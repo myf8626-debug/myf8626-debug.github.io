@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="苗怡飞，郑州轻工业大学软件工程本科，2028届。AI 产品与 AI 工程实践，关注事实来源、工具权限和可核对的输出。">
+  <meta name="theme-color" content="#ffffff">
+  <title>苗怡飞 · AI 产品与 AI 工程</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">跳到正文</a>
+  <header class="site-header">
+    <div class="shell header-inner"><a class="name" href="#main">苗怡飞</a>
+    <nav aria-label="主导航"><a href="#works">作品</a><a href="#cases">复盘</a><a href="#contact">联系</a></nav></div>
+  </header>
+  <main class="shell" id="main">
+    <section class="hero" aria-labelledby="hero-title">
+      <p class="bio">郑州轻工业大学 · 软件工程本科在读</p>
+      <h1 id="hero-title">让 AI 的每条结论，<br>都能回到依据。</h1>
+      <p class="position">结论要有依据，动作要有边界。验证到哪里，就写到哪里。</p>
+      <p class="identity">2028 届 · 专业排名 12/121 · AI 产品 / AI 工程方向</p>
+    </section>
+    <section class="block" id="works" aria-labelledby="works-title">
+      <div class="section-heading"><h2 id="works-title">作品与实践</h2><p class="section-note">做过什么，负责什么，验证到哪里。</p></div>
+      <article class="work">
+  <h3>draft-thesis-docx</h3>
+  <div><p class="work-copy">论文模板保护、格式审查与引用核对。</p><p class="role">角色：独立开发。</p>
+  <a class="work-link" href="https://github.com/myf8626-debug/draft-thesis-docx">源码与使用说明</a></div>
+</article>
+<article class="work">
+  <h3>Resume Protocol</h3>
+  <div><p class="work-copy">让求职事实有来源，模型调用有边界。</p><p class="role">角色：候选人知识库与工具授权。</p>
+  <a class="work-link" href="#case-resume">阅读我的实现</a></div>
+</article>
+<article class="work">
+  <h3>潮向信息科技 · 数据中台实习</h3>
+  <div><p class="work-copy">把跨源校验拆成规则检查、异常记录和人工复核。</p><p class="role">角色：工作流提出与落地。</p>
+  <a class="work-link" href="#case-internship">阅读实习复盘</a></div>
+</article>
+    </section>
+    <section class="block" id="cases" aria-labelledby="cases-title">
+      <div class="section-heading"><h2 id="cases-title">项目复盘</h2><p class="section-note">具体处理、取舍与验证结果。</p></div>
+      <article class="case-study" id="case-thesis"><h3>draft-thesis-docx：把学校规范变成可检查的流程</h3><section class="case-part"><h4>问题</h4><p>高校论文不是把正文写完就能交。学校模板对封面、声明页、目录、页眉、分页都有要求，AI 改正文时，很容易顺手动到这些地方。看起来只是调整一段结构，最后却可能整份格式都错。另一个麻烦是引用：文字写得很顺，参考文献却未必真实，人工复查的负担反而更大。</p></section><section class="case-part"><h4>判断</h4><p>我先阅读学校的论文撰写规范，再据此设计 skill，例如郑州轻工业大学《毕业设计（论文）撰写规范》。我选择把模板和规范当作格式权威，不让模型凭习惯重排；大纲获批才进入正文。先把允许修改的范围说清楚，再讨论能生成多少内容。</p></section><section class="case-part"><h4>做法</h4><p>脚本按指定边界保存前置内容、递归依赖和全局渲染部件的哈希，用于改写前后比对；差异按流程阻塞。其他脚本覆盖分节检查、页眉同步、字段刷新、三线表与图表审查、参考文献校验和页面渲染。skill 中禁止伪造参考文献、测试记录和无依据结论；引用真实性仍须查原文，不能由格式检查通过替代。</p></section><section class="case-part"><h4>结果</h4><p>项目由我独立开发，以 MIT 许可证开源，使用 Python，包含 10 个脚本、约 2000 行代码。目前完成的是设计与脚本实现，尚未在真实论文上验证。没有可据此发布的模板覆盖率、缺陷拦截数量或完整流程验收结果。</p></section></article><article class="case-study" id="case-resume"><h3>Resume Protocol：让模型取证，把权限留给代码</h3><section class="case-part"><h4>问题</h4><p>在 AI 求职 Agent 里，岗位要求或模型猜测一旦混进候选人事实库，后续定制简历就可能写出这个人没做过的经历。团队项目里，我负责候选人知识库与工具授权这一层：既要让模型找得到背景，也要限制它能读谁的资料、能把什么当事实。</p></section><section class="case-part"><h4>判断</h4><p>事实从哪里来、检索属于谁、工具能不能调用，都应该由代码决定。我没有把这些边界全交给提示词。模型可以选择任务做法，不能给自己的调用授权；出问题时，要能定位到具体的权限和证据记录。</p></section><section class="case-part"><h4>做法</h4><p>事实记录保存 source_id / source_quote / source_position，只从上传文档的统一写入路径抽取。检索按服务端持久化的 user_id + candidate_id 隔离，工具不暴露作用域字段，越权报错；证据包限制为 8 条事实、4 段原文、4000 字符。工具权限由服务端计算，模型输出不参与。回归测试曾发现，同轮查询教育、项目和技能时，trace 只留最后一次；我把覆盖写入改为本轮累加，保住前面的取证记录。</p></section><section class="case-part"><h4>结果</h4><p>我还写了四个 Career Skill 和结论到证据的映射规则。可核对的产出是这一层的实现、测试和验收报告，其他团队模块不计入我的贡献。真实模型端到端验证尚未完成，本机缺少凭据。报告明确规定：检索 trace 三字段为空，回答却声称“知道”候选人背景，就判失败；不能用回答看似合理替代调用证据。</p></section></article><article class="case-study" id="case-internship"><h3>潮向实习：区分规则缺陷与模型判断偏差</h3><section class="case-part"><h4>问题</h4><p>在潮向信息科技的数据中台实习时，我负责商品和门店数据的跨源校验。同一个对象的字段值需要判定，还要对照两个来源；遇到口径冲突，不能看到其中一个结果就结束。重复检查很耗时，但这些任务又不能只追求处理快：一旦判错，后面还得回头找依据。</p></section><section class="case-part"><h4>判断</h4><p>我主动提出用 AI 辅助审查，但没有把目标定成让模型接管全部判断。规则能说清的部分先按规则检查，不能说清或缺少依据的部分保留人工复核。这样模型是在帮我整理审查过程，而不是替一个没有依据的结论盖章。</p></section><section class="case-part"><h4>做法</h4><p>我用 Codex 开发和迭代工作流，把过程拆成规则检查、异常记录、人工复核。出现异常时，先回到字段判定、双来源比对和口径冲突这些具体任务，检查规则本身有没有缺口。如果规则设计有问题就改规则；如果规则明确而模型判断偏离，再调整模型使用方式。不靠反复调提示词掩盖规则问题，没有依据的情形仍保留人工判定。</p></section><section class="case-part"><h4>结果</h4><p>这套工作流由我主动提出并独立落地，实习时间是 2026.02—04。现在能清楚说明的是职责、流程和判断原则，具体误报案例已经记不清，因此这里只说明处理逻辑。当前没有可供核对的计时样本与误报统计，效率提升幅度和审核准确率改善尚未验证。可展示的结果限于工作流落地，不能据此量化审核效果或宣称模型判断更准确。</p></section></article>
+    </section>
+  </main>
+  <footer class="site-footer" id="contact">
+    <div class="shell"><h2>联系</h2>
+      <div class="contact-links"><a href="mailto:378122428@qq.com">378122428@qq.com</a><a href="https://github.com/myf8626-debug">GitHub / myf8626-debug</a></div>
+      <p class="availability">正在寻找 2027 年暑期实习</p>
+    </div>
+  </footer>
+</body>
+</html>

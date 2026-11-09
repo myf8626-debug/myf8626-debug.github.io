@@ -1,0 +1,15 @@
+.env
+.env.*
+*.env
+*.local
+node_modules/
+dist/
+build/
+target/
+tmp/
+private/
+*.log
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
