@@ -11,7 +11,7 @@
     <link rel="canonical" href="https://myf8626-debug.github.io/" />
     <title>苗怡飞 · 简历与作品集</title>
     <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
-    <link rel="stylesheet" href="style.css?v=20261109-color" />
+    <link rel="stylesheet" href="style.css?v=20261109-cards" />
     <script defer src="site.js"></script>
   </head>
   <body>
@@ -44,22 +44,57 @@
       </div>
     </header>
     <main id="main">
-      <section class="hero shell">
-        <div class="hero-main">
-          <p class="eyebrow hero-eyebrow">
-            <span aria-hidden="true"></span>软件工程本科 · 2028 届
+      <section class="profile-board shell" aria-label="个人简介与项目卡片">
+        <article class="profile-card" aria-label="苗怡飞的个人简介">
+          <span class="profile-availability"
+            ><i aria-hidden="true"></i>寻找 2027 年暑期实习</span
+          >
+          <div class="profile-avatar">
+            <img
+              src="assets/miao-yifei.png"
+              alt="苗怡飞的简历证件照"
+              width="108"
+              height="144"
+            /><span>2028 届</span>
+          </div>
+          <h1>苗怡飞</h1>
+          <p class="profile-role">AI 产品 / AI 工程</p>
+          <p class="profile-position">
+            让 AI 的每条结论，<br />都能回到<span>依据。</span>
           </p>
-          <h1>
-            让 AI 的每条结论，<br /><em
-              >都能回到<span class="title-mark">依据。</span></em
-            >
-          </h1>
-          <p class="position">
-            结论要有依据，动作要有边界。<br />验证到哪里，就写到哪里。
-          </p>
-          <div class="hero-actions">
-            <a class="button primary" href="#works"
-              >浏览作品<svg
+          <div class="profile-school">
+            <p>郑州轻工业大学 · 软件工程</p>
+            <span>郑州 · 本科在读</span>
+          </div>
+          <dl class="profile-stats">
+            <div>
+              <dt>专业排名</dt>
+              <dd>12<span>/121</span></dd>
+              <small>前 10%</small>
+            </div>
+            <div>
+              <dt>每周实习</dt>
+              <dd>5<span>天</span></dd>
+              <small>连续 3 个月</small>
+            </div>
+          </dl>
+          <a
+            class="button profile-resume"
+            href="assets/miao-yifei-resume-2026.pdf"
+            download="苗怡飞-简历-2026.pdf"
+            >下载我的简历
+            <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
+              <path
+                d="M5 19 19 5M5 5h14v14"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.6"
+              /></svg
+          ></a>
+          <div class="profile-links">
+            <a href="https://github.com/myf8626-debug"
+              >GitHub
+              <svg
                 viewBox="0 0 24 24"
                 width="18"
                 height="18"
@@ -71,11 +106,9 @@
                   stroke="currentColor"
                   stroke-width="1.6"
                 /></svg></a
-            ><a
-              class="button"
-              href="assets/miao-yifei-resume-2026.pdf"
-              download="苗怡飞-简历-2026.pdf"
-              >下载简历 PDF<svg
+            ><a href="mailto:378122428@qq.com"
+              >联系我
+              <svg
                 viewBox="0 0 24 24"
                 width="18"
                 height="18"
@@ -89,100 +122,282 @@
                 /></svg
             ></a>
           </div>
-        </div>
-        <figure
-          class="hero-art"
-          aria-label="Resume Protocol 来源、检索和授权的机制示意"
-        >
-          <figcaption>
-            <span>Resume Protocol</span><span>机制示意</span>
-          </figcaption>
-          <div class="trace-canvas">
-            <svg
-              class="trace-lines"
-              viewBox="0 0 480 400"
-              preserveAspectRatio="none"
-              aria-hidden="true"
-            >
-              <path
-                d="M105 95V208H355V324"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="1.5"
-              />
-              <circle cx="105" cy="95" r="4" />
-              <circle cx="355" cy="324" r="4" />
-            </svg>
-            <div class="trace-card trace-source">
-              <span class="trace-step">01 / 来源</span
-              ><strong>先有原文，再有事实。</strong>
-              <div class="trace-fields">
-                <code>source_id</code><code>source_quote</code
-                ><code>source_position</code>
+          <p class="profile-motto">
+            结论要有依据，动作要有边界。<br />验证到哪里，就写到哪里。
+          </p>
+        </article>
+        <div class="board-column board-left">
+          <p class="board-heading"><span>项目实现</span><span>03</span></p>
+          <a class="board-item board-resume" href="#case-resume"
+            ><div class="board-card-top">
+              <span class="board-icon"
+                ><svg
+                  viewBox="0 0 24 24"
+                  width="24"
+                  height="24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <rect x="5" y="3" width="14" height="18" rx="2" />
+                  <path d="M9 8h6M9 12h6M9 16h3" /></svg></span
+              ><span class="board-meta">团队协作</span
+              ><span class="board-arrow"
+                ><svg
+                  viewBox="0 0 24 24"
+                  width="18"
+                  height="18"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M5 19 19 5M5 5h14v14"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.6"
+                  /></svg
+              ></span>
+            </div>
+            <div class="board-card-body">
+              <div>
+                <h3>Resume Protocol</h3>
+                <p>候选人事实溯源、检索隔离与工具授权。</p>
               </div>
-              <span class="trace-edge" aria-hidden="true"></span>
             </div>
-            <div class="trace-card trace-scope">
-              <span class="trace-step">02 / 检索</span
-              ><strong>范围由服务端绑定。</strong>
-              <p><code>user_id</code><span>+</span><code>candidate_id</code></p>
+            <span class="board-action"
+              >查看我的贡献<span aria-hidden="true"></span></span></a
+          ><a class="board-item board-thesis" href="#case-thesis"
+            ><div class="board-card-top">
+              <span class="board-icon"
+                ><svg
+                  viewBox="0 0 24 24"
+                  width="24"
+                  height="24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M3 4h7a3 3 0 0 1 3 3v14a4 4 0 0 0-4-3H3zM13 7a3 3 0 0 1 3-3h5v14h-5a3 3 0 0 0-3 3M6 8h3M6 11h3"
+                  /></svg></span
+              ><span class="board-meta">独立开发 · MIT</span
+              ><span class="board-arrow"
+                ><svg
+                  viewBox="0 0 24 24"
+                  width="18"
+                  height="18"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M5 19 19 5M5 5h14v14"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.6"
+                  /></svg
+              ></span>
             </div>
-            <div class="trace-card trace-tools">
-              <span class="trace-step">03 / 授权</span
-              ><strong>模型不能授予自己权限。</strong>
-              <p>allowedTools · 确定性计算</p>
+            <div class="board-card-body">
+              <div>
+                <h3>论文模板保护工具</h3>
+                <p>用哈希快照与检查脚本，守住论文格式和依据。</p>
+              </div>
             </div>
-          </div>
-          <a class="art-link" href="#case-resume"
-            >查看这套机制的实现<svg
-              viewBox="0 0 24 24"
-              width="18"
-              height="18"
-              aria-hidden="true"
-            >
-              <path
-                d="M5 19 19 5M5 5h14v14"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="1.5"
-              /></svg
+            <span class="board-action"
+              >查看实现与验证边界<span aria-hidden="true"></span></span></a
+          ><a class="board-item board-cloud" href="#case-cloud"
+            ><div class="board-card-top">
+              <span class="board-icon"
+                ><svg
+                  viewBox="0 0 24 24"
+                  width="24"
+                  height="24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M3 7a2 2 0 0 1 2-2h5l2 3h7a2 2 0 0 1 2 2v9H3zM9 14l3-3 3 3M12 11v6"
+                  /></svg></span
+              ><span class="board-meta">团队协作 · 前端</span
+              ><span class="board-arrow"
+                ><svg
+                  viewBox="0 0 24 24"
+                  width="18"
+                  height="18"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M5 19 19 5M5 5h14v14"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.6"
+                  /></svg
+              ></span>
+            </div>
+            <div class="board-card-body">
+              <div>
+                <h3>云栈 · 智能云盘</h3>
+                <p>文件管理、权限交互与异常状态处理。</p>
+              </div>
+            </div>
+            <span class="board-action"
+              >查看前端工作<span aria-hidden="true"></span></span
           ></a>
-        </figure>
-      </section>
-
-      <aside class="intro-sheet shell" aria-label="个人简介">
-        <div class="intro-person">
-          <img
-            class="portrait"
-            src="assets/miao-yifei.png"
-            alt="苗怡飞的简历证件照"
-            width="72"
-            height="96"
-          />
-          <div>
-            <p>苗怡飞</p>
-            <span>郑州 · 本科在读</span>
-          </div>
         </div>
-        <dl>
-          <div>
-            <dt>学校 / 专业</dt>
-            <dd>郑州轻工业大学<br />软件工程</dd>
-          </div>
-          <div>
-            <dt>专业排名</dt>
-            <dd>
-              <strong>12<span>/121</span></strong
-              ><small>前 10%</small>
-            </dd>
-          </div>
-          <div>
-            <dt>实习安排</dt>
-            <dd>每周 5 天 · 连续 3 个月</dd>
-          </div>
-        </dl>
-        <p class="availability">正在寻找 2027 年暑期实习</p>
-      </aside>
+        <div class="board-column board-right">
+          <p class="board-heading"><span>可操作样例</span><span>03</span></p>
+          <a class="board-item board-store" href="labs/store-evidence/"
+            ><div class="board-card-top">
+              <span class="board-icon"
+                ><svg
+                  viewBox="0 0 24 24"
+                  width="24"
+                  height="24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M4 20V4M4 20h17M9 16v-4M14 16V8M19 16V5"
+                  /></svg></span
+              ><span class="board-meta">交互样例</span
+              ><span class="board-arrow"
+                ><svg
+                  viewBox="0 0 24 24"
+                  width="18"
+                  height="18"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M5 19 19 5M5 5h14v14"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.6"
+                  /></svg
+              ></span>
+            </div>
+            <div class="board-card-body">
+              <div>
+                <h3>门店数据分析台</h3>
+                <p>从业务问题到可重跑的 SQL 与分析结果。</p>
+              </div>
+              <img
+                class="board-thumb"
+                src="assets/store-evidence.jpg"
+                alt=""
+                width="1044"
+                height="640"
+                loading="lazy"
+              />
+            </div>
+            <span class="board-action"
+              >运行样例<span aria-hidden="true"></span></span></a
+          ><a class="board-item board-job" href="labs/job-evidence/"
+            ><div class="board-card-top">
+              <span class="board-icon"
+                ><svg
+                  viewBox="0 0 24 24"
+                  width="24"
+                  height="24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <rect x="3" y="7" width="18" height="14" rx="2" />
+                  <path d="M8 7V4h8v3M3 12h18M10 12v3h4v-3" /></svg></span
+              ><span class="board-meta">交互样例</span
+              ><span class="board-arrow"
+                ><svg
+                  viewBox="0 0 24 24"
+                  width="18"
+                  height="18"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M5 19 19 5M5 5h14v14"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.6"
+                  /></svg
+              ></span>
+            </div>
+            <div class="board-card-body">
+              <div>
+                <h3>岗位调研证据台</h3>
+                <p>逐条核对候选人声称与原始证据。</p>
+              </div>
+              <img
+                class="board-thumb"
+                src="assets/job-evidence.jpg"
+                alt=""
+                width="1044"
+                height="640"
+                loading="lazy"
+              />
+            </div>
+            <span class="board-action"
+              >运行样例<span aria-hidden="true"></span></span></a
+          ><a class="board-item board-policy" href="labs/policy-evidence/"
+            ><div class="board-card-top">
+              <span class="board-icon"
+                ><svg
+                  viewBox="0 0 24 24"
+                  width="24"
+                  height="24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M12 3 3 7v5c0 5 9 9 9 9s9-4 9-9V7zM8 12l3 3 5-6"
+                  /></svg></span
+              ><span class="board-meta">交互样例</span
+              ><span class="board-arrow"
+                ><svg
+                  viewBox="0 0 24 24"
+                  width="18"
+                  height="18"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M5 19 19 5M5 5h14v14"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.6"
+                  /></svg
+              ></span>
+            </div>
+            <div class="board-card-body">
+              <div>
+                <h3>校规证据问答台</h3>
+                <p>回答有出处，冲突与信息不足明确标注。</p>
+              </div>
+              <img
+                class="board-thumb"
+                src="assets/policy-evidence.jpg"
+                alt=""
+                width="1044"
+                height="640"
+                loading="lazy"
+              />
+            </div>
+            <span class="board-action"
+              >运行样例<span aria-hidden="true"></span></span
+          ></a>
+          <p class="board-footnote">人工构造数据 · 真实模型尚未接入</p>
+        </div>
+      </section>
 
       <section class="section shell" id="experience">
         <div class="section-heading">
