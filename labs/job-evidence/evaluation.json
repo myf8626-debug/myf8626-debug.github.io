@@ -1,0 +1,84 @@
+{
+  "kind": "deterministic_regression_tests",
+  "dataset_type": "synthetic",
+  "model_evaluated": false,
+  "generated_at": "2026-11-09T14:13:25.793787+00:00",
+  "python": "3.13.0",
+  "tests_run": 16,
+  "passed": 16,
+  "failures": 0,
+  "errors": 0,
+  "input_sha256": {
+    "web/sample.json": "4092047bede52f21531b7ea2a788d7ed4b29ed88ccff4d555b5b31e3a8daf468"
+  },
+  "cases": [
+    {
+      "test": "test_engine.ProvenanceTests.test_all_citations_must_match",
+      "status": "passed"
+    },
+    {
+      "test": "test_engine.ProvenanceTests.test_duplicate_claim_id",
+      "status": "passed"
+    },
+    {
+      "test": "test_engine.ProvenanceTests.test_duplicate_source_id",
+      "status": "passed"
+    },
+    {
+      "test": "test_engine.ProvenanceTests.test_empty_quote_not_proof",
+      "status": "passed"
+    },
+    {
+      "test": "test_engine.ProvenanceTests.test_exact_quote_wrong_offset",
+      "status": "passed"
+    },
+    {
+      "test": "test_engine.ProvenanceTests.test_expected_statuses",
+      "status": "passed"
+    },
+    {
+      "test": "test_engine.ProvenanceTests.test_explicit_empty_dataset_not_replaced",
+      "status": "passed"
+    },
+    {
+      "test": "test_engine.ProvenanceTests.test_explicit_null_dataset_not_replaced",
+      "status": "passed"
+    },
+    {
+      "test": "test_engine.ProvenanceTests.test_input_bounds",
+      "status": "passed"
+    },
+    {
+      "test": "test_engine.ProvenanceTests.test_invalid_source_type",
+      "status": "passed"
+    },
+    {
+      "test": "test_engine.ProvenanceTests.test_missing_source_is_not_empty_success",
+      "status": "passed"
+    },
+    {
+      "test": "test_engine.ProvenanceTests.test_negative_position_rejected",
+      "status": "passed"
+    },
+    {
+      "test": "test_engine.ProvenanceTests.test_no_mutation",
+      "status": "passed"
+    },
+    {
+      "test": "test_engine.ProvenanceTests.test_real_quote_wrong_claim",
+      "status": "passed"
+    },
+    {
+      "test": "test_engine.ProvenanceTests.test_removed_conflicting_source",
+      "status": "passed"
+    },
+    {
+      "test": "test_engine.ProvenanceTests.test_unicode_positions",
+      "status": "passed"
+    }
+  ],
+  "limitations": [
+    "人工构造的小样本回归检查，不代表真实业务效果。",
+    "未接入或评测真实模型，不报告模型准确率、编造率或提升幅度。"
+  ]
+}

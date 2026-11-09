@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta
+      name="description"
+      content="对模拟门店数据执行清洗、多表关联和窗口查询，核对每一个数字。"
+    />
+    <title>门店数据分析台 · 苗怡飞作品集</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="shell nav">
+        <a class="brand" href="https://myf8626-debug.github.io/"
+          >苗怡飞 / 实验作品</a
+        >
+        <nav class="navlinks" aria-label="项目导航">
+          <a href="../job-evidence/">岗位调研证据台</a
+          ><a href="../policy-evidence/">政策溯源问答</a
+          ><a href="../store-evidence/" aria-current="page">门店数据分析台</a>
+        </nav>
+      </div>
+    </header>
+    <main class="shell">
+      <section class="hero">
+        <div class="folio">03</div>
+        <div>
+          <p class="eyebrow">门店数据分析台</p>
+          <h1>从业务问题，回到 SQL 与明细。</h1>
+          <p class="subtitle">
+            对模拟门店数据执行清洗、多表关联和窗口查询，核对每一个数字。
+          </p>
+        </div>
+      </section>
+      <p class="notice">
+        可复现样例版 ·
+        数据为人工构造的演示样例，非真实公司或学校资料。当前没有调用 AI 模型。
+      </p>
+      <div id="error" class="error" role="alert"></div>
+      <div class="workspace">
+        <aside class="controls" id="controls"></aside>
+        <section class="results" aria-label="运行结果">
+          <div class="result-head">
+            <div>
+              <h2 id="result-title">检查结果</h2>
+              <p id="result-note">结果由当前输入计算。</p>
+            </div>
+            <button class="secondary" id="export">导出记录</button>
+          </div>
+          <div id="output" aria-live="polite">正在加载样例…</div>
+        </section>
+      </div>
+      <section class="notes">
+        <div>
+          <h2>这个版本做到了哪里</h2>
+          <p id="scope-note"></p>
+        </div>
+        <div>
+          <h2>实现与来源</h2>
+          <p>
+            使用 AI 辅助开发的个人实验项目。参考
+            <a href="https://github.com/vanna-ai/vanna">上游项目</a>
+            的应用方向，当前版本独立实现样例处理与核验逻辑，未集成上游
+            SDK。真实模型质量尚未验证。
+          </p>
+          <p>
+            <a href="README.md">实现说明</a> · <a href="API.md">接口文档</a> ·
+            <a href="evaluation.json">可复现检查记录</a> ·
+            <a href="source.zip" download>下载源码</a>
+          </p>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="shell footer-inner">
+        <span>结论要有依据，动作要有边界。</span
+        ><a href="https://myf8626-debug.github.io/">返回个人作品集</a>
+      </div>
+    </footer>
+    <script src="vendor/sql-wasm.js"></script>
+    <script type="module" src="app.js"></script>
+  </body>
+</html>

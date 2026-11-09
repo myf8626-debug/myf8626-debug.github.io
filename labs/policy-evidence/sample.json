@@ -1,0 +1,94 @@
+{
+  "synthetic": true,
+  "description": "所有条款为软件测试编写，不是实际学校政策。",
+  "clauses": [
+    {
+      "id": "P1",
+      "document": "模拟创新学分认定办法（旧版）",
+      "section": "第三条",
+      "topic": "competition",
+      "cohorts": [2024, 2025],
+      "effective_from": "2024-09-01",
+      "effective_to": "2026-09-01",
+      "text": "省级竞赛获奖可申请认定 1 个创新学分，须提交获奖证明。",
+      "value": "1学分"
+    },
+    {
+      "id": "P2",
+      "document": "模拟创新学分认定办法（2026版）",
+      "section": "第三条",
+      "topic": "competition",
+      "cohorts": [2024, 2025],
+      "effective_from": "2026-09-01",
+      "effective_to": "2028-09-01",
+      "text": "省级竞赛获奖可申请认定 2 个创新学分，须提交获奖证明并经审核。",
+      "value": "2学分"
+    },
+    {
+      "id": "P3",
+      "document": "模拟新生培养方案",
+      "section": "第八条",
+      "topic": "competition",
+      "cohorts": [2026],
+      "effective_from": "2026-09-01",
+      "effective_to": "2030-09-01",
+      "text": "2026 级省级竞赛获奖可申请认定 3 个创新学分，须经审核。",
+      "value": "3学分"
+    },
+    {
+      "id": "P4",
+      "document": "模拟奖学金评定办法",
+      "section": "第四条",
+      "topic": "scholarship",
+      "cohorts": [2024, 2025],
+      "effective_from": "2025-09-01",
+      "effective_to": "2028-09-01",
+      "text": "申请人须满足综合测评前 20% 且本学年无不及格课程；满足条件不代表必然获奖。",
+      "value": "综测前20%且无挂科"
+    },
+    {
+      "id": "P5",
+      "document": "模拟实习实施细则 A",
+      "section": "第二条",
+      "topic": "internship",
+      "cohorts": [2024, 2025],
+      "effective_from": "2026-09-01",
+      "effective_to": "2028-09-01",
+      "text": "专业实习需完成 8 周，并提交过程记录。",
+      "value": "8周"
+    },
+    {
+      "id": "P6",
+      "document": "模拟实习实施细则 B（冲突样例）",
+      "section": "第二条",
+      "topic": "internship",
+      "cohorts": [2024, 2025],
+      "effective_from": "2026-09-01",
+      "effective_to": "2028-09-01",
+      "text": "专业实习需完成 10 周，并提交过程记录。",
+      "value": "10周"
+    },
+    {
+      "id": "P7",
+      "document": "模拟毕业审核办法",
+      "section": "第五条",
+      "topic": "graduation",
+      "cohorts": [2024],
+      "effective_from": "2024-09-01",
+      "effective_to": "2029-09-01",
+      "text": "毕业审核需按本年级培养方案完成必修和选修要求；本样例没有提供总学分数。",
+      "value": "按年级方案审核"
+    },
+    {
+      "id": "P8",
+      "document": "模拟创新学分认定办法（未来版）",
+      "section": "第三条",
+      "topic": "competition",
+      "cohorts": [2024, 2025],
+      "effective_from": "2028-09-01",
+      "effective_to": "2030-09-01",
+      "text": "省级竞赛获奖可申请认定 4 个创新学分，须经审核。",
+      "value": "4学分"
+    }
+  ]
+}

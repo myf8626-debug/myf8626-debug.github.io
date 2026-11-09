@@ -1,0 +1,130 @@
+{
+  "company": "栖木科技 · 模拟调研资料",
+  "synthetic": true,
+  "sources": [
+    {
+      "id": "S1",
+      "title": "模拟岗位页 · AI 产品实习",
+      "date": "2026-11-01",
+      "text": "栖木科技招聘 AI 产品实习生。工作地点：远程。每周到岗：5天。实习周期：3个月。岗位要求：SQL。",
+      "facts": {
+        "location": "远程",
+        "days": "5天",
+        "duration": "3个月",
+        "skill": "SQL"
+      }
+    },
+    {
+      "id": "S2",
+      "title": "模拟团队介绍",
+      "date": "2026-10-20",
+      "text": "栖木科技的产品方向是知识库问答。团队采用人工复核流程。",
+      "facts": {
+        "product": "知识库问答",
+        "review": "人工复核"
+      }
+    },
+    {
+      "id": "S3",
+      "title": "模拟转载招聘页（待核对）",
+      "date": "2026-10-15",
+      "text": "栖木科技 AI 产品实习岗位，工作地点：上海。",
+      "facts": {
+        "location": "上海"
+      }
+    }
+  ],
+  "claims": [
+    {
+      "id": "C1",
+      "text": "岗位支持远程工作",
+      "field": "location",
+      "value": "远程",
+      "evidence": [
+        {
+          "source_id": "S1",
+          "quote": "工作地点：远程",
+          "start": 16,
+          "end": 23
+        }
+      ]
+    },
+    {
+      "id": "C2",
+      "text": "每周需要到岗 5 天",
+      "field": "days",
+      "value": "5天",
+      "evidence": [
+        {
+          "source_id": "S1",
+          "quote": "每周到岗：5天",
+          "start": 24,
+          "end": 31
+        }
+      ]
+    },
+    {
+      "id": "C3",
+      "text": "需要持续实习 3 个月",
+      "field": "duration",
+      "value": "3个月",
+      "evidence": [
+        {
+          "source_id": "S1",
+          "quote": "实习周期：3个月",
+          "start": 32,
+          "end": 40
+        }
+      ]
+    },
+    {
+      "id": "C4",
+      "text": "岗位要求具备 SQL 能力",
+      "field": "skill",
+      "value": "SQL",
+      "evidence": [
+        {
+          "source_id": "S1",
+          "quote": "岗位要求：SQL",
+          "start": 41,
+          "end": 49
+        }
+      ]
+    },
+    {
+      "id": "C5",
+      "text": "团队提供转正机会",
+      "field": "conversion",
+      "value": "提供",
+      "evidence": []
+    },
+    {
+      "id": "C6",
+      "text": "产品方向为知识库问答",
+      "field": "product",
+      "value": "知识库问答",
+      "evidence": [
+        {
+          "source_id": "S2",
+          "quote": "产品方向是知识库问答",
+          "start": 6,
+          "end": 16
+        }
+      ]
+    },
+    {
+      "id": "C7",
+      "text": "每周只需到岗 3 天",
+      "field": "days",
+      "value": "3天",
+      "evidence": [
+        {
+          "source_id": "S1",
+          "quote": "每周到岗：5天",
+          "start": 24,
+          "end": 31
+        }
+      ]
+    }
+  ]
+}

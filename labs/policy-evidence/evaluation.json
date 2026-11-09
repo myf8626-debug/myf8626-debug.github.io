@@ -1,0 +1,100 @@
+{
+  "kind": "deterministic_regression_tests",
+  "dataset_type": "synthetic",
+  "model_evaluated": false,
+  "generated_at": "2026-11-09T14:13:25.851565+00:00",
+  "python": "3.13.0",
+  "tests_run": 20,
+  "passed": 20,
+  "failures": 0,
+  "errors": 0,
+  "input_sha256": {
+    "web/sample.json": "fc32ba06f76e16fae4a3a5aa47c80c3d6f65177eadb76a79e369529109e072b9"
+  },
+  "cases": [
+    {
+      "test": "test_engine.PolicyTests.test_conflict_not_arbitrarily_resolved",
+      "status": "passed"
+    },
+    {
+      "test": "test_engine.PolicyTests.test_current_cohort",
+      "status": "passed"
+    },
+    {
+      "test": "test_engine.PolicyTests.test_date_padding",
+      "status": "passed"
+    },
+    {
+      "test": "test_engine.PolicyTests.test_duplicate_id",
+      "status": "passed"
+    },
+    {
+      "test": "test_engine.PolicyTests.test_effective_boundary",
+      "status": "passed"
+    },
+    {
+      "test": "test_engine.PolicyTests.test_empty_question",
+      "status": "passed"
+    },
+    {
+      "test": "test_engine.PolicyTests.test_expiry_exclusive",
+      "status": "passed"
+    },
+    {
+      "test": "test_engine.PolicyTests.test_explicit_empty_dataset_not_replaced",
+      "status": "passed"
+    },
+    {
+      "test": "test_engine.PolicyTests.test_explicit_null_dataset_not_replaced",
+      "status": "passed"
+    },
+    {
+      "test": "test_engine.PolicyTests.test_historical_date",
+      "status": "passed"
+    },
+    {
+      "test": "test_engine.PolicyTests.test_invalid_date",
+      "status": "passed"
+    },
+    {
+      "test": "test_engine.PolicyTests.test_invalid_range",
+      "status": "passed"
+    },
+    {
+      "test": "test_engine.PolicyTests.test_missing_cohort_abstains",
+      "status": "passed"
+    },
+    {
+      "test": "test_engine.PolicyTests.test_multiple_topics",
+      "status": "passed"
+    },
+    {
+      "test": "test_engine.PolicyTests.test_no_invented_graduation_credits",
+      "status": "passed"
+    },
+    {
+      "test": "test_engine.PolicyTests.test_non_integer_cohort",
+      "status": "passed"
+    },
+    {
+      "test": "test_engine.PolicyTests.test_other_cohort",
+      "status": "passed"
+    },
+    {
+      "test": "test_engine.PolicyTests.test_reason_retained",
+      "status": "passed"
+    },
+    {
+      "test": "test_engine.PolicyTests.test_scholarship_exact_quote",
+      "status": "passed"
+    },
+    {
+      "test": "test_engine.PolicyTests.test_unknown_topic",
+      "status": "passed"
+    }
+  ],
+  "limitations": [
+    "人工构造的小样本回归检查，不代表真实业务效果。",
+    "未接入或评测真实模型，不报告模型准确率、编造率或提升幅度。"
+  ]
+}

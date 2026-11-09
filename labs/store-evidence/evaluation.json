@@ -1,0 +1,97 @@
+{
+  "kind": "deterministic_regression_tests",
+  "dataset_type": "synthetic",
+  "model_evaluated": false,
+  "generated_at": "2026-11-09T14:13:25.990554+00:00",
+  "python": "3.13.0",
+  "tests_run": 19,
+  "passed": 19,
+  "failures": 0,
+  "errors": 0,
+  "input_sha256": {
+    "web/queries.json": "bfaf0364e11a11570450f2db6e0525af82458b02df41ddfb22654410100b09fa",
+    "web/seed.sql": "fd2498fe46958475392f97f4a6b707ee860f506ea6629fd7492c073f58483486"
+  },
+  "cases": [
+    {
+      "test": "test_engine.SQLTests.test_aggregate_total",
+      "status": "passed"
+    },
+    {
+      "test": "test_engine.SQLTests.test_category_totals",
+      "status": "passed"
+    },
+    {
+      "test": "test_engine.SQLTests.test_cleaning_counts",
+      "status": "passed"
+    },
+    {
+      "test": "test_engine.SQLTests.test_empty_statistical_signal_is_valid",
+      "status": "passed"
+    },
+    {
+      "test": "test_engine.SQLTests.test_extension_blocked",
+      "status": "passed"
+    },
+    {
+      "test": "test_engine.SQLTests.test_first_month_has_no_comparison",
+      "status": "passed"
+    },
+    {
+      "test": "test_engine.SQLTests.test_fixed_question",
+      "status": "passed"
+    },
+    {
+      "test": "test_engine.SQLTests.test_issue_line_numbers",
+      "status": "passed"
+    },
+    {
+      "test": "test_engine.SQLTests.test_missing_table_reports_error",
+      "status": "passed"
+    },
+    {
+      "test": "test_engine.SQLTests.test_monthly_window",
+      "status": "passed"
+    },
+    {
+      "test": "test_engine.SQLTests.test_multi_statement_blocked",
+      "status": "passed"
+    },
+    {
+      "test": "test_engine.SQLTests.test_pragma_blocked",
+      "status": "passed"
+    },
+    {
+      "test": "test_engine.SQLTests.test_raw_data_not_deleted",
+      "status": "passed"
+    },
+    {
+      "test": "test_engine.SQLTests.test_readonly_delete",
+      "status": "passed"
+    },
+    {
+      "test": "test_engine.SQLTests.test_recursive_budget",
+      "status": "passed"
+    },
+    {
+      "test": "test_engine.SQLTests.test_refund_preaggregation_avoids_fanout",
+      "status": "passed"
+    },
+    {
+      "test": "test_engine.SQLTests.test_result_cap",
+      "status": "passed"
+    },
+    {
+      "test": "test_engine.SQLTests.test_unknown_natural_question_not_fabricated",
+      "status": "passed"
+    },
+    {
+      "test": "test_engine.SQLTests.test_write_cte_blocked",
+      "status": "passed"
+    }
+  ],
+  "limitations": [
+    "人工构造的小样本回归检查，不代表真实业务效果。",
+    "未接入或评测真实模型，不报告模型准确率、编造率或提升幅度。"
+  ]
+}
