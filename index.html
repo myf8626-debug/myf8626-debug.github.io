@@ -7,17 +7,36 @@
       name="description"
       content="苗怡飞的简历与作品集：AI 产品、AI 工程、候选人知识库、数据审核与可操作样例。郑州轻工业大学软件工程，2028 届。"
     />
-    <meta name="theme-color" content="#ffffff" />
+    <meta name="theme-color" content="#f2f4fc" />
     <link rel="canonical" href="https://myf8626-debug.github.io/" />
     <title>苗怡飞 · 简历与作品集</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="style.css?v=20261109-color" />
     <script defer src="site.js"></script>
   </head>
   <body>
     <a class="skip-link" href="#main">跳到正文</a>
     <header class="site-header">
       <div class="shell header-inner">
-        <a class="name" href="#main">苗怡飞<span>AI 产品 / AI 工程</span></a>
+        <a class="name" href="#main"
+          ><svg
+            class="brand-mark"
+            viewBox="0 0 40 40"
+            width="36"
+            height="36"
+            aria-hidden="true"
+          >
+            <path
+              d="M6 31V9l14 15L34 9v22M6 9l14 15 14-15"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="3"
+              stroke-linejoin="round"
+            /></svg
+          ><span class="brand-name"
+            >苗怡飞<small>AI 产品 / AI 工程</small></span
+          ></a
+        >
         <nav aria-label="主导航">
           <a href="#experience">经历</a><a href="#works">作品</a
           ><a href="#resume">简历</a><a href="#contact">联系</a>
@@ -27,8 +46,14 @@
     <main id="main">
       <section class="hero shell">
         <div class="hero-main">
-          <p class="eyebrow">软件工程本科 · 2028 届</p>
-          <h1>让 AI 的每条结论，<br /><em>都能回到依据。</em></h1>
+          <p class="eyebrow hero-eyebrow">
+            <span aria-hidden="true"></span>软件工程本科 · 2028 届
+          </p>
+          <h1>
+            让 AI 的每条结论，<br /><em
+              >都能回到<span class="title-mark">依据。</span></em
+            >
+          </h1>
           <p class="position">
             结论要有依据，动作要有边界。<br />验证到哪里，就写到哪里。
           </p>
@@ -65,45 +90,106 @@
             ></a>
           </div>
         </div>
-        <aside class="intro-sheet" aria-label="个人简介">
-          <div class="intro-person">
-            <img
-              class="portrait"
-              src="assets/miao-yifei.png"
-              alt="苗怡飞的简历证件照"
-              width="72"
-              height="96"
-            />
-            <div>
-              <p>苗怡飞</p>
-              <span>郑州 · 本科在读</span>
+        <figure
+          class="hero-art"
+          aria-label="Resume Protocol 来源、检索和授权的机制示意"
+        >
+          <figcaption>
+            <span>Resume Protocol</span><span>机制示意</span>
+          </figcaption>
+          <div class="trace-canvas">
+            <svg
+              class="trace-lines"
+              viewBox="0 0 480 400"
+              preserveAspectRatio="none"
+              aria-hidden="true"
+            >
+              <path
+                d="M105 95V208H355V324"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+              />
+              <circle cx="105" cy="95" r="4" />
+              <circle cx="355" cy="324" r="4" />
+            </svg>
+            <div class="trace-card trace-source">
+              <span class="trace-step">01 / 来源</span
+              ><strong>先有原文，再有事实。</strong>
+              <div class="trace-fields">
+                <code>source_id</code><code>source_quote</code
+                ><code>source_position</code>
+              </div>
+              <span class="trace-edge" aria-hidden="true"></span>
+            </div>
+            <div class="trace-card trace-scope">
+              <span class="trace-step">02 / 检索</span
+              ><strong>范围由服务端绑定。</strong>
+              <p><code>user_id</code><span>+</span><code>candidate_id</code></p>
+            </div>
+            <div class="trace-card trace-tools">
+              <span class="trace-step">03 / 授权</span
+              ><strong>模型不能授予自己权限。</strong>
+              <p>allowedTools · 确定性计算</p>
             </div>
           </div>
-          <dl>
-            <div>
-              <dt>学校 / 专业</dt>
-              <dd>郑州轻工业大学<br />软件工程</dd>
-            </div>
-            <div>
-              <dt>专业排名</dt>
-              <dd>
-                <strong>12<span>/121</span></strong
-                ><small>前 10%</small>
-              </dd>
-            </div>
-            <div>
-              <dt>实习安排</dt>
-              <dd>每周 5 天 · 连续 3 个月</dd>
-            </div>
-          </dl>
-          <p class="availability">正在寻找 2027 年暑期实习</p>
-        </aside>
+          <a class="art-link" href="#case-resume"
+            >查看这套机制的实现<svg
+              viewBox="0 0 24 24"
+              width="18"
+              height="18"
+              aria-hidden="true"
+            >
+              <path
+                d="M5 19 19 5M5 5h14v14"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+              /></svg
+          ></a>
+        </figure>
       </section>
+
+      <aside class="intro-sheet shell" aria-label="个人简介">
+        <div class="intro-person">
+          <img
+            class="portrait"
+            src="assets/miao-yifei.png"
+            alt="苗怡飞的简历证件照"
+            width="72"
+            height="96"
+          />
+          <div>
+            <p>苗怡飞</p>
+            <span>郑州 · 本科在读</span>
+          </div>
+        </div>
+        <dl>
+          <div>
+            <dt>学校 / 专业</dt>
+            <dd>郑州轻工业大学<br />软件工程</dd>
+          </div>
+          <div>
+            <dt>专业排名</dt>
+            <dd>
+              <strong>12<span>/121</span></strong
+              ><small>前 10%</small>
+            </dd>
+          </div>
+          <div>
+            <dt>实习安排</dt>
+            <dd>每周 5 天 · 连续 3 个月</dd>
+          </div>
+        </dl>
+        <p class="availability">正在寻找 2027 年暑期实习</p>
+      </aside>
 
       <section class="section shell" id="experience">
         <div class="section-heading">
           <div>
-            <p class="eyebrow">实际工作</p>
+            <p class="eyebrow section-eyebrow">
+              <span>01</span>Experience<span class="eyebrow-cn">实际工作</span>
+            </p>
             <h2>把规则落到工作流里。</h2>
           </div>
           <span class="section-note">实习经历</span>
@@ -169,7 +255,11 @@
         ><span class="anchor-alias" id="cases"></span>
         <div class="section-heading">
           <div>
-            <p class="eyebrow">项目与实现</p>
+            <p class="eyebrow section-eyebrow">
+              <span>02</span>Selected work<span class="eyebrow-cn"
+                >项目与实现</span
+              >
+            </p>
             <h2>从做过的事，到能点开的作品。</h2>
           </div>
           <p class="section-note">看实现，也看验证边界。</p>
@@ -756,7 +846,9 @@
       <section class="section shell" id="resume">
         <div class="section-heading">
           <div>
-            <p class="eyebrow">简历概览</p>
+            <p class="eyebrow section-eyebrow">
+              <span>03</span>About me<span class="eyebrow-cn">简历概览</span>
+            </p>
             <h2>经历之外，关于我。</h2>
           </div>
           <a
@@ -833,9 +925,7 @@
           </div>
         </div>
         <div class="resume-download">
-          <p>
-            完整经历、项目职责与联系方式，可在单页 PDF 简历中查看。
-          </p>
+          <p>完整经历、项目职责与联系方式，可在单页 PDF 简历中查看。</p>
           <a
             class="button"
             href="assets/miao-yifei-resume-2026.pdf"
@@ -858,7 +948,11 @@
 
       <section class="contact shell" id="contact">
         <div>
-          <p class="eyebrow">一起做有依据的 AI 应用</p>
+          <p class="eyebrow section-eyebrow">
+            <span>04</span>Contact<span class="eyebrow-cn"
+              >一起做有依据的 AI 应用</span
+            >
+          </p>
           <h2>欢迎聊聊实习机会。</h2>
           <p>
             优先远程，也考虑郑州及北上杭深。<br />每周可实习 5 天，预计连续 3
@@ -897,6 +991,7 @@
       </section>
     </main>
     <footer class="site-footer">
+      <div class="shell signature" aria-hidden="true">MIAO YIFEI</div>
       <div class="shell footer-inner">
         <span>苗怡飞 · 简历与作品集</span
         ><span
