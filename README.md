@@ -3,6 +3,7 @@
 融合个人简历、实习和六项作品的 HTML/CSS/JavaScript 主页，以及三个可交互的样例应用，部署于 GitHub Pages。
 
 - `index.html` / `style.css` / `site.js`：统一主页、作品筛选、可展开复盘与打印样式。
+- `theme.css`：深色科技风主题、卡片光边和背景网格，打印时保留浅色样式。
 - `assets/`：本人提供的简历原件、证件照与实际样例截图。
 - `DESIGN_SOURCES.md`：DevPortfolio 视觉参考与内容来源。
 - `case-studies-public.md`：已有项目的职责与验证边界。
