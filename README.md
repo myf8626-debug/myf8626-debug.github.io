@@ -1,8 +1,10 @@
 # 苗怡飞的个人作品集
 
-HTML/CSS 主页与三个可交互的样例应用，部署于 GitHub Pages。
+融合个人简历、实习和六项作品的 HTML/CSS/JavaScript 主页，以及三个可交互的样例应用，部署于 GitHub Pages。
 
-- `index.html` / `style.css`：个人主页与打印样式。
+- `index.html` / `style.css` / `site.js`：统一主页、作品筛选、可展开复盘与打印样式。
+- `assets/`：本人提供的简历原件、证件照与实际样例截图。
+- `DESIGN_SOURCES.md`：DevPortfolio 视觉参考与内容来源。
 - `case-studies-public.md`：已有项目的职责与验证边界。
 - `labs/`：岗位调研证据台、政策溯源问答、门店数据分析台。
 - `labs/source/`：三个项目可直接阅读的后端代码、测试及说明。
