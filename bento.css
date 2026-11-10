@@ -719,7 +719,7 @@ dialog::backdrop {
 }
 .modal-scroll .case-part h4 {
   font-size: 11px;
-  color: #61c3a6;
+  color: #237459;
   font-weight: 500;
   padding-top: 4px;
 }
@@ -839,7 +839,16 @@ dialog::backdrop {
 }
 .modal-scroll code {
   font-family: Consolas, monospace;
+  color: #237459;
+}
+.dark .modal-scroll .case-part h4 {
+  color: #61c3a6;
+}
+.dark .modal-scroll code {
   color: #79cdb8;
+}
+html:not(.dark) :focus-visible {
+  outline-color: #237459;
 }
 a:hover .store-preview {
   transform: rotate(-4deg) translateY(-2px);
