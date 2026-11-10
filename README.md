@@ -1,11 +1,13 @@
 # 苗怡飞的个人作品集
 
-融合个人简历、实习和六项作品的 HTML/CSS/JavaScript 主页，以及三个可交互的样例应用，部署于 GitHub Pages。
+基于 [Vighnesh-Gaddam/Portfolio](https://github.com/Vighnesh-Gaddam/Portfolio) 的 MIT 模板制作的静态适配版，融合个人简历、实习和六项作品，部署于 GitHub Pages。个人介绍居中，项目分列两侧；支持详情弹窗、深浅主题与手机布局。
 
-- `index.html` / `style.css` / `site.js`：统一主页、作品筛选、可展开复盘与打印样式。
-- `theme.css`：深色科技风主题、卡片光边和背景网格，打印时保留浅色样式。
+- `index.html` / `bento.css` / `bento.js`：卡片主页、主题切换和原生 dialog 详情。首页默认深色。
+- `work.html` / `style.css` / `theme.css` / `site.js`：完整项目复盘、实习与教育信息，保留筛选、深链接及打印样式。禁用 JavaScript 时，主页卡片会跳转到此页。
+- `vendor/vighnesh-portfolio/theme-tokens.css`：沿用的模板颜色变量。
+- `licenses/vighnesh-portfolio-MIT.txt`：原作者 MIT 许可及版权声明。
 - `assets/`：本人提供的简历原件、证件照与实际样例截图。
-- `DESIGN_SOURCES.md`：DevPortfolio 视觉参考与内容来源。
+- `DESIGN_SOURCES.md`：上游模板版本、适配说明与内容来源。
 - `case-studies-public.md`：已有项目的职责与验证边界。
 - `labs/`：岗位调研证据台、政策溯源问答、门店数据分析台。
 - `labs/source/`：三个项目可直接阅读的后端代码、测试及说明。

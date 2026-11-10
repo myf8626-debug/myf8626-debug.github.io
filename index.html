@@ -1,590 +1,745 @@
 <!doctype html>
-<html lang="zh-CN">
+<html lang="zh-CN" class="dark">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <meta
       name="description"
-      content="苗怡飞的简历与作品集：AI 产品、AI 工程、候选人知识库、数据审核与可操作样例。郑州轻工业大学软件工程，2028 届。"
+      content="苗怡飞的个人作品集。AI 产品与工程，关注事实溯源、检索隔离与工具授权。郑州轻工业大学软件工程，2028 届。"
     />
-    <meta name="theme-color" content="#090d19" />
+    <meta name="theme-color" content="#080808" />
     <link rel="canonical" href="https://myf8626-debug.github.io/" />
-    <title>苗怡飞 · 简历与作品集</title>
-    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
-    <link rel="stylesheet" href="style.css?v=20261109-cards" />
-    <link rel="stylesheet" href="theme.css?v=20261109-dark" />
-    <script defer src="site.js"></script>
+    <title>苗怡飞 · AI 产品与工程作品集</title>
+    <link rel="icon" href="assets/favicon.svg" />
+    <script>
+      try {
+        if (localStorage.getItem("portfolio-theme") === "light")
+          document.documentElement.classList.remove("dark");
+      } catch (e) {}
+    </script>
+    <link rel="stylesheet" href="vendor/vighnesh-portfolio/theme-tokens.css" />
+    <link rel="stylesheet" href="bento.css?v=20261110" />
+    <script defer src="bento.js?v=20261110"></script>
   </head>
   <body>
-    <a class="skip-link" href="#main">跳到正文</a>
-    <header class="site-header">
-      <div class="shell header-inner">
-        <a class="name" href="#main"
-          ><svg
-            class="brand-mark"
-            viewBox="0 0 40 40"
-            width="36"
-            height="36"
-            aria-hidden="true"
-          >
-            <path
-              d="M6 31V9l14 15L34 9v22M6 9l14 15 14-15"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="3"
-              stroke-linejoin="round"
-            /></svg
-          ><span class="brand-name"
-            >苗怡飞<small>AI 产品 / AI 工程</small></span
-          ></a
-        >
-        <nav aria-label="主导航">
-          <a href="#experience">经历</a><a href="#works">作品</a
-          ><a href="#resume">简历</a><a href="#contact">联系</a>
-        </nav>
-      </div>
+    <a class="skip-link" href="#main">跳到作品</a>
+    <header class="masthead page-width">
+      <a class="wordmark" href="./">苗怡飞<span>作品集 / 2026</span></a>
+      <nav aria-label="主导航">
+        <a href="work.html">全部作品</a
+        ><a href="work.html#case-internship" data-modal="case-internship"
+          >实习</a
+        ><a href="work.html#resume" data-modal="resume">简历</a>
+      </nav>
     </header>
-    <main id="main">
-      <section class="profile-board shell" aria-label="个人简介与项目卡片">
-        <article class="profile-card" aria-label="苗怡飞的个人简介">
-          <span class="profile-availability"
-            ><i aria-hidden="true"></i>寻找 2027 年暑期实习</span
-          >
-          <div class="profile-avatar">
+    <main id="main" class="page-width">
+      <div class="bento-grid" id="works">
+        <article class="bento-card profile-card" aria-labelledby="profile-name">
+          <p class="available">
+            <i aria-hidden="true"></i>寻找 2027 年暑期实习
+          </p>
+          <div class="identity">
             <img
               src="assets/miao-yifei.png"
               alt="苗怡飞的简历证件照"
-              width="108"
-              height="144"
-            /><span>2028 届</span>
-          </div>
-          <h1>苗怡飞</h1>
-          <p class="profile-role">AI 产品 / AI 工程</p>
-          <p class="profile-position">
-            让 AI 的每条结论，<br />都能回到<span>依据。</span>
-          </p>
-          <div class="profile-school">
-            <p>郑州轻工业大学 · 软件工程</p>
-            <span>郑州 · 本科在读</span>
-          </div>
-          <dl class="profile-stats">
+              width="88"
+              height="117"
+            />
             <div>
-              <dt>专业排名</dt>
-              <dd>12<span>/121</span></dd>
-              <small>前 10%</small>
+              <h1 id="profile-name">苗怡飞</h1>
+              <p>MIAO YIFEI</p>
+              <span>AI 产品 / AI 工程</span>
             </div>
-            <div>
-              <dt>每周实习</dt>
-              <dd>5<span>天</span></dd>
-              <small>连续 3 个月</small>
-            </div>
-          </dl>
-          <a
-            class="button profile-resume"
-            href="assets/miao-yifei-resume-2026.pdf"
-            download="苗怡飞-简历-2026.pdf"
-            >下载我的简历
-            <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
+          </div>
+          <p class="profile-statement">结论要有依据，<br />动作要有边界。</p>
+          <p class="profile-principle">验证到哪里，就写到哪里。</p>
+          <div class="profile-bottom">
+            <span>郑州 · 软件工程本科</span><span>2028 届</span>
+          </div>
+          <p class="profile-schedule">每周 5 天 · 连续 3 个月</p>
+        </article>
+        <a
+          class="bento-card resume-card"
+          href="work.html#case-resume"
+          data-modal="case-resume"
+          ><span class="card-label">团队协作 · 我的核心层贡献</span
+          ><span class="card-arrow"
+            ><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
               <path
-                d="M5 19 19 5M5 5h14v14"
+                d="M7 17 17 7M7 7h10v10"
                 fill="none"
                 stroke="currentColor"
-                stroke-width="1.6"
+                stroke-width="1.7"
+                stroke-linecap="round"
+                stroke-linejoin="round"
               /></svg
-          ></a>
-          <div class="profile-links">
-            <a href="https://github.com/myf8626-debug"
-              >GitHub
-              <svg
+          ></span>
+          <div class="feature-symbol" aria-hidden="true">
+            <span>source</span><i></i><span>fact</span><i></i><span>claim</span>
+          </div>
+          <div class="card-copy">
+            <h2>Resume Protocol</h2>
+            <p>让求职事实有来源，让模型调用有边界。</p>
+            <span class="card-note">候选人知识库 / 检索隔离 / 工具授权</span>
+          </div></a
+        ><a
+          class="bento-card thesis-card"
+          href="work.html#case-thesis"
+          data-modal="case-thesis"
+          ><span class="card-label">独立开发 · MIT</span
+          ><span class="card-arrow"
+            ><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
+              <path
+                d="M7 17 17 7M7 7h10v10"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.7"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              /></svg
+          ></span>
+          <div class="paper-symbol" aria-hidden="true">
+            <i></i><i></i><i></i>
+          </div>
+          <div class="card-copy">
+            <h2>论文模板<br />保护工具</h2>
+            <p>格式有约束，引用有依据。</p>
+          </div></a
+        ><a
+          class="bento-card cloud-card"
+          href="work.html#case-cloud"
+          data-modal="case-cloud"
+          ><span class="card-label">团队协作 · 前端</span
+          ><span class="card-arrow"
+            ><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
+              <path
+                d="M7 17 17 7M7 7h10v10"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.7"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              /></svg></span
+          ><svg class="folder-symbol" viewBox="0 0 80 62" aria-hidden="true">
+            <path
+              d="M9 16h22l8 8h32v31H9zM9 16V9h23l7 7h32v8"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.5"
+            />
+            <path
+              d="m29 40 10-10 10 10M39 30v20"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.5"
+            />
+          </svg>
+          <div class="card-copy">
+            <h2>云栈<br />智能云盘</h2>
+            <p>文件、权限与异常状态。</p>
+          </div></a
+        ><a class="bento-card store-card" href="labs/store-evidence/"
+          ><span class="card-label">可操作样例 · 未接入模型</span
+          ><span class="card-arrow"
+            ><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
+              <path
+                d="M7 17 17 7M7 7h10v10"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.7"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              /></svg></span
+          ><img
+            class="store-preview"
+            src="assets/store-evidence.jpg"
+            alt="门店数据分析台的实际样例界面"
+            width="1044"
+            height="640"
+          />
+          <div class="card-copy">
+            <h2>门店数据<br />分析台</h2>
+            <p>从业务问题，到可重跑的 SQL。</p>
+            <span class="card-note">多表关联 / 数据清洗</span>
+          </div></a
+        ><a class="bento-card job-card" href="labs/job-evidence/"
+          ><span class="card-label">可操作样例</span
+          ><span class="card-arrow"
+            ><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
+              <path
+                d="M7 17 17 7M7 7h10v10"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.7"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              /></svg></span
+          ><img
+            class="mini-preview"
+            src="assets/job-evidence.jpg"
+            alt="岗位调研证据台的实际样例界面"
+            width="1044"
+            height="640"
+          />
+          <div class="card-copy">
+            <h2>岗位调研<br />证据台</h2>
+            <p>声称与证据，逐条对应。</p>
+          </div></a
+        ><a class="bento-card policy-card" href="labs/policy-evidence/"
+          ><span class="card-label">可操作样例</span
+          ><span class="card-arrow"
+            ><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
+              <path
+                d="M7 17 17 7M7 7h10v10"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.7"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              /></svg></span
+          ><img
+            class="mini-preview"
+            src="assets/policy-evidence.jpg"
+            alt="校规证据问答台的实际样例界面"
+            width="1044"
+            height="640"
+          />
+          <div class="card-copy">
+            <h2>校规证据<br />问答台</h2>
+            <p>查出处，也说明不确定。</p>
+          </div></a
+        ><a
+          class="bento-card experience-card"
+          href="work.html#case-internship"
+          data-modal="case-internship"
+          ><span class="card-label">实习经历 · 2026.02—04</span
+          ><span class="card-arrow"
+            ><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
+              <path
+                d="M7 17 17 7M7 7h10v10"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.7"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              /></svg
+          ></span>
+          <div class="card-copy">
+            <span class="work-marker">数据中台</span>
+            <h2>潮向信息科技</h2>
+            <p>用 Codex 落地 AI 辅助数据审核工作流。</p>
+            <div class="mini-flow">
+              <span>规则检查</span><i></i><span>异常记录</span><i></i
+              ><span>人工复核</span>
+            </div>
+          </div></a
+        ><a
+          class="bento-card education-card"
+          href="work.html#resume"
+          data-modal="resume"
+          ><span class="card-label">教育与获奖</span
+          ><span class="card-arrow"
+            ><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
+              <path
+                d="M7 17 17 7M7 7h10v10"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.7"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              /></svg
+          ></span>
+          <div class="card-copy">
+            <span class="work-marker">2024.09—2028.06</span>
+            <h2>郑州轻工业大学</h2>
+            <p>软件工程本科 · 专业排名 12/121</p>
+            <span class="card-note">国家励志奖学金 / 省级竞赛奖项</span>
+          </div></a
+        >
+        <section class="bento-card connect-card" aria-label="简历与联系">
+          <div class="social-pair">
+            <a
+              href="https://github.com/myf8626-debug"
+              aria-label="查看我的 GitHub"
+              ><svg
                 viewBox="0 0 24 24"
-                width="18"
-                height="18"
+                width="27"
+                height="27"
                 aria-hidden="true"
               >
                 <path
-                  d="M5 19 19 5M5 5h14v14"
+                  d="M9 19c-4 1-4-2-6-2m12 5v-4c0-1 .1-2-.5-2.5 3-.3 6-1.5 6-6.5 0-1.5-.5-2.7-1.5-3.7.2-1 .2-2-.4-3.3 0 0-1.2-.4-3.6 1.4a12 12 0 0 0-6 0C6.6 1.6 5.4 2 5.4 2 4.8 3.3 4.8 4.3 5 5.3 4 6.3 3.5 7.5 3.5 9c0 5 3 6.2 6 6.5C9 16 9 17 9 18v4"
                   fill="none"
                   stroke="currentColor"
                   stroke-width="1.6"
-                /></svg></a
-            ><a href="mailto:378122428@qq.com"
-              >联系我
-              <svg
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                /></svg
+              ><span>GitHub</span></a
+            ><a href="mailto:378122428@qq.com" aria-label="发邮件给苗怡飞"
+              ><svg
                 viewBox="0 0 24 24"
-                width="18"
-                height="18"
+                width="27"
+                height="27"
                 aria-hidden="true"
               >
+                <rect
+                  x="3"
+                  y="5"
+                  width="18"
+                  height="14"
+                  rx="3"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.6"
+                />
                 <path
-                  d="M5 19 19 5M5 5h14v14"
+                  d="m4 7 8 6 8-6"
                   fill="none"
                   stroke="currentColor"
                   stroke-width="1.6"
                 /></svg
-            ></a>
-          </div>
-          <p class="profile-motto">
-            结论要有依据，动作要有边界。<br />验证到哪里，就写到哪里。
-          </p>
-        </article>
-        <div class="board-column board-left">
-          <p class="board-heading"><span>项目实现</span><span>03</span></p>
-          <a class="board-item board-resume" href="#case-resume"
-            ><div class="board-card-top">
-              <span class="board-icon"
-                ><svg
-                  viewBox="0 0 24 24"
-                  width="24"
-                  height="24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="1.5"
-                  stroke-linejoin="round"
-                  aria-hidden="true"
-                >
-                  <rect x="5" y="3" width="14" height="18" rx="2" />
-                  <path d="M9 8h6M9 12h6M9 16h3" /></svg></span
-              ><span class="board-meta">团队协作</span
-              ><span class="board-arrow"
-                ><svg
-                  viewBox="0 0 24 24"
-                  width="18"
-                  height="18"
-                  aria-hidden="true"
-                >
-                  <path
-                    d="M5 19 19 5M5 5h14v14"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="1.6"
-                  /></svg
-              ></span>
-            </div>
-            <div class="board-card-body">
-              <div>
-                <h3>Resume Protocol</h3>
-                <p>候选人事实溯源、检索隔离与工具授权。</p>
-              </div>
-            </div>
-            <span class="board-action"
-              >查看我的贡献<span aria-hidden="true"></span></span></a
-          ><a class="board-item board-thesis" href="#case-thesis"
-            ><div class="board-card-top">
-              <span class="board-icon"
-                ><svg
-                  viewBox="0 0 24 24"
-                  width="24"
-                  height="24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="1.5"
-                  stroke-linejoin="round"
-                  aria-hidden="true"
-                >
-                  <path
-                    d="M3 4h7a3 3 0 0 1 3 3v14a4 4 0 0 0-4-3H3zM13 7a3 3 0 0 1 3-3h5v14h-5a3 3 0 0 0-3 3M6 8h3M6 11h3"
-                  /></svg></span
-              ><span class="board-meta">独立开发 · MIT</span
-              ><span class="board-arrow"
-                ><svg
-                  viewBox="0 0 24 24"
-                  width="18"
-                  height="18"
-                  aria-hidden="true"
-                >
-                  <path
-                    d="M5 19 19 5M5 5h14v14"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="1.6"
-                  /></svg
-              ></span>
-            </div>
-            <div class="board-card-body">
-              <div>
-                <h3>论文模板保护工具</h3>
-                <p>用哈希快照与检查脚本，守住论文格式和依据。</p>
-              </div>
-            </div>
-            <span class="board-action"
-              >查看实现与验证边界<span aria-hidden="true"></span></span></a
-          ><a class="board-item board-cloud" href="#case-cloud"
-            ><div class="board-card-top">
-              <span class="board-icon"
-                ><svg
-                  viewBox="0 0 24 24"
-                  width="24"
-                  height="24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="1.5"
-                  stroke-linejoin="round"
-                  aria-hidden="true"
-                >
-                  <path
-                    d="M3 7a2 2 0 0 1 2-2h5l2 3h7a2 2 0 0 1 2 2v9H3zM9 14l3-3 3 3M12 11v6"
-                  /></svg></span
-              ><span class="board-meta">团队协作 · 前端</span
-              ><span class="board-arrow"
-                ><svg
-                  viewBox="0 0 24 24"
-                  width="18"
-                  height="18"
-                  aria-hidden="true"
-                >
-                  <path
-                    d="M5 19 19 5M5 5h14v14"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="1.6"
-                  /></svg
-              ></span>
-            </div>
-            <div class="board-card-body">
-              <div>
-                <h3>云栈 · 智能云盘</h3>
-                <p>文件管理、权限交互与异常状态处理。</p>
-              </div>
-            </div>
-            <span class="board-action"
-              >查看前端工作<span aria-hidden="true"></span></span
-          ></a>
-        </div>
-        <div class="board-column board-right">
-          <p class="board-heading"><span>可操作样例</span><span>03</span></p>
-          <a class="board-item board-store" href="labs/store-evidence/"
-            ><div class="board-card-top">
-              <span class="board-icon"
-                ><svg
-                  viewBox="0 0 24 24"
-                  width="24"
-                  height="24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="1.5"
-                  stroke-linejoin="round"
-                  aria-hidden="true"
-                >
-                  <path
-                    d="M4 20V4M4 20h17M9 16v-4M14 16V8M19 16V5"
-                  /></svg></span
-              ><span class="board-meta">交互样例</span
-              ><span class="board-arrow"
-                ><svg
-                  viewBox="0 0 24 24"
-                  width="18"
-                  height="18"
-                  aria-hidden="true"
-                >
-                  <path
-                    d="M5 19 19 5M5 5h14v14"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="1.6"
-                  /></svg
-              ></span>
-            </div>
-            <div class="board-card-body">
-              <div>
-                <h3>门店数据分析台</h3>
-                <p>从业务问题到可重跑的 SQL 与分析结果。</p>
-              </div>
-              <img
-                class="board-thumb"
-                src="assets/store-evidence.jpg"
-                alt=""
-                width="1044"
-                height="640"
-                loading="lazy"
-              />
-            </div>
-            <span class="board-action"
-              >运行样例<span aria-hidden="true"></span></span></a
-          ><a class="board-item board-job" href="labs/job-evidence/"
-            ><div class="board-card-top">
-              <span class="board-icon"
-                ><svg
-                  viewBox="0 0 24 24"
-                  width="24"
-                  height="24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="1.5"
-                  stroke-linejoin="round"
-                  aria-hidden="true"
-                >
-                  <rect x="3" y="7" width="18" height="14" rx="2" />
-                  <path d="M8 7V4h8v3M3 12h18M10 12v3h4v-3" /></svg></span
-              ><span class="board-meta">交互样例</span
-              ><span class="board-arrow"
-                ><svg
-                  viewBox="0 0 24 24"
-                  width="18"
-                  height="18"
-                  aria-hidden="true"
-                >
-                  <path
-                    d="M5 19 19 5M5 5h14v14"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="1.6"
-                  /></svg
-              ></span>
-            </div>
-            <div class="board-card-body">
-              <div>
-                <h3>岗位调研证据台</h3>
-                <p>逐条核对候选人声称与原始证据。</p>
-              </div>
-              <img
-                class="board-thumb"
-                src="assets/job-evidence.jpg"
-                alt=""
-                width="1044"
-                height="640"
-                loading="lazy"
-              />
-            </div>
-            <span class="board-action"
-              >运行样例<span aria-hidden="true"></span></span></a
-          ><a class="board-item board-policy" href="labs/policy-evidence/"
-            ><div class="board-card-top">
-              <span class="board-icon"
-                ><svg
-                  viewBox="0 0 24 24"
-                  width="24"
-                  height="24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="1.5"
-                  stroke-linejoin="round"
-                  aria-hidden="true"
-                >
-                  <path
-                    d="M12 3 3 7v5c0 5 9 9 9 9s9-4 9-9V7zM8 12l3 3 5-6"
-                  /></svg></span
-              ><span class="board-meta">交互样例</span
-              ><span class="board-arrow"
-                ><svg
-                  viewBox="0 0 24 24"
-                  width="18"
-                  height="18"
-                  aria-hidden="true"
-                >
-                  <path
-                    d="M5 19 19 5M5 5h14v14"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="1.6"
-                  /></svg
-              ></span>
-            </div>
-            <div class="board-card-body">
-              <div>
-                <h3>校规证据问答台</h3>
-                <p>回答有出处，冲突与信息不足明确标注。</p>
-              </div>
-              <img
-                class="board-thumb"
-                src="assets/policy-evidence.jpg"
-                alt=""
-                width="1044"
-                height="640"
-                loading="lazy"
-              />
-            </div>
-            <span class="board-action"
-              >运行样例<span aria-hidden="true"></span></span
-          ></a>
-          <p class="board-footnote">人工构造数据 · 真实模型尚未接入</p>
-        </div>
-      </section>
-
-      <section class="section shell" id="experience">
-        <div class="section-heading">
-          <div>
-            <p class="eyebrow section-eyebrow">
-              <span>01</span>Experience<span class="eyebrow-cn">实际工作</span>
-            </p>
-            <h2>把规则落到工作流里。</h2>
-          </div>
-          <span class="section-note">实习经历</span>
-        </div>
-        <article class="experience-row">
-          <div class="timeline">
-            <span>2026.02—04</span><small>上海潮向信息科技有限公司</small>
-          </div>
-          <div class="experience-copy">
-            <h3>数据中台 · AI 辅助数据质量审核</h3>
-            <p>
-              负责商品与门店数据的跨源校验，主动提出并用 Codex 落地 AI
-              辅助审查工作流。把规则检查、异常记录和人工复核接起来，对依据不足的情况保留人工判断。
-            </p>
-            <div class="process" aria-label="工作流程">
-              <span>规则检查</span><i aria-hidden="true"></i
-              ><span>异常记录</span><i aria-hidden="true"></i
-              ><span>人工复核</span>
-            </div>
-            <details class="case-detail" id="case-internship">
-              <summary>
-                展开实习复盘与验证边界<span
-                  class="expand-mark"
-                  aria-hidden="true"
-                ></span>
-              </summary>
-              <div class="detail-body">
-                <section class="case-part">
-                  <h4>问题</h4>
-                  <p>
-                    在潮向信息科技的数据中台实习时，我负责商品和门店数据的跨源校验。同一个对象的字段值需要判定，还要对照两个来源；遇到口径冲突，不能看到其中一个结果就结束。重复检查很耗时，但这些任务又不能只追求处理快：一旦判错，后面还得回头找依据。
-                  </p>
-                </section>
-                <section class="case-part">
-                  <h4>判断</h4>
-                  <p>
-                    我主动提出用 AI
-                    辅助审查，但没有把目标定成让模型接管全部判断。规则能说清的部分先按规则检查，不能说清或缺少依据的部分保留人工复核。这样模型是在帮我整理审查过程，而不是替一个没有依据的结论盖章。
-                  </p>
-                </section>
-                <section class="case-part">
-                  <h4>做法</h4>
-                  <p>
-                    我用 Codex
-                    开发和迭代工作流，把过程拆成规则检查、异常记录、人工复核。出现异常时，先回到字段判定、双来源比对和口径冲突这些具体任务，检查规则本身有没有缺口。如果规则设计有问题就改规则；如果规则明确而模型判断偏离，再调整模型使用方式。不靠反复调提示词掩盖规则问题，没有依据的情形仍保留人工判定。
-                  </p>
-                </section>
-                <section class="case-part">
-                  <h4>结果</h4>
-                  <p>
-                    这套工作流由我主动提出并独立落地，实习时间是
-                    2026.02—04。现在能清楚说明的是职责、流程和判断原则，具体误报案例已经记不清，因此这里只说明处理逻辑。当前没有可供核对的计时样本与误报统计，效率提升幅度和审核准确率改善尚未验证。可展示的结果限于工作流落地，不能据此量化审核效果或宣称模型判断更准确。
-                  </p>
-                </section>
-              </div>
-            </details>
-          </div>
-        </article>
-      </section>
-
-      <section class="section shell" id="works">
-        <span class="anchor-alias" id="labs"></span
-        ><span class="anchor-alias" id="cases"></span>
-        <div class="section-heading">
-          <div>
-            <p class="eyebrow section-eyebrow">
-              <span>02</span>Selected work<span class="eyebrow-cn"
-                >项目与实现</span
-              >
-            </p>
-            <h2>从做过的事，到能点开的作品。</h2>
-          </div>
-          <p class="section-note">看实现，也看验证边界。</p>
-        </div>
-        <div class="project-toolbar">
-          <div class="filters" role="group" aria-label="筛选作品" hidden>
-            <button type="button" data-filter="all" aria-pressed="true">
-              全部作品</button
-            ><button
-              type="button"
-              data-filter="implementation"
-              aria-pressed="false"
+              ><span>邮箱</span></a
             >
-              项目实现</button
-            ><button type="button" data-filter="sample" aria-pressed="false">
-              交互样例
-            </button>
           </div>
-          <p id="project-count" class="section-note" aria-live="polite">
-            6 项作品
-          </p>
+          <a
+            class="connect-button"
+            href="work.html#contact"
+            data-modal="contact"
+            >简历与联系
+            <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
+              <path
+                d="M7 17 17 7M7 7h10v10"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.7"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              /></svg
+          ></a>
+        </section>
+      </div>
+      <p class="sample-disclosure">
+        三个交互样例使用人工构造数据，真实模型尚未接入。已有项目的个人职责与验证边界可点击卡片查看。
+      </p>
+    </main>
+    <footer class="page-width footer">
+      <span>© 2026 苗怡飞 · 让结论回到依据</span
+      ><span
+        >基于
+        <a href="https://github.com/Vighnesh-Gaddam/Portfolio"
+          >Vighnesh Portfolio</a
+        >
+        · <a href="licenses/vighnesh-portfolio-MIT.txt">MIT</a></span
+      >
+    </footer>
+    <button
+      class="theme-toggle"
+      type="button"
+      aria-label="切换为浅色主题"
+      hidden
+    >
+      <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">
+        <circle
+          cx="12"
+          cy="12"
+          r="4"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.5"
+        />
+        <path
+          d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.5 1.5m11 11L19 19M5 19l1.5-1.5m11-11L19 5"
+          stroke="currentColor"
+          stroke-width="1.5"
+        />
+      </svg>
+    </button>
+    <dialog id="detail-dialog" aria-labelledby="dialog-title">
+      <div class="dialog-header">
+        <div>
+          <p class="dialog-kicker">经历与实现</p>
+          <h2 id="dialog-title"></h2>
         </div>
-        <p class="sample-note">
-          交互样例使用人工构造数据，真实模型尚未接入；源码与检查记录可在各项目中查看。
-        </p>
-        <article class="project" id="work-resume" data-kind="implementation">
-          <div class="project-top">
-            <span class="project-number">01</span>
-            <p>2026.09 · 团队协作</p>
-          </div>
-          <div class="project-grid">
-            <div class="project-visual">
-              <div class="system-preview">
-                <p class="preview-label">Candidate Knowledge Base · 实现示意</p>
-                <div class="evidence-document">
-                  <span>事实来源</span><strong>上传文档</strong>
-                  <div class="field-row">
-                    <code>source_id</code><code>source_quote</code
-                    ><code>source_position</code>
-                  </div>
+        <button class="close-dialog" type="button" aria-label="关闭详情">
+          <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
+            <path
+              d="m6 6 12 12M6 18 18 6"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.6"
+            />
+          </svg>
+        </button>
+      </div>
+      <div id="dialog-content" class="modal-scroll"></div>
+    </dialog>
+    <template id="detail-case-resume"
+      ><article class="project" id="work-resume" data-kind="implementation">
+        <div class="project-top">
+          <span class="project-number">01</span>
+          <p>2026.09 · 团队协作</p>
+        </div>
+        <div class="project-grid">
+          <div class="project-visual">
+            <div class="system-preview">
+              <p class="preview-label">Candidate Knowledge Base · 实现示意</p>
+              <div class="evidence-document">
+                <span>事实来源</span><strong>上传文档</strong>
+                <div class="field-row">
+                  <code>source_id</code><code>source_quote</code
+                  ><code>source_position</code>
                 </div>
-                <div class="flow-line" aria-hidden="true"></div>
-                <div class="boundary-row">
-                  <span>user_id + candidate_id</span><strong>检索隔离</strong>
-                </div>
-                <div class="boundary-row">
-                  <span>allowedTools</span><strong>服务端授权</strong>
-                </div>
-                <p class="preview-caption">
-                  模型可以选择任务，不能授予自己权限。
-                </p>
               </div>
-            </div>
-            <div class="project-copy">
-              <h3>Resume Protocol</h3>
-              <p class="project-description">
-                让求职事实有来源，让模型调用有边界。
+              <div class="flow-line" aria-hidden="true"></div>
+              <div class="boundary-row">
+                <span>user_id + candidate_id</span><strong>检索隔离</strong>
+              </div>
+              <div class="boundary-row">
+                <span>allowedTools</span><strong>服务端授权</strong>
+              </div>
+              <p class="preview-caption">
+                模型可以选择任务，不能授予自己权限。
               </p>
-              <dl class="project-facts">
-                <div>
-                  <dt>我的工作</dt>
-                  <dd>
-                    候选人知识库、scope-bound 检索、确定性工具授权与四个 Career
-                    Skill。
-                  </dd>
+            </div>
+          </div>
+          <div class="project-copy">
+            <h3>Resume Protocol</h3>
+            <p class="project-description">
+              让求职事实有来源，让模型调用有边界。
+            </p>
+            <dl class="project-facts">
+              <div>
+                <dt>我的工作</dt>
+                <dd>
+                  候选人知识库、scope-bound 检索、确定性工具授权与四个 Career
+                  Skill。
+                </dd>
+              </div>
+              <div>
+                <dt>验证边界</dt>
+                <dd>
+                  已实现职责内模块与回归检查；真实模型端到端验证尚未完成。
+                </dd>
+              </div>
+            </dl>
+            <div class="project-actions">
+              <a class="text-link" href="#case-resume"
+                >查看我的实现<svg
+                  viewBox="0 0 24 24"
+                  width="18"
+                  height="18"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M5 19 19 5M5 5h14v14"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.6"
+                  /></svg></a
+              ><a
+                class="text-link"
+                href="https://github.com/tbszz/Resume-Protocol"
+                >团队仓库<svg
+                  viewBox="0 0 24 24"
+                  width="18"
+                  height="18"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M5 19 19 5M5 5h14v14"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.6"
+                  /></svg
+              ></a>
+            </div>
+          </div>
+        </div>
+        <details class="case-detail" id="case-resume">
+          <summary>
+            问题、判断与实现细节<span
+              class="expand-mark"
+              aria-hidden="true"
+            ></span>
+          </summary>
+          <div class="detail-body">
+            <section class="case-part">
+              <h4>问题</h4>
+              <p>
+                在 AI 求职 Agent
+                里，岗位要求或模型猜测一旦混进候选人事实库，后续定制简历就可能写出这个人没做过的经历。团队项目里，我负责候选人知识库与工具授权这一层：既要让模型找得到背景，也要限制它能读谁的资料、能把什么当事实。
+              </p>
+            </section>
+            <section class="case-part">
+              <h4>判断</h4>
+              <p>
+                事实从哪里来、检索属于谁、工具能不能调用，都应该由代码决定。我没有把这些边界全交给提示词。模型可以选择任务做法，不能给自己的调用授权；出问题时，要能定位到具体的权限和证据记录。
+              </p>
+            </section>
+            <section class="case-part">
+              <h4>做法</h4>
+              <p>
+                事实记录保存 source_id / source_quote /
+                source_position，只从上传文档的统一写入路径抽取。检索按服务端持久化的
+                user_id + candidate_id
+                隔离，工具不暴露作用域字段，越权报错；证据包限制为 8 条事实、4
+                段原文、4000
+                字符。工具权限由服务端计算，模型输出不参与。回归测试曾发现，同轮查询教育、项目和技能时，trace
+                只留最后一次；我把覆盖写入改为本轮累加，保住前面的取证记录。
+              </p>
+            </section>
+            <section class="case-part">
+              <h4>结果</h4>
+              <p>
+                我还写了四个 Career Skill
+                和结论到证据的映射规则。可核对的产出是这一层的实现、测试和验收报告，其他团队模块不计入我的贡献。真实模型端到端验证尚未完成，本机缺少凭据。报告明确规定：检索
+                trace
+                三字段为空，回答却声称“知道”候选人背景，就判失败；不能用回答看似合理替代调用证据。
+              </p>
+            </section>
+          </div>
+        </details>
+      </article></template
+    >
+    <template id="detail-case-thesis"
+      ><article class="project" id="work-thesis" data-kind="implementation">
+        <div class="project-top">
+          <span class="project-number">03</span>
+          <p>2026.06 · 独立开发 / MIT 开源</p>
+        </div>
+        <div class="project-grid">
+          <div class="project-visual">
+            <div class="system-preview thesis-preview">
+              <p class="preview-label">draft-thesis-docx · 检查机制示意</p>
+              <div class="document-pair">
+                <div class="document-sheet">
+                  <span>学校模板</span>
+                  <div class="sheet-line long"></div>
+                  <div class="sheet-line"></div>
+                  <div class="sheet-line short"></div>
+                  <p>封面 / 前置部分</p>
                 </div>
-                <div>
-                  <dt>验证边界</dt>
-                  <dd>
-                    已实现职责内模块与回归检查；真实模型端到端验证尚未完成。
-                  </dd>
+                <div class="hash-gate">
+                  <span>哈希快照</span>
+                  <div class="gate-line"></div>
+                  <strong>前后比对</strong>
                 </div>
-              </dl>
-              <div class="project-actions">
-                <a class="text-link" href="#case-resume"
-                  >查看我的实现<svg
-                    viewBox="0 0 24 24"
-                    width="18"
-                    height="18"
-                    aria-hidden="true"
-                  >
-                    <path
-                      d="M5 19 19 5M5 5h14v14"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="1.6"
-                    /></svg></a
-                ><a
-                  class="text-link"
-                  href="https://github.com/tbszz/Resume-Protocol"
-                  >团队仓库<svg
-                    viewBox="0 0 24 24"
-                    width="18"
-                    height="18"
-                    aria-hidden="true"
-                  >
-                    <path
-                      d="M5 19 19 5M5 5h14v14"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="1.6"
-                    /></svg
-                ></a>
+                <div class="document-sheet">
+                  <span>改写后文档</span>
+                  <div class="sheet-line long"></div>
+                  <div class="sheet-line"></div>
+                  <div class="sheet-line short"></div>
+                  <p>保护边界核对</p>
+                </div>
+              </div>
+              <div class="preview-bottom">
+                <span>Python</span><span>10 个脚本</span
+                ><span>约 2,000 行</span>
               </div>
             </div>
           </div>
-          <details class="case-detail" id="case-resume">
+          <div class="project-copy">
+            <h3>draft-thesis-docx</h3>
+            <p class="project-description">
+              把论文格式规范，变成可检查的流程。
+            </p>
+            <dl class="project-facts">
+              <div>
+                <dt>我的工作</dt>
+                <dd>
+                  模板部件哈希快照、格式检查脚本，以及引用与结论的依据约束。
+                </dd>
+              </div>
+              <div>
+                <dt>验证边界</dt>
+                <dd>依据学校规范设计并实现，尚未在真实论文上验证。</dd>
+              </div>
+            </dl>
+            <div class="project-actions">
+              <a
+                class="text-link"
+                href="https://github.com/myf8626-debug/draft-thesis-docx"
+                >查看开源项目<svg
+                  viewBox="0 0 24 24"
+                  width="18"
+                  height="18"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M5 19 19 5M5 5h14v14"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.6"
+                  /></svg></a
+              ><a class="text-link" href="#case-thesis"
+                >阅读项目复盘<svg
+                  viewBox="0 0 24 24"
+                  width="18"
+                  height="18"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M5 19 19 5M5 5h14v14"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.6"
+                  /></svg
+              ></a>
+            </div>
+          </div>
+        </div>
+        <details class="case-detail" id="case-thesis">
+          <summary>
+            问题、判断与实现细节<span
+              class="expand-mark"
+              aria-hidden="true"
+            ></span>
+          </summary>
+          <div class="detail-body">
+            <section class="case-part">
+              <h4>问题</h4>
+              <p>
+                高校论文不是把正文写完就能交。学校模板对封面、声明页、目录、页眉、分页都有要求，AI
+                改正文时，很容易顺手动到这些地方。看起来只是调整一段结构，最后却可能整份格式都错。另一个麻烦是引用：文字写得很顺，参考文献却未必真实，人工复查的负担反而更大。
+              </p>
+            </section>
+            <section class="case-part">
+              <h4>判断</h4>
+              <p>
+                我先阅读学校的论文撰写规范，再据此设计
+                skill，例如郑州轻工业大学《毕业设计（论文）撰写规范》。我选择把模板和规范当作格式权威，不让模型凭习惯重排；大纲获批才进入正文。先把允许修改的范围说清楚，再讨论能生成多少内容。
+              </p>
+            </section>
+            <section class="case-part">
+              <h4>做法</h4>
+              <p>
+                脚本按指定边界保存前置内容、递归依赖和全局渲染部件的哈希，用于改写前后比对；差异按流程阻塞。其他脚本覆盖分节检查、页眉同步、字段刷新、三线表与图表审查、参考文献校验和页面渲染。skill
+                中禁止伪造参考文献、测试记录和无依据结论；引用真实性仍须查原文，不能由格式检查通过替代。
+              </p>
+            </section>
+            <section class="case-part">
+              <h4>结果</h4>
+              <p>
+                项目由我独立开发，以 MIT 许可证开源，使用 Python，包含 10
+                个脚本、约 2000
+                行代码。目前完成的是设计与脚本实现，尚未在真实论文上验证。没有可据此发布的模板覆盖率、缺陷拦截数量或完整流程验收结果。
+              </p>
+            </section>
+          </div>
+        </details>
+      </article></template
+    >
+    <template id="detail-case-cloud"
+      ><article class="project" id="work-cloud" data-kind="implementation">
+        <div class="project-top">
+          <span class="project-number">06</span>
+          <p>2026.03—05 · 团队项目 / 前端负责人</p>
+        </div>
+        <div class="project-grid">
+          <div class="project-visual">
+            <div class="system-preview cloud-preview">
+              <p class="preview-label">云栈 · 前端模块示意</p>
+              <div class="cloud-modules">
+                <div>
+                  <span>01</span><strong>文件上传</strong
+                  ><small>上传状态 / 失败重试</small>
+                </div>
+                <div>
+                  <span>02</span><strong>分类与检索</strong
+                  ><small>列表状态 / 查询结果</small>
+                </div>
+                <div>
+                  <span>03</span><strong>权限与展示</strong
+                  ><small>权限边界 / 数据一致性</small>
+                </div>
+              </div>
+              <p class="preview-caption">React · Ant Design · Axios</p>
+            </div>
+          </div>
+          <div class="project-copy">
+            <h3>云栈 · 智能云盘</h3>
+            <p class="project-description">
+              把文件操作与权限状态，落到具体界面。
+            </p>
+            <dl class="project-facts">
+              <div>
+                <dt>我的工作</dt>
+                <dd>
+                  文件上传、分类、权限、检索与数据展示页面；处理联调中的状态一致性问题。
+                </dd>
+              </div>
+              <div>
+                <dt>验证边界</dt>
+                <dd>省级获奖项目；当前展示个人职责，暂未提供在线演示入口。</dd>
+              </div>
+            </dl>
+            <div class="project-actions">
+              <a class="text-link" href="#case-cloud"
+                >查看职责与联调实践<svg
+                  viewBox="0 0 24 24"
+                  width="18"
+                  height="18"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M5 19 19 5M5 5h14v14"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.6"
+                  /></svg
+              ></a>
+            </div>
+          </div>
+        </div>
+        <details class="case-detail" id="case-cloud">
+          <summary>
+            个人职责与项目边界<span
+              class="expand-mark"
+              aria-hidden="true"
+            ></span>
+          </summary>
+          <div class="detail-body">
+            <section class="case-part">
+              <h4>职责</h4>
+              <p>
+                负责文件上传、分类、权限、检索与数据展示页面，进行前端结构拆分与状态流转设计。
+              </p>
+            </section>
+            <section class="case-part">
+              <h4>联调</h4>
+              <p>
+                核对页面状态与后端数据的一致性，定位并修复权限边界、上传失败重试、列表状态不同步等问题，梳理接口约定与异常码对照。
+              </p>
+            </section>
+            <section class="case-part">
+              <h4>边界</h4>
+              <p>
+                这是团队项目，我的职责限于前端及相关接口联调。当前页面未提供在线运行入口，不把示意图当作产品运行截图。
+              </p>
+            </section>
+          </div>
+        </details>
+      </article></template
+    >
+    <template id="detail-case-internship"
+      ><article class="experience-row">
+        <div class="timeline">
+          <span>2026.02—04</span><small>上海潮向信息科技有限公司</small>
+        </div>
+        <div class="experience-copy">
+          <h3>数据中台 · AI 辅助数据质量审核</h3>
+          <p>
+            负责商品与门店数据的跨源校验，主动提出并用 Codex 落地 AI
+            辅助审查工作流。把规则检查、异常记录和人工复核接起来，对依据不足的情况保留人工判断。
+          </p>
+          <div class="process" aria-label="工作流程">
+            <span>规则检查</span><i aria-hidden="true"></i><span>异常记录</span
+            ><i aria-hidden="true"></i><span>人工复核</span>
+          </div>
+          <details class="case-detail" id="case-internship">
             <summary>
-              问题、判断与实现细节<span
+              展开实习复盘与验证边界<span
                 class="expand-mark"
                 aria-hidden="true"
               ></span>
@@ -593,472 +748,36 @@
               <section class="case-part">
                 <h4>问题</h4>
                 <p>
-                  在 AI 求职 Agent
-                  里，岗位要求或模型猜测一旦混进候选人事实库，后续定制简历就可能写出这个人没做过的经历。团队项目里，我负责候选人知识库与工具授权这一层：既要让模型找得到背景，也要限制它能读谁的资料、能把什么当事实。
+                  在潮向信息科技的数据中台实习时，我负责商品和门店数据的跨源校验。同一个对象的字段值需要判定，还要对照两个来源；遇到口径冲突，不能看到其中一个结果就结束。重复检查很耗时，但这些任务又不能只追求处理快：一旦判错，后面还得回头找依据。
                 </p>
               </section>
               <section class="case-part">
                 <h4>判断</h4>
                 <p>
-                  事实从哪里来、检索属于谁、工具能不能调用，都应该由代码决定。我没有把这些边界全交给提示词。模型可以选择任务做法，不能给自己的调用授权；出问题时，要能定位到具体的权限和证据记录。
+                  我主动提出用 AI
+                  辅助审查，但没有把目标定成让模型接管全部判断。规则能说清的部分先按规则检查，不能说清或缺少依据的部分保留人工复核。这样模型是在帮我整理审查过程，而不是替一个没有依据的结论盖章。
                 </p>
               </section>
               <section class="case-part">
                 <h4>做法</h4>
                 <p>
-                  事实记录保存 source_id / source_quote /
-                  source_position，只从上传文档的统一写入路径抽取。检索按服务端持久化的
-                  user_id + candidate_id
-                  隔离，工具不暴露作用域字段，越权报错；证据包限制为 8 条事实、4
-                  段原文、4000
-                  字符。工具权限由服务端计算，模型输出不参与。回归测试曾发现，同轮查询教育、项目和技能时，trace
-                  只留最后一次；我把覆盖写入改为本轮累加，保住前面的取证记录。
+                  我用 Codex
+                  开发和迭代工作流，把过程拆成规则检查、异常记录、人工复核。出现异常时，先回到字段判定、双来源比对和口径冲突这些具体任务，检查规则本身有没有缺口。如果规则设计有问题就改规则；如果规则明确而模型判断偏离，再调整模型使用方式。不靠反复调提示词掩盖规则问题，没有依据的情形仍保留人工判定。
                 </p>
               </section>
               <section class="case-part">
                 <h4>结果</h4>
                 <p>
-                  我还写了四个 Career Skill
-                  和结论到证据的映射规则。可核对的产出是这一层的实现、测试和验收报告，其他团队模块不计入我的贡献。真实模型端到端验证尚未完成，本机缺少凭据。报告明确规定：检索
-                  trace
-                  三字段为空，回答却声称“知道”候选人背景，就判失败；不能用回答看似合理替代调用证据。
+                  这套工作流由我主动提出并独立落地，实习时间是
+                  2026.02—04。现在能清楚说明的是职责、流程和判断原则，具体误报案例已经记不清，因此这里只说明处理逻辑。当前没有可供核对的计时样本与误报统计，效率提升幅度和审核准确率改善尚未验证。可展示的结果限于工作流落地，不能据此量化审核效果或宣称模型判断更准确。
                 </p>
               </section>
             </div>
           </details>
-        </article>
-        <article class="project" id="work-store" data-kind="sample">
-          <div class="project-top">
-            <span class="project-number">02</span>
-            <p>2026.11 · 个人样例 / AI 辅助开发</p>
-          </div>
-          <div class="project-grid">
-            <div class="project-visual">
-              <a class="screenshot-link" href="labs/store-evidence/"
-                ><img
-                  src="assets/store-evidence.jpg"
-                  width="1044"
-                  height="640"
-                  loading="lazy"
-                  alt="门店数据分析台的真实运行截图，展示可编辑 SQL、有效订单数和退款占比"
-                /><span>实际运行界面 · 模拟数据</span></a
-              >
-            </div>
-            <div class="project-copy">
-              <h3>门店数据分析台</h3>
-              <p class="project-description">
-                业务问题可以点开，计算结果可以重跑。
-              </p>
-              <dl class="project-facts">
-                <div>
-                  <dt>我的工作</dt>
-                  <dd>多表 SQL、订单清洗、退款预聚合、月度环比及结果导出。</dd>
-                </div>
-                <div>
-                  <dt>验证边界</dt>
-                  <dd>
-                    20 行模拟订单；19 项回归检查通过。固定问题映射
-                    SQL，未接入模型。
-                  </dd>
-                </div>
-              </dl>
-              <div class="project-actions">
-                <a class="text-link" href="labs/store-evidence/"
-                  >打开交互样例<svg
-                    viewBox="0 0 24 24"
-                    width="18"
-                    height="18"
-                    aria-hidden="true"
-                  >
-                    <path
-                      d="M5 19 19 5M5 5h14v14"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="1.6"
-                    /></svg></a
-                ><a
-                  class="text-link"
-                  href="labs/store-evidence/source.zip"
-                  download
-                  >下载源码<svg
-                    viewBox="0 0 24 24"
-                    width="18"
-                    height="18"
-                    aria-hidden="true"
-                  >
-                    <path
-                      d="M5 19 19 5M5 5h14v14"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="1.6"
-                    /></svg
-                ></a>
-              </div>
-            </div>
-          </div>
-        </article>
-        <article class="project" id="work-thesis" data-kind="implementation">
-          <div class="project-top">
-            <span class="project-number">03</span>
-            <p>2026.06 · 独立开发 / MIT 开源</p>
-          </div>
-          <div class="project-grid">
-            <div class="project-visual">
-              <div class="system-preview thesis-preview">
-                <p class="preview-label">draft-thesis-docx · 检查机制示意</p>
-                <div class="document-pair">
-                  <div class="document-sheet">
-                    <span>学校模板</span>
-                    <div class="sheet-line long"></div>
-                    <div class="sheet-line"></div>
-                    <div class="sheet-line short"></div>
-                    <p>封面 / 前置部分</p>
-                  </div>
-                  <div class="hash-gate">
-                    <span>哈希快照</span>
-                    <div class="gate-line"></div>
-                    <strong>前后比对</strong>
-                  </div>
-                  <div class="document-sheet">
-                    <span>改写后文档</span>
-                    <div class="sheet-line long"></div>
-                    <div class="sheet-line"></div>
-                    <div class="sheet-line short"></div>
-                    <p>保护边界核对</p>
-                  </div>
-                </div>
-                <div class="preview-bottom">
-                  <span>Python</span><span>10 个脚本</span
-                  ><span>约 2,000 行</span>
-                </div>
-              </div>
-            </div>
-            <div class="project-copy">
-              <h3>draft-thesis-docx</h3>
-              <p class="project-description">
-                把论文格式规范，变成可检查的流程。
-              </p>
-              <dl class="project-facts">
-                <div>
-                  <dt>我的工作</dt>
-                  <dd>
-                    模板部件哈希快照、格式检查脚本，以及引用与结论的依据约束。
-                  </dd>
-                </div>
-                <div>
-                  <dt>验证边界</dt>
-                  <dd>依据学校规范设计并实现，尚未在真实论文上验证。</dd>
-                </div>
-              </dl>
-              <div class="project-actions">
-                <a
-                  class="text-link"
-                  href="https://github.com/myf8626-debug/draft-thesis-docx"
-                  >查看开源项目<svg
-                    viewBox="0 0 24 24"
-                    width="18"
-                    height="18"
-                    aria-hidden="true"
-                  >
-                    <path
-                      d="M5 19 19 5M5 5h14v14"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="1.6"
-                    /></svg></a
-                ><a class="text-link" href="#case-thesis"
-                  >阅读项目复盘<svg
-                    viewBox="0 0 24 24"
-                    width="18"
-                    height="18"
-                    aria-hidden="true"
-                  >
-                    <path
-                      d="M5 19 19 5M5 5h14v14"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="1.6"
-                    /></svg
-                ></a>
-              </div>
-            </div>
-          </div>
-          <details class="case-detail" id="case-thesis">
-            <summary>
-              问题、判断与实现细节<span
-                class="expand-mark"
-                aria-hidden="true"
-              ></span>
-            </summary>
-            <div class="detail-body">
-              <section class="case-part">
-                <h4>问题</h4>
-                <p>
-                  高校论文不是把正文写完就能交。学校模板对封面、声明页、目录、页眉、分页都有要求，AI
-                  改正文时，很容易顺手动到这些地方。看起来只是调整一段结构，最后却可能整份格式都错。另一个麻烦是引用：文字写得很顺，参考文献却未必真实，人工复查的负担反而更大。
-                </p>
-              </section>
-              <section class="case-part">
-                <h4>判断</h4>
-                <p>
-                  我先阅读学校的论文撰写规范，再据此设计
-                  skill，例如郑州轻工业大学《毕业设计（论文）撰写规范》。我选择把模板和规范当作格式权威，不让模型凭习惯重排；大纲获批才进入正文。先把允许修改的范围说清楚，再讨论能生成多少内容。
-                </p>
-              </section>
-              <section class="case-part">
-                <h4>做法</h4>
-                <p>
-                  脚本按指定边界保存前置内容、递归依赖和全局渲染部件的哈希，用于改写前后比对；差异按流程阻塞。其他脚本覆盖分节检查、页眉同步、字段刷新、三线表与图表审查、参考文献校验和页面渲染。skill
-                  中禁止伪造参考文献、测试记录和无依据结论；引用真实性仍须查原文，不能由格式检查通过替代。
-                </p>
-              </section>
-              <section class="case-part">
-                <h4>结果</h4>
-                <p>
-                  项目由我独立开发，以 MIT 许可证开源，使用 Python，包含 10
-                  个脚本、约 2000
-                  行代码。目前完成的是设计与脚本实现，尚未在真实论文上验证。没有可据此发布的模板覆盖率、缺陷拦截数量或完整流程验收结果。
-                </p>
-              </section>
-            </div>
-          </details>
-        </article>
-        <article class="project" id="work-job" data-kind="sample">
-          <div class="project-top">
-            <span class="project-number">04</span>
-            <p>2026.11 · 个人样例 / AI 辅助开发</p>
-          </div>
-          <div class="project-grid">
-            <div class="project-visual">
-              <a class="screenshot-link" href="labs/job-evidence/"
-                ><img
-                  src="assets/job-evidence.jpg"
-                  width="1044"
-                  height="640"
-                  loading="lazy"
-                  alt="岗位调研证据台的真实运行截图，展示远程与上海两条来源的冲突"
-                /><span>实际运行界面 · 模拟资料</span></a
-              >
-            </div>
-            <div class="project-copy">
-              <h3>岗位调研证据台</h3>
-              <p class="project-description">
-                每条调研结论，都能展开它的原文。
-              </p>
-              <dl class="project-facts">
-                <div>
-                  <dt>我的工作</dt>
-                  <dd>
-                    引文位置核验、结构化字段匹配、来源冲突识别与资料导入导出。
-                  </dd>
-                </div>
-                <div>
-                  <dt>验证边界</dt>
-                  <dd>
-                    7 条模拟结论；16
-                    项回归检查通过。未联网调研，未验证语义蕴含。
-                  </dd>
-                </div>
-              </dl>
-              <div class="project-actions">
-                <a class="text-link" href="labs/job-evidence/"
-                  >打开交互样例<svg
-                    viewBox="0 0 24 24"
-                    width="18"
-                    height="18"
-                    aria-hidden="true"
-                  >
-                    <path
-                      d="M5 19 19 5M5 5h14v14"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="1.6"
-                    /></svg></a
-                ><a
-                  class="text-link"
-                  href="labs/job-evidence/source.zip"
-                  download
-                  >下载源码<svg
-                    viewBox="0 0 24 24"
-                    width="18"
-                    height="18"
-                    aria-hidden="true"
-                  >
-                    <path
-                      d="M5 19 19 5M5 5h14v14"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="1.6"
-                    /></svg
-                ></a>
-              </div>
-            </div>
-          </div>
-        </article>
-        <article class="project" id="work-policy" data-kind="sample">
-          <div class="project-top">
-            <span class="project-number">05</span>
-            <p>2026.11 · 个人样例 / AI 辅助开发</p>
-          </div>
-          <div class="project-grid">
-            <div class="project-visual">
-              <a class="screenshot-link" href="labs/policy-evidence/"
-                ><img
-                  src="assets/policy-evidence.jpg"
-                  width="1044"
-                  height="640"
-                  loading="lazy"
-                  alt="政策问答的真实运行截图，展示年级和日期筛选后的依据条款"
-                /><span>实际运行界面 · 非真实学校规定</span></a
-              >
-            </div>
-            <div class="project-copy">
-              <h3>政策溯源问答</h3>
-              <p class="project-description">先核对适用范围，再给出条款。</p>
-              <dl class="project-facts">
-                <div>
-                  <dt>我的工作</dt>
-                  <dd>
-                    年级与有效期过滤、冲突保留、无依据拒答及条款来源展示。
-                  </dd>
-                </div>
-                <div>
-                  <dt>验证边界</dt>
-                  <dd>
-                    8 条模拟政策；20
-                    项回归检查通过。采用关键词与字段过滤，未接入模型。
-                  </dd>
-                </div>
-              </dl>
-              <div class="project-actions">
-                <a class="text-link" href="labs/policy-evidence/"
-                  >打开交互样例<svg
-                    viewBox="0 0 24 24"
-                    width="18"
-                    height="18"
-                    aria-hidden="true"
-                  >
-                    <path
-                      d="M5 19 19 5M5 5h14v14"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="1.6"
-                    /></svg></a
-                ><a
-                  class="text-link"
-                  href="labs/policy-evidence/source.zip"
-                  download
-                  >下载源码<svg
-                    viewBox="0 0 24 24"
-                    width="18"
-                    height="18"
-                    aria-hidden="true"
-                  >
-                    <path
-                      d="M5 19 19 5M5 5h14v14"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="1.6"
-                    /></svg
-                ></a>
-              </div>
-            </div>
-          </div>
-        </article>
-        <article class="project" id="work-cloud" data-kind="implementation">
-          <div class="project-top">
-            <span class="project-number">06</span>
-            <p>2026.03—05 · 团队项目 / 前端负责人</p>
-          </div>
-          <div class="project-grid">
-            <div class="project-visual">
-              <div class="system-preview cloud-preview">
-                <p class="preview-label">云栈 · 前端模块示意</p>
-                <div class="cloud-modules">
-                  <div>
-                    <span>01</span><strong>文件上传</strong
-                    ><small>上传状态 / 失败重试</small>
-                  </div>
-                  <div>
-                    <span>02</span><strong>分类与检索</strong
-                    ><small>列表状态 / 查询结果</small>
-                  </div>
-                  <div>
-                    <span>03</span><strong>权限与展示</strong
-                    ><small>权限边界 / 数据一致性</small>
-                  </div>
-                </div>
-                <p class="preview-caption">React · Ant Design · Axios</p>
-              </div>
-            </div>
-            <div class="project-copy">
-              <h3>云栈 · 智能云盘</h3>
-              <p class="project-description">
-                把文件操作与权限状态，落到具体界面。
-              </p>
-              <dl class="project-facts">
-                <div>
-                  <dt>我的工作</dt>
-                  <dd>
-                    文件上传、分类、权限、检索与数据展示页面；处理联调中的状态一致性问题。
-                  </dd>
-                </div>
-                <div>
-                  <dt>验证边界</dt>
-                  <dd>
-                    省级获奖项目；当前展示个人职责，暂未提供在线演示入口。
-                  </dd>
-                </div>
-              </dl>
-              <div class="project-actions">
-                <a class="text-link" href="#case-cloud"
-                  >查看职责与联调实践<svg
-                    viewBox="0 0 24 24"
-                    width="18"
-                    height="18"
-                    aria-hidden="true"
-                  >
-                    <path
-                      d="M5 19 19 5M5 5h14v14"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="1.6"
-                    /></svg
-                ></a>
-              </div>
-            </div>
-          </div>
-          <details class="case-detail" id="case-cloud">
-            <summary>
-              个人职责与项目边界<span
-                class="expand-mark"
-                aria-hidden="true"
-              ></span>
-            </summary>
-            <div class="detail-body">
-              <section class="case-part">
-                <h4>职责</h4>
-                <p>
-                  负责文件上传、分类、权限、检索与数据展示页面，进行前端结构拆分与状态流转设计。
-                </p>
-              </section>
-              <section class="case-part">
-                <h4>联调</h4>
-                <p>
-                  核对页面状态与后端数据的一致性，定位并修复权限边界、上传失败重试、列表状态不同步等问题，梳理接口约定与异常码对照。
-                </p>
-              </section>
-              <section class="case-part">
-                <h4>边界</h4>
-                <p>
-                  这是团队项目，我的职责限于前端及相关接口联调。当前页面未提供在线运行入口，不把示意图当作产品运行截图。
-                </p>
-              </section>
-            </div>
-          </details>
-        </article>
-      </section>
-
+        </div>
+      </article></template
+    >
+    <template id="detail-resume">
       <section class="section shell" id="resume">
         <div class="section-heading">
           <div>
@@ -1161,63 +880,26 @@
           ></a>
         </div>
       </section>
-
-      <section class="contact shell" id="contact">
-        <div>
-          <p class="eyebrow section-eyebrow">
-            <span>04</span>Contact<span class="eyebrow-cn"
-              >一起做有依据的 AI 应用</span
-            >
-          </p>
-          <h2>欢迎聊聊实习机会。</h2>
-          <p>
-            优先远程，也考虑郑州及北上杭深。<br />每周可实习 5 天，预计连续 3
-            个月。
-          </p>
+    </template>
+    <template id="detail-contact"
+      ><section class="contact-detail">
+        <p class="modal-intro">
+          正在寻找 2027 年暑期实习。优先远程，也考虑郑州及北上杭深；每周可实习 5
+          天，预计连续 3 个月。
+        </p>
+        <a
+          class="download-card"
+          href="assets/miao-yifei-resume-2026.pdf"
+          download="苗怡飞-简历-2026.pdf"
+          ><span>PDF · 2026</span><strong>下载我的简历</strong
+          ><small>本人提供的单页原件</small></a
+        >
+        <div class="contact-options">
+          <a href="mailto:378122428@qq.com">378122428@qq.com</a
+          ><a href="https://github.com/myf8626-debug">GitHub / myf8626-debug</a
+          ><a href="work.html#resume">查看完整教育与获奖信息</a>
         </div>
-        <div class="contact-links">
-          <a class="text-link" href="mailto:378122428@qq.com"
-            >378122428@qq.com<svg
-              viewBox="0 0 24 24"
-              width="18"
-              height="18"
-              aria-hidden="true"
-            >
-              <path
-                d="M5 19 19 5M5 5h14v14"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="1.6"
-              /></svg></a
-          ><a class="text-link" href="https://github.com/myf8626-debug"
-            >GitHub / myf8626-debug<svg
-              viewBox="0 0 24 24"
-              width="18"
-              height="18"
-              aria-hidden="true"
-            >
-              <path
-                d="M5 19 19 5M5 5h14v14"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="1.6"
-              /></svg
-          ></a>
-        </div>
-      </section>
-    </main>
-    <footer class="site-footer">
-      <div class="shell signature" aria-hidden="true">MIAO YIFEI</div>
-      <div class="shell footer-inner">
-        <span>苗怡飞 · 简历与作品集</span
-        ><span
-          >视觉参考
-          <a href="https://github.com/RyanFitzgerald/devportfolio"
-            >DevPortfolio</a
-          >
-          · <a href="DESIGN_SOURCES.md">设计说明</a></span
-        ><a href="#main">回到顶部</a>
-      </div>
-    </footer>
+      </section></template
+    >
   </body>
 </html>

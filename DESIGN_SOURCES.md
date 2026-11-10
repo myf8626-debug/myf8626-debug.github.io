@@ -1,16 +1,26 @@
-# 设计参考与内容来源
+# 模板与内容来源
 
-主要视觉参考：[RyanFitzgerald/devportfolio](https://github.com/RyanFitzgerald/devportfolio)（MIT 开源模板）。
-参考其大标题、留白、蓝色点缀，以及项目 / 经历 / 教育的阅读结构。本站为原生 HTML/CSS/JavaScript 重新实现，未复制模板源码、作者介绍、图片或项目内容。
+当前首页基于 [Vighnesh-Gaddam/Portfolio](https://github.com/Vighnesh-Gaddam/Portfolio) 适配，采用 MIT 许可。
 
-根据本人提出的“个人居中、左右是项目卡片”与“深色背景、更有科技感”反馈，首页采用三列布局：中央个人名片，左侧是 Resume Protocol、论文工具与云栈，右侧是三个交互样例。页面使用深海军蓝底色、青蓝与紫色光边、细网格、低强度扫描线和暗色项目面板，保留各项目的颜色区分。英文和数字使用等宽字体，中文使用系统中文字体。手机先显示个人名片，再显示项目卡片；不使用自动播放、闪烁或滚动视差。
+- 上游版本：`afb00e6cf119897740cc700a9758165ed2704878`。
+- 原作者：Vighnesh Gaddam。原许可完整保存在 `licenses/vighnesh-portfolio-MIT.txt`。
+- `vendor/vighnesh-portfolio/theme-tokens.css` 提取自该版本的 `src/app/globals.css`，沿用深浅色主题变量。
+- `bento.css` 的卡片表面、28–32px 圆角、箭头提示、悬停反馈与进入动效，适配自 `src/components/BentoCard.tsx`。
+- 布局与详情、联系入口分别依据 `src/app/page.tsx`、`DetailView.tsx`、`ConnectionHub.tsx` 调整。
 
-布局和响应式规则位于 `style.css`，屏幕深色主题集中在 `theme.css`；打印时仍使用浅色背景，避免整页深色打印。
+## 本站适配
 
-个人名片、卡片布局、图标及字母 M 标记均为本站原创 HTML/CSS/SVG。首屏是六个作品的快速入口，下方保留详细项目列表和可展开复盘。点击已有项目进入对应贡献说明，点击交互样例进入实际演示；旧 /labs/ 汇总入口返回主页。
+保留模板的黑色卡片、大小错落布局与点击展开方式，按本人要求将个人资料置于中央、左右放置项目，底部加入实习、教育和联系卡片。
 
-项目预览中：三个交互样例为真实网页截图；Resume Protocol、论文工具与云栈为明确标注的机制 / 模块示意，并非产品运行截图。
+原模板使用 Next.js / React / Framer Motion。本站为兼容现有 GitHub Pages 静态站点，将所需界面适配为 HTML/CSS/JavaScript；弹窗改为原生 `dialog`，支持 Escape、焦点恢复、浏览器前进后退及深链接，未声称继续运行原 React 组件。无构建步骤、无新增运行时依赖、无外部字体请求。
 
-简历内容与证件照来自本人提供的《苗怡飞-简历-2026.pdf》，下载文件为原件。网页对实习成效使用此前已确认的流程描述，不重复统计口径尚未核对的效率百分比。活动介绍不使用未经核对的“全省最大”表述。
+未复制作者的个人介绍、工作履历、照片、项目、博客、评价或 GitHub 活动数据。本站保留本人真实职责和验证边界，不添加没有数据来源的统计卡。
 
-案例原文保留于可展开的项目详情中，原有 #case-resume、#case-thesis、#case-internship 深链接继续可用。
+`work.html` 保留上一版的完整复盘和筛选页面，也是禁用 JavaScript 时的卡片跳转目标；相关排版曾参考 [RyanFitzgerald/devportfolio](https://github.com/RyanFitzgerald/devportfolio)。
+
+## 个人内容与素材
+
+- 简历 PDF 与证件照来自本人提供的《苗怡飞-简历-2026.pdf》。下载文件为原件；首页黑白照片仅由 CSS 显示效果实现，未改写原图片。
+- 三个交互样例缩略图来自实际网页运行截图；其数据为人工构造，真实模型尚未接入。
+- 完整项目页的 Resume Protocol、论文工具和云栈预览为明确标注的机制或模块示意。
+- 团队项目只说明本人职责；论文工具尚未在真实论文上验证，Resume Protocol 的真实模型端到端尚未验证。实习不发布缺少核对记录的效率百分比。
