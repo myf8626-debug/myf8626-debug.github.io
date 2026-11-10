@@ -9,7 +9,7 @@
       "aria-label",
       dark ? "切换为浅色主题" : "切换为深色主题",
     );
-    meta.content = dark ? "#080808" : "#F5F4F1";
+    meta.content = dark ? "#171e31" : "#eef1f9";
   }
   toggle.hidden = false;
   toggle.addEventListener("click", () => {

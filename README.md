@@ -3,6 +3,7 @@
 基于 [Vighnesh-Gaddam/Portfolio](https://github.com/Vighnesh-Gaddam/Portfolio) 的 MIT 模板制作的静态适配版，融合个人简历、实习和六项作品，部署于 GitHub Pages。个人介绍居中，项目分列两侧；支持详情弹窗、深浅主题与手机布局。
 
 - `index.html` / `bento.css` / `bento.js`：卡片主页、主题切换和原生 dialog 详情。首页默认深色。
+- `palette.css`：蓝灰背景、多色项目卡片及对应的浅色主题；头像与截图保留原始颜色。
 - `work.html` / `style.css` / `theme.css` / `site.js`：完整项目复盘、实习与教育信息，保留筛选、深链接及打印样式。禁用 JavaScript 时，主页卡片会跳转到此页。
 - `vendor/vighnesh-portfolio/theme-tokens.css`：沿用的模板颜色变量。
 - `licenses/vighnesh-portfolio-MIT.txt`：原作者 MIT 许可及版权声明。

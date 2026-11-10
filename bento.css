@@ -465,7 +465,6 @@ a.bento-card:hover .card-arrow {
   border: 1px solid var(--border-color);
   border-radius: 7px;
   opacity: 0.8;
-  filter: saturate(0.4);
 }
 .work-marker {
   display: flex;
