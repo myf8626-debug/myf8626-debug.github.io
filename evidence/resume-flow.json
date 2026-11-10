@@ -1,0 +1,48 @@
+{
+  "kind": "real_model_synthetic_flow_summary",
+  "run_id": "2026-11-10T07-04-47-449Z-3d055a",
+  "original_status": "mechanical_pass_semantic_review_pending",
+  "synthetic_inputs": true,
+  "full_flow_completed": true,
+  "deterministic_checks": [
+    {
+      "name": "uploaded facts point to actual source positions",
+      "passed": true
+    },
+    {
+      "name": "cross-user HTTP read is rejected",
+      "passed": true
+    },
+    {
+      "name": "cross-user conversation binding is rejected",
+      "passed": true
+    },
+    {
+      "name": "retrieval service raises a real scope error",
+      "passed": true
+    },
+    {
+      "name": "unlisted tool is rejected by deterministic authorization",
+      "passed": true
+    }
+  ],
+  "source_sha256": {
+    "knowledge/core-policy.md": "d0605af6ea40802066b76cc041f2b248f0dbf3c5b968aded571a8ef1d572220b",
+    "server/modelClient.js": "8804297b9ee16b9f04def2957f9acd6e54ec4df2b57ff6467a6e760291dd0ea0",
+    "server/claudeAgent.js": "3d3b5e5e0cd948a9444f0edb7caa4a6c3eb878f17aec28fd25ca09bc39bf63d2",
+    "server/careerAgent.js": "727ef073956fa443d5a3d8552826ade2821858d174caab7ddf66b525b76e2a0c",
+    "server/app.js": "8efd592bf98bf09c551e1712a217c5f162222910847a442c93d7fb0434e65c48",
+    "server/candidateRetrieval.js": "a7981bcb44788ff983f43fe004cc6ee7159184fde395fe57769574d4785873a2",
+    "server/tenureGuard.js": "ee9558575e95d6bcf2200cd06ec6262286e7e910d5333ecc6436e774e00b6a69",
+    "server/generatedContent.js": "4549388ad00efdb31be99486e1f3adb1dbb75d7bc3ab58cc4843f55674f58f1c",
+    "scripts/validate-candidate-live.mjs": "be655a35b4673f5c1b6c300d2ef1d2ad130aecf8165ea13bdbc556bb796774ae",
+    "scripts/live-candidate-checks.mjs": "f8c285cbb589568fdf8fdffa9cf112179509b2d31a63229b5c9d61a13dd5f69f"
+  },
+  "scope": "One synthetic upload → supplied JD → generation → existing server checks → PDF/DOCX export flow.",
+  "limitations": [
+    "Original run status retains semantic_review_pending; subsequent review was limited, not a comprehensive semantic benchmark.",
+    "PDF preview checked visually; DOCX content/structure checked, not independently rendered.",
+    "Known tenure inference guarded by finite patterns, not a general hallucination detector.",
+    "Local validation changes are not asserted to be present in the team remote repository."
+  ]
+}

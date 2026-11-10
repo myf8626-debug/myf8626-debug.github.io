@@ -1,10 +1,11 @@
-"""Local-only, dependency-free API and static server. No model credentials read."""
+"""Local-only API; model calls require explicit environment configuration."""
 
 from http.server import ThreadingHTTPServer, SimpleHTTPRequestHandler
 from pathlib import Path
 import argparse, json, sys
 from urllib.parse import urlsplit
 from engine import dispatch
+from model_query import generate, configured, ModelError
 
 ROOT = Path(__file__).resolve().parent
 
@@ -29,13 +30,15 @@ class Handler(SimpleHTTPRequestHandler):
     def do_GET(self):
         if urlsplit(self.path).path == "/api/health":
             return self.reply(
-                200, {"status": "ok", "mode": "sample", "model_connected": False}
+                200, {"status": "ok", "mode": "sample", "model_configured": configured()}
             )
         if self.path.startswith("/api/"):
             return self.reply(404, {"error": "Unknown endpoint"})
         super().do_GET()
 
     def do_POST(self):
+        if self.headers.get('Host') not in (f'127.0.0.1:{self.server.server_port}', f'localhost:{self.server.server_port}'):
+            return self.reply(403, {'error': 'Only loopback hosts are allowed'})
         # Reject cross-origin browser writes. This server is bound only to loopback.
         origin = self.headers.get("Origin")
         if origin and origin not in ("http://" + self.headers.get("Host", ""),):
@@ -49,17 +52,13 @@ class Handler(SimpleHTTPRequestHandler):
                 raise ValueError("Expected JSON object")
             route = urlsplit(self.path).path
             if route == "/api/model":
-                return self.reply(
-                    501,
-                    {
-                        "error": "真实模型尚未接入；当前为可复现样例模式",
-                        "model_connected": False,
-                    },
-                )
+                return self.reply(200, generate(body.get('question')))
             result = dispatch(route, body)
             self.reply(200, result)
         except KeyError:
             self.reply(404, {"error": "Unknown endpoint"})
+        except ModelError as e:
+            self.reply(502, {"error": str(e)})
         except (ValueError, TypeError) as e:
             self.reply(400, {"error": str(e)})
         except Exception:

@@ -1,30 +1,31 @@
-# API 契约
+# 本地 API
 
-默认服务地址：http://127.0.0.1:8313 。仅本机开发用途。
+默认 http://127.0.0.1:8313，仅供本机演示。无用户系统和生产限流。
+
+## GET /api/health
+返回 status、mode=sample、model_configured。配置存在不等于连接成功。
 
 ## POST /api/query
+JSON 对象 {"sql":"SELECT COUNT(*) FROM clean_orders"}，或 question 为固定目录中的完整问题。sql 优先。
+单条 SELECT/WITH，1..10000 字符，最多 200 行。返回 sql、columns、rows、counts、truncated。
+每次创建内存模拟数据库。SQLite authorizer 限制表/函数；query_only 加指令与约两秒执行预算。
 
-Content-Type: application/json，最大请求体 200000 字节。返回 JSON。
+## POST /api/model
+JSON 对象 {"question":"有效订单扣除退款后的净额是多少？"}，问题 1..2000 字符。
+需服务端环境变量 DEEPSEEK_API_KEY；可选 DEEPSEEK_MODEL（默认 deepseek-flash）。
+返回 mode=live-model-synthetic-data、model、question、draft、refused、usage；执行成功另有 result，其数据模式仍为 sample。
+draft 包含 sql、explanation、assumptions。sql=null 表示拒答，不执行 SQL。
+模型草稿先经相同只读门禁再执行，不提供网络/文件/系统表访问。解释文字不等于已核验结论。
+密钥不发浏览器；接口固定官方 HTTPS，不跟随重定向；不自动重试或回退样例。
 
-```json
-{
-  "question": "哪些门店的退款订单占比更高？"
-}
-```
+## 错误
+400：输入、JSON 或 SQL 不合法。
+403：非本机 Host 或浏览器跨源 POST。
+404：未知接口。
+502：无模型凭据、上游错误、超时或模型响应格式错误。
+500：未预期内部错误（不返回请求正文）。
+请求体上限 200000 字节。服务不记录请求正文。
 
-可传 sql 字符串（优先于 question），或传与 web/queries.json 完全一致的固定 question。sql 最大 10000 字符，仅单条 SELECT/WITH，禁止写入；最大返回 200 行。每个请求重新创建内存样例数据库，不保留状态。返回 columns/rows/sql/counts/truncated。
-
-## 状态码
-- 200：成功，mode 固定为 sample。
-- 400：输入格式 / SQL 错误；error 字段说明原因。
-- 403：浏览器跨源 POST 被拒绝。
-- 404：未知接口。
-- 501：POST /api/model，真实模型未接入。
-
-## 模型替换边界
-未来 provider 只负责生成候选结论 / 检索候选条款 / SQL 草稿，核验器仍决定输出边界。
-当前没有已实现的 live provider，不能只填一个 API Key 就宣称完成了接入。
-
-## 验证范围
-接口测试覆盖正常请求、无效 JSON、错误路径、超过请求体上限、模型未实现和跨源请求。
-无用户系统、生产级并发控制、外网部署或安全审计结论。
+## 验证边界
+HTTP 回归覆盖查询、坏 JSON、未知路径、Host/Origin、模型错误、模型路由和健康状态。
+真实模型检查与 mock 测试分别记录，见 README。不是任意 SQL 沙箱或公网服务安全审计。

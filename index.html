@@ -21,7 +21,8 @@
     <link rel="stylesheet" href="bento.css?v=20261110-colors" />
     <link rel="stylesheet" href="palette.css?v=20261110-colors" />
     <script defer src="bento.js?v=20261110-colors"></script>
-  </head>
+  <link rel="stylesheet" href="verification.css?v=20261111">
+</head>
   <body>
     <a class="skip-link" href="#main">跳到作品</a>
     <header class="masthead page-width">
@@ -81,7 +82,7 @@
           <div class="card-copy">
             <h2>Resume Protocol</h2>
             <p>让求职事实有来源，让模型调用有边界。</p>
-            <span class="card-note">候选人知识库 / 检索隔离 / 工具授权</span>
+            <span class="card-note">事实溯源 / 工具授权 / 合成材料导出验证</span>
           </div></a
         ><a
           class="bento-card thesis-card"
@@ -104,7 +105,7 @@
           </div>
           <div class="card-copy">
             <h2>论文模板<br />保护工具</h2>
-            <p>格式有约束，引用有依据。</p>
+            <p>14 项保护回归，误改有记录。</p>
           </div></a
         ><a
           class="bento-card cloud-card"
@@ -140,7 +141,7 @@
             <p>文件、权限与异常状态。</p>
           </div></a
         ><a class="bento-card store-card" href="labs/store-evidence/"
-          ><span class="card-label">可操作样例 · 未接入模型</span
+          ><span class="card-label">在线样例 · 本地模型已验证</span
           ><span class="card-arrow"
             ><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
               <path
@@ -153,7 +154,7 @@
               /></svg></span
           ><img
             class="store-preview"
-            src="assets/store-evidence.jpg"
+            src="assets/store-evidence-20261111.png"
             alt="门店数据分析台的实际样例界面"
             width="1044"
             height="640"
@@ -161,7 +162,7 @@
           <div class="card-copy">
             <h2>门店数据<br />分析台</h2>
             <p>从业务问题，到可重跑的 SQL。</p>
-            <span class="card-note">多表关联 / 数据清洗</span>
+            <span class="card-note">46 项回归 / 冲突隔离 / 整数分计算</span>
           </div></a
         ><a class="bento-card job-card" href="labs/job-evidence/"
           ><span class="card-label">可操作样例</span
@@ -321,7 +322,7 @@
         </section>
       </div>
       <p class="sample-disclosure">
-        三个交互样例使用人工构造数据，真实模型尚未接入。已有项目的个人职责与验证边界可点击卡片查看。
+        线上交互使用合成数据与固定查询。门店项目另有本地真实模型验证；项目职责、测试与局限均可核对。 <a href="verification.html">查看最新验证记录 · 2026.11.11</a>
       </p>
     </main>
     <footer class="page-width footer">
@@ -420,7 +421,7 @@
               <div>
                 <dt>验证边界</dt>
                 <dd>
-                  已实现职责内模块与回归检查；真实模型端到端验证尚未完成。
+                  本地真实模型已跑通一个合成材料的生成与 PDF/DOCX 导出流程；完整语义正确性仍未验证。
                 </dd>
               </div>
             </dl>
@@ -440,8 +441,8 @@
                   /></svg></a
               ><a
                 class="text-link"
-                href="https://github.com/tbszz/Resume-Protocol"
-                >团队仓库<svg
+                href="evidence/resume-flow.json"
+                >公开验证摘要<svg
                   viewBox="0 0 24 24"
                   width="18"
                   height="18"
@@ -463,7 +464,7 @@
               class="expand-mark"
               aria-hidden="true"
             ></span>
-          </summary>
+          </summary><figure class="verification-shot"><a href="assets/resume-export-verified.png"><img loading="lazy" src="assets/resume-export-verified.png" alt="真实模型生成的 PDF 导出预览 · 虚构候选人材料"></a><figcaption>真实模型生成的 PDF 导出预览 · 虚构候选人材料</figcaption></figure><p class="verification-link"><a href="verification.html#resume">查看验证范围与记录</a></p>
           <div class="detail-body">
             <section class="case-part">
               <h4>问题</h4>
@@ -492,12 +493,7 @@
             </section>
             <section class="case-part">
               <h4>结果</h4>
-              <p>
-                我还写了四个 Career Skill
-                和结论到证据的映射规则。可核对的产出是这一层的实现、测试和验收报告，其他团队模块不计入我的贡献。真实模型端到端验证尚未完成，本机缺少凭据。报告明确规定：检索
-                trace
-                三字段为空，回答却声称“知道”候选人背景，就判失败；不能用回答看似合理替代调用证据。
-              </p>
+              <p>团队项目中，我负责候选人知识库、检索隔离、工具授权与四个 Career Skill。近期在 AI 辅助下补做本地真实模型验证：一个合成材料的上传、JD 输入、生成与现有校验、PDF/DOCX 导出流程已跑通。PDF 检查过页面，DOCX 检查了内容与结构；完整语义正确性仍未验证，已知年限推断仅有有限规则保护。团队其他模块不计入个人贡献，本地改动不等于团队远端已更新。</p>
             </section>
           </div>
         </details>
@@ -535,8 +531,7 @@
                 </div>
               </div>
               <div class="preview-bottom">
-                <span>Python</span><span>10 个脚本</span
-                ><span>约 2,000 行</span>
+                <span>Python</span><span>14 项回归</span><span>合成文件测试</span>
               </div>
             </div>
           </div>
@@ -554,7 +549,7 @@
               </div>
               <div>
                 <dt>验证边界</dt>
-                <dd>依据学校规范设计并实现，尚未在真实论文上验证。</dd>
+                <dd>14 项合成文件回归通过；尚未在真实论文上验证。</dd>
               </div>
             </dl>
             <div class="project-actions">
@@ -596,7 +591,7 @@
               class="expand-mark"
               aria-hidden="true"
             ></span>
-          </summary>
+          </summary><figure class="verification-shot"><a href="assets/thesis-checks-20261111.png"><img loading="lazy" src="assets/thesis-checks-20261111.png" alt="实际回归报告页面 · 合成文件测试，非真实论文截图"></a><figcaption>实际回归报告页面 · 合成文件测试，非真实论文截图</figcaption></figure><p class="verification-link"><a href="verification.html#thesis">查看验证范围与记录</a></p>
           <div class="detail-body">
             <section class="case-part">
               <h4>问题</h4>
@@ -621,11 +616,7 @@
             </section>
             <section class="case-part">
               <h4>结果</h4>
-              <p>
-                项目由我独立开发，以 MIT 许可证开源，使用 Python，包含 10
-                个脚本、约 2000
-                行代码。目前完成的是设计与脚本实现，尚未在真实论文上验证。没有可据此发布的模板覆盖率、缺陷拦截数量或完整流程验收结果。
-              </p>
+              <p>项目由我独立开发，近期使用 AI 辅助补充审计与回归。14 项合成 ZIP/XML 测试通过，覆盖正常正文修改、保护部件误改、报告路径误覆盖与写入失败。报告可指出变化部件，失败时保留旧报告。尚未在真实论文或完整学校模板上验证；哈希一致不代表排版与引用真实可靠。</p>
             </section>
           </div>
         </details>

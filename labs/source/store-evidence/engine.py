@@ -43,7 +43,11 @@ def query(sql):
         }
 
         def authorizer(action, a, b, db, trigger):
-            if action == sqlite3.SQLITE_FUNCTION and str(b).lower() == "load_extension":
+            tables = {'stores','products','orders','refunds','order_issues','flagged_orders','clean_orders','refund_issues','clean_refunds'}
+            functions = {'abs','round','sum','count','avg','min','max','coalesce','ifnull','nullif','cast','date','strftime','length','trim','lower','upper','substr','group_concat','row_number','lag','lead','rank','dense_rank'}
+            if action == sqlite3.SQLITE_READ and a not in tables:
+                return sqlite3.SQLITE_DENY
+            if action == sqlite3.SQLITE_FUNCTION and str(b).lower() not in functions:
                 return sqlite3.SQLITE_DENY
             return sqlite3.SQLITE_OK if action in allowed else sqlite3.SQLITE_DENY
 

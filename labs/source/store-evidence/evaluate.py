@@ -44,7 +44,7 @@ report = {
     "cases": result.cases,
     "limitations": [
         "人工构造的小样本回归检查，不代表真实业务效果。",
-        "未接入或评测真实模型，不报告模型准确率、编造率或提升幅度。",
+        "本报告不调用真实模型；真实调用另见 reports/live-evaluation.json，均不代表生产准确率。",
     ],
 }
 (ROOT / "web/evaluation.json").write_text(

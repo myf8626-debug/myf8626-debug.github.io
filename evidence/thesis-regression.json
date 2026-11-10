@@ -1,0 +1,19 @@
+{
+  "kind": "synthetic_docx_package_regression",
+  "generated_at": "2026-11-10T14:17:57.875956+00:00",
+  "tests_run": 14,
+  "failures": 0,
+  "errors": 0,
+  "passed": true,
+  "real_thesis_validated": false,
+  "sha256": {
+    "tests/test_frontmatter.py": "e381e92fd8ce3928f76706e4c96ed06a9d0ca3c82d4ba42816ecb7f078364d1a",
+    "draft-thesis-docx/scripts/audit_frontmatter.py": "f8a4da9731fd890e90cff2738dd0b8a07b8e23b1b44458b6555bb72d0d3fa397",
+    "draft-thesis-docx/scripts/verify_frontmatter_unchanged.py": "d7dd6e85e4c1bae67b51733fcb35d9e32a3e34c15b5b0187b34dea7bf6db0d89"
+  },
+  "limitations": [
+    "Fixtures are minimal synthetic ZIP/XML packages, not renderable school templates.",
+    "No real thesis or Word/LibreOffice rendering validation in this run.",
+    "Hash equality does not establish visual correctness or factual/citation truth."
+  ]
+}

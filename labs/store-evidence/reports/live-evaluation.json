@@ -1,0 +1,325 @@
+{
+  "kind": "live_model_synthetic_data",
+  "generated_at": "2026-11-10T14:08:48.838165+00:00",
+  "tests_run": 6,
+  "passed": 6,
+  "cases": [
+    {
+      "id": "count",
+      "question": "只返回有效订单数这一列，不要分组。",
+      "expected": [
+        [
+          12
+        ]
+      ],
+      "status": "passed",
+      "output": {
+        "mode": "live-model-synthetic-data",
+        "model": "deepseek-flash",
+        "question": "只返回有效订单数这一列，不要分组。",
+        "draft": {
+          "sql": "SELECT count(*) AS valid_order_count FROM clean_orders",
+          "explanation": "有效订单数按 clean_orders 中的订单行数统计（clean_orders 已剔除异常订单），不分组，仅输出一列。",
+          "assumptions": [
+            "“有效订单”指 clean_orders 中的记录",
+            "按订单行（row_id）计数，而非去重 order_id"
+          ]
+        },
+        "refused": false,
+        "usage": {
+          "prompt_tokens": 421,
+          "completion_tokens": 82,
+          "total_tokens": 503
+        },
+        "result": {
+          "mode": "sample",
+          "dataset": "synthetic-store-v1",
+          "sql": "SELECT count(*) AS valid_order_count FROM clean_orders",
+          "columns": [
+            "valid_order_count"
+          ],
+          "rows": [
+            [
+              12
+            ]
+          ],
+          "truncated": false,
+          "counts": {
+            "raw": 20,
+            "clean": 12,
+            "excluded": 8
+          },
+          "max_rows": 200
+        }
+      }
+    },
+    {
+      "id": "gross",
+      "question": "只返回所有有效订单商品总额，单位元，不扣退款，一列。",
+      "expected": [
+        [
+          460
+        ]
+      ],
+      "status": "passed",
+      "output": {
+        "mode": "live-model-synthetic-data",
+        "model": "deepseek-flash",
+        "question": "只返回所有有效订单商品总额，单位元，不扣退款，一列。",
+        "draft": {
+          "sql": "SELECT ROUND(SUM(amount_cents)/100.0, 2) AS total_amount FROM clean_orders",
+          "explanation": "有效订单指 clean_orders 中的订单（已剔除异常数据）；商品总额按 amount_cents 求和后除以100转为元，不扣退款。",
+          "assumptions": [
+            "clean_orders 已过滤异常订单，视为有效订单",
+            "amount_cents 为订单金额的整数分表示"
+          ]
+        },
+        "refused": false,
+        "usage": {
+          "prompt_tokens": 428,
+          "completion_tokens": 95,
+          "total_tokens": 523
+        },
+        "result": {
+          "mode": "sample",
+          "dataset": "synthetic-store-v1",
+          "sql": "SELECT ROUND(SUM(amount_cents)/100.0, 2) AS total_amount FROM clean_orders",
+          "columns": [
+            "total_amount"
+          ],
+          "rows": [
+            [
+              460.0
+            ]
+          ],
+          "truncated": false,
+          "counts": {
+            "raw": 20,
+            "clean": 12,
+            "excluded": 8
+          },
+          "max_rows": 200
+        }
+      }
+    },
+    {
+      "id": "net",
+      "question": "只返回所有有效订单扣除有效退款后的净额，单位元，一列。",
+      "expected": [
+        [
+          340
+        ]
+      ],
+      "status": "passed",
+      "output": {
+        "mode": "live-model-synthetic-data",
+        "model": "deepseek-flash",
+        "question": "只返回所有有效订单扣除有效退款后的净额，单位元，一列。",
+        "draft": {
+          "sql": "SELECT ROUND((SELECT COALESCE(SUM(amount_cents),0) FROM clean_orders) - (SELECT COALESCE(SUM(refund_cents),0) FROM (SELECT order_id, SUM(refund_cents) AS refund_cents FROM clean_refunds WHERE refund_cents > 0 GROUP BY order_id)), 2) / 100.0 AS net_amount",
+          "explanation": "商品总额取 clean_orders 全部有效订单的 amount_cents 求和；有效退款先按 order_id 聚合 clean_refunds 中正退款额，再整体求和；两者相减后除以100.0得到元。",
+          "assumptions": [
+            "clean_orders 已剔除异常订单，clean_refunds 已剔除异常退款",
+            "有效退款指 refund_cents > 0 的退款"
+          ]
+        },
+        "refused": false,
+        "usage": {
+          "prompt_tokens": 428,
+          "completion_tokens": 173,
+          "total_tokens": 601
+        },
+        "result": {
+          "mode": "sample",
+          "dataset": "synthetic-store-v1",
+          "sql": "SELECT ROUND((SELECT COALESCE(SUM(amount_cents),0) FROM clean_orders) - (SELECT COALESCE(SUM(refund_cents),0) FROM (SELECT order_id, SUM(refund_cents) AS refund_cents FROM clean_refunds WHERE refund_cents > 0 GROUP BY order_id)), 2) / 100.0 AS net_amount",
+          "columns": [
+            "net_amount"
+          ],
+          "rows": [
+            [
+              340.0
+            ]
+          ],
+          "truncated": false,
+          "counts": {
+            "raw": 20,
+            "clean": 12,
+            "excluded": 8
+          },
+          "max_rows": 200
+        }
+      }
+    },
+    {
+      "id": "store",
+      "question": "按门店ID升序返回门店名称、有效订单数、商品总额（元）、有效退款额（元），共四列。",
+      "expected": [
+        [
+          "中原店",
+          5,
+          220,
+          30
+        ],
+        [
+          "金水店",
+          4,
+          160,
+          60
+        ],
+        [
+          "滨江店",
+          3,
+          80,
+          30
+        ]
+      ],
+      "status": "passed",
+      "output": {
+        "mode": "live-model-synthetic-data",
+        "model": "deepseek-flash",
+        "question": "按门店ID升序返回门店名称、有效订单数、商品总额（元）、有效退款额（元），共四列。",
+        "draft": {
+          "sql": "SELECT s.store_name, COUNT(DISTINCT co.order_id) AS valid_order_count, ROUND(COALESCE(SUM(co.amount_cents),0)/100.0,2) AS gross_amount_yuan, ROUND(COALESCE((SELECT SUM(cr.refund_cents) FROM clean_refunds cr JOIN clean_orders o2 ON o2.order_id=cr.order_id WHERE o2.store_id=s.store_id AND cr.refund_cents>0),0)/100.0,2) AS valid_refund_yuan FROM stores s LEFT JOIN clean_orders co ON co.store_id=s.store_id GROUP BY s.store_id, s.store_name ORDER BY s.store_id ASC",
+          "explanation": "按门店聚合 clean_orders 计算有效订单数与商品总额（分求和后除100.0）；有效退款额先按 order_id 聚合 clean_refunds 中正退款额，再按门店汇总，避免 JOIN 放大订单数。商品总额不扣退款。",
+          "assumptions": [
+            "有效订单指 clean_orders 中的订单（已剔除异常）",
+            "有效退款指 clean_refunds 中 refund_cents>0 的退款",
+            "门店无订单时订单数与金额显示为0"
+          ]
+        },
+        "refused": false,
+        "usage": {
+          "prompt_tokens": 438,
+          "completion_tokens": 258,
+          "total_tokens": 696
+        },
+        "result": {
+          "mode": "sample",
+          "dataset": "synthetic-store-v1",
+          "sql": "SELECT s.store_name, COUNT(DISTINCT co.order_id) AS valid_order_count, ROUND(COALESCE(SUM(co.amount_cents),0)/100.0,2) AS gross_amount_yuan, ROUND(COALESCE((SELECT SUM(cr.refund_cents) FROM clean_refunds cr JOIN clean_orders o2 ON o2.order_id=cr.order_id WHERE o2.store_id=s.store_id AND cr.refund_cents>0),0)/100.0,2) AS valid_refund_yuan FROM stores s LEFT JOIN clean_orders co ON co.store_id=s.store_id GROUP BY s.store_id, s.store_name ORDER BY s.store_id ASC",
+          "columns": [
+            "store_name",
+            "valid_order_count",
+            "gross_amount_yuan",
+            "valid_refund_yuan"
+          ],
+          "rows": [
+            [
+              "中原店",
+              5,
+              220.0,
+              30.0
+            ],
+            [
+              "金水店",
+              4,
+              160.0,
+              60.0
+            ],
+            [
+              "滨江店",
+              3,
+              80.0,
+              30.0
+            ]
+          ],
+          "truncated": false,
+          "counts": {
+            "raw": 20,
+            "clean": 12,
+            "excluded": 8
+          },
+          "max_rows": 200
+        }
+      }
+    },
+    {
+      "id": "issues",
+      "question": "只返回原始第16行订单的全部异常原因，每个原因单独一行一列，按原因升序。",
+      "expected": [
+        [
+          "数量不合法"
+        ],
+        [
+          "金额缺失或不合法"
+        ]
+      ],
+      "status": "passed",
+      "output": {
+        "mode": "live-model-synthetic-data",
+        "model": "deepseek-flash",
+        "question": "只返回原始第16行订单的全部异常原因，每个原因单独一行一列，按原因升序。",
+        "draft": {
+          "sql": "SELECT issue FROM order_issues WHERE row_id = 16 ORDER BY issue ASC",
+          "explanation": "按 row_id=16 从 order_issues 取该订单的全部异常原因，每项一行，按 issue 升序。row_id 为 orders 表的行标识。",
+          "assumptions": [
+            "“第16行订单”理解为 orders.row_id = 16"
+          ]
+        },
+        "refused": false,
+        "usage": {
+          "prompt_tokens": 433,
+          "completion_tokens": 81,
+          "total_tokens": 514
+        },
+        "result": {
+          "mode": "sample",
+          "dataset": "synthetic-store-v1",
+          "sql": "SELECT issue FROM order_issues WHERE row_id = 16 ORDER BY issue ASC",
+          "columns": [
+            "issue"
+          ],
+          "rows": [
+            [
+              "数量不合法"
+            ],
+            [
+              "金额缺失或不合法"
+            ]
+          ],
+          "truncated": false,
+          "counts": {
+            "raw": 20,
+            "clean": 12,
+            "excluded": 8
+          },
+          "max_rows": 200
+        }
+      }
+    },
+    {
+      "id": "unsupported",
+      "question": "预测2027年每家门店的利润，给出准确金额。",
+      "expected": null,
+      "status": "passed",
+      "output": {
+        "mode": "live-model-synthetic-data",
+        "model": "deepseek-flash",
+        "question": "预测2027年每家门店的利润，给出准确金额。",
+        "draft": {
+          "sql": null,
+          "explanation": "无法预测未来。现有数据仅含2026年10、11月的合成订单/退款数据，且没有利润或成本字段（仅有金额与退款额），因此无法计算或预测2027年每家门店的利润金额。",
+          "assumptions": []
+        },
+        "refused": true,
+        "usage": {
+          "prompt_tokens": 423,
+          "completion_tokens": 62,
+          "total_tokens": 485
+        }
+      }
+    }
+  ],
+  "sha256": {
+    "model_query.py": "27279592f0583b07c63af5bca110bf79b70a7381a68fe4a07808fcd19bd05272",
+    "engine.py": "0d029d84a7856475df84ae65ef8be54d2247167281c78d4e8934f26f2e755528",
+    "web/seed.sql": "24316fe15f1ff2926f592013c9fc1bc662ca275a307fbc7dcd32768136723432",
+    "evaluate_live.py": "4b13f9bedbba1cc6462e0f804562ec5c0e6bec1cd89a778551689aeaf0065a11"
+  },
+  "limitations": [
+    "人工构造的六个冒烟问题，非独立留出评测集，不能换算为生产准确率。",
+    "使用真实模型、合成业务数据；没有真实客户数据或业务效果验证。",
+    "解释文本由模型生成，仅比对结果行或拒答；未自动核验解释的每项声称。"
+  ]
+}

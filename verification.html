@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="苗怡飞作品集的最新验证记录：Resume Protocol 合成材料导出、论文保护回归、门店数据分析与本地模型验证。"><title>验证记录 · 苗怡飞作品集</title><link rel="icon" href="assets/favicon.svg"><link rel="stylesheet" href="verification.css?v=20261111"></head>
+<body class="verification-page"><main class="verification-wrap">
+<nav class="verification-nav" aria-label="主导航"><a href="./">苗怡飞 / 返回主页</a><a href="work.html">全部作品与个人贡献</a></nav>
+<p class="verification-meta">更新于 2026.11.11 · 本地验证成果</p>
+<h1>把结果放出来，<br>也把边界说清楚。</h1>
+<p class="verification-lead">这里汇总实际运行记录与截图。测试通过只说明所列样例符合预期，不代表生产准确率。新增修复和验证使用 AI 辅助开发，个人职责与团队成果分别说明。</p>
+<section class="verification-panel" id="resume" aria-labelledby="resume-title">
+<p class="verification-meta">团队协作 · 候选人知识库与工具授权层</p><h2 id="resume-title">Resume Protocol</h2>
+<p>近期补做真实模型调用：使用虚构候选人材料，走通上传 → 用户提供 JD → 生成与现有服务端校验 → PDF / DOCX 导出。原始报告保留“机械检查通过、语义复核待完成”的状态；后续人工检查范围有限。</p>
+<div class="verification-stats"><div class="verification-stat"><strong>1</strong><span>合成材料完整流程</span></div><div class="verification-stat"><strong>PDF / DOCX</strong><span>两种格式导出</span></div></div>
+<ul><li>事实保留来源、原文与位置；检索范围和工具权限由服务端确定。</li><li>已知毕业日期推断工龄的错误增加有限规则保护，不宣称能阻止所有错误推论。</li><li>PDF 已检查中文页面；DOCX 检查内容与结构，未独立渲染 Word 版式。</li></ul>
+<figure><a href="assets/resume-export-verified.png"><img src="assets/resume-export-verified.png" alt="Resume Protocol 真实模型生成后导出的 PDF，使用虚构的张三与 GreenSteps 项目材料" loading="lazy"></a><figcaption>实际 PDF 导出预览。张三、GreenSteps 等为测试材料，不是本人简历或真实客户记录。</figcaption></figure>
+<p class="verification-boundary">本地验证版，未将这轮修改推送到团队仓库；不是自然路由准确率或完整事实核验评测。</p>
+<div class="verification-actions"><a href="evidence/resume-flow.json">读取筛选后的运行摘要</a><a href="work.html#case-resume">我的职责与实现</a><a href="evidence/resume-flow.json">公开验证摘要</a></div>
+</section>
+<section class="verification-panel thesis" id="thesis" aria-labelledby="thesis-title">
+<p class="verification-meta">独立项目 · AI 辅助补充验证</p><h2 id="thesis-title">论文模板保护工具</h2>
+<p>把“正文可以改、受保护部件不能误改”写成可运行的检查；生成 JSON 审计报告，定位变化部件。</p>
+<div class="verification-stats"><div class="verification-stat"><strong>14 / 14</strong><span>回归测试通过</span></div><div class="verification-stat"><strong>0</strong><span>本轮失败与错误</span></div></div>
+<h3>本轮检查覆盖</h3><ul><li>未改动文件与正常正文编辑放行。</li><li>封面、页眉、关联图片、样式与关系变化被拦截。</li><li>边界缺失、旧版及不完整快照拒绝通过。</li><li>报告或快照输出不能覆盖原文档，硬链接别名也检查。</li><li>模拟报告替换失败，原有报告仍保留。</li></ul>
+<p class="verification-boundary">数据是最小合成 ZIP/XML 文件，非完整可渲染学校模板。尚未在真实论文上验证；哈希一致不能证明排版正确或引用真实。</p>
+<div class="verification-actions"><a href="evidence/thesis-regression.json">读取原始回归报告</a><a href="evidence/thesis-source.zip" download>下载本地验证版源码</a><a href="https://github.com/myf8626-debug/draft-thesis-docx">原开源仓库</a></div>
+<p class="verification-meta">原仓库链接保留；本轮新增修复以此页下载的本地验证版为准，不声称远端代码已同步。</p>
+</section>
+<section class="verification-panel store" id="store" aria-labelledby="store-title">
+<p class="verification-meta">个人实验 · AI 辅助开发 · 合成门店数据</p><h2 id="store-title">门店数据分析台</h2>
+<div class="verification-stats"><div class="verification-stat"><strong>46 / 46</strong><span>确定性回归通过</span></div><div class="verification-stat"><strong>7 / 7</strong><span>Python / WASM 一致性</span></div><div class="verification-stat"><strong>5 → 6</strong><span>六道模型问题的通过数</span></div></div>
+<p>金额用整数“分”聚合；一条订单保留多个异常原因。同订单号但内容冲突时整组隔离，关联退款一并排除，原始记录保留。退款先按订单汇总，避免一对多关联放大金额。</p>
+<p>本地可选调用 DeepSeek 生成 SQL，再经过只读边界实际执行。六道人工构造问题首次通过五道：一题多返回门店 ID 列，按契约判失败；补充通用输出列约束后，同六题复测通过。</p>
+<figure><a href="assets/store-model-local.png"><img src="assets/store-model-local.png" alt="本地模型查询的实际页面截图：模型生成 SQL，SQLite 对合成数据计算净额 340 元" loading="lazy"></a><figcaption>本地真实模型调用截图，合成数据净额 340 元。截图中的模型入口需要本地服务及个人凭据，线上静态样例不提供该入口。</figcaption></figure>
+<p class="verification-boundary">同题复测属于开发回归，不是独立留出评测，不能写成准确率 100%。GitHub Pages 上只运行合成数据固定查询；没有在线模型后端，也没有真实业务成效数据。</p>
+<div class="verification-actions"><a href="labs/store-evidence/">打开线上固定样例</a><a href="labs/store-evidence/source.zip" download>下载本地可运行源码</a><a href="evidence/store-regression.json">46 项回归记录</a><a href="labs/store-evidence/reports/sql-parity.json">跨引擎一致性</a><a href="labs/store-evidence/reports/live-evaluation-first-run.json">首次模型失败记录</a><a href="labs/store-evidence/reports/live-evaluation.json">同题复测记录</a></div>
+</section>
+<p class="verification-lead">岗位调研证据台与政策问答仍为人工构造样例，没有新增联网搜索或真实政策库。潮向实习不发布缺少原始记录的效率提升数字。</p>
+<footer><a href="./">返回个人主页</a> · 结论要有依据，动作要有边界。</footer>
+</main></body></html>

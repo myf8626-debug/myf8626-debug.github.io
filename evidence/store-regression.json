@@ -1,0 +1,205 @@
+{
+  "kind": "deterministic_regression_tests",
+  "dataset_type": "synthetic",
+  "model_evaluated": false,
+  "generated_at": "2026-11-10T14:19:15.785405+00:00",
+  "python": "3.13.0",
+  "tests_run": 46,
+  "passed": 46,
+  "failures": 0,
+  "errors": 0,
+  "input_sha256": {
+    "web/queries.json": "92dd6d25c4e02a190ab3f6cc6b5c7aae1e6b43e7d47291192e9c456afaccd5f1",
+    "web/seed.sql": "3b144c5bd4ec2469231c42d3a9bd66afd65d87a085999fc25185822b30c86ccd"
+  },
+  "cases": [
+    {
+      "test": "test_api.APITests.test_health_is_configuration_not_connection",
+      "status": "passed"
+    },
+    {
+      "test": "test_api.APITests.test_invalid_json",
+      "status": "passed"
+    },
+    {
+      "test": "test_api.APITests.test_missing_route",
+      "status": "passed"
+    },
+    {
+      "test": "test_api.APITests.test_model_error_no_fallback",
+      "status": "passed"
+    },
+    {
+      "test": "test_api.APITests.test_model_route",
+      "status": "passed"
+    },
+    {
+      "test": "test_api.APITests.test_query",
+      "status": "passed"
+    },
+    {
+      "test": "test_api.APITests.test_wrong_host",
+      "status": "passed"
+    },
+    {
+      "test": "test_api.APITests.test_wrong_origin",
+      "status": "passed"
+    },
+    {
+      "test": "test_boundaries.CleaningTests.test_all_reasons_survive",
+      "status": "passed"
+    },
+    {
+      "test": "test_boundaries.CleaningTests.test_cents_sum_exact",
+      "status": "passed"
+    },
+    {
+      "test": "test_boundaries.CleaningTests.test_conflict_also_quarantines_attached_refunds",
+      "status": "passed"
+    },
+    {
+      "test": "test_boundaries.CleaningTests.test_conflicting_duplicates_quarantine_both",
+      "status": "passed"
+    },
+    {
+      "test": "test_boundaries.CleaningTests.test_fractional_cent_rejected",
+      "status": "passed"
+    },
+    {
+      "test": "test_boundaries.CleaningTests.test_identical_duplicates_keep_one",
+      "status": "passed"
+    },
+    {
+      "test": "test_boundaries.CleaningTests.test_invalid_calendar_date",
+      "status": "passed"
+    },
+    {
+      "test": "test_boundaries.CleaningTests.test_negative_cannot_hide_over_refund",
+      "status": "passed"
+    },
+    {
+      "test": "test_boundaries.CleaningTests.test_null_difference_is_still_conflict",
+      "status": "passed"
+    },
+    {
+      "test": "test_boundaries.CleaningTests.test_orphan_refund",
+      "status": "passed"
+    },
+    {
+      "test": "test_boundaries.CleaningTests.test_refund_overage_quarantines_whole_order",
+      "status": "passed"
+    },
+    {
+      "test": "test_boundaries.CleaningTests.test_system_table_and_allocations_blocked",
+      "status": "passed"
+    },
+    {
+      "test": "test_boundaries.ModelTests.test_bad_shape",
+      "status": "passed"
+    },
+    {
+      "test": "test_boundaries.ModelTests.test_no_key_no_network",
+      "status": "passed"
+    },
+    {
+      "test": "test_boundaries.ModelTests.test_provider_error_sanitized",
+      "status": "passed"
+    },
+    {
+      "test": "test_boundaries.ModelTests.test_refusal_does_not_query",
+      "status": "passed"
+    },
+    {
+      "test": "test_boundaries.ModelTests.test_truncated_generation",
+      "status": "passed"
+    },
+    {
+      "test": "test_boundaries.ModelTests.test_valid_sql_runs",
+      "status": "passed"
+    },
+    {
+      "test": "test_boundaries.ModelTests.test_write_blocked",
+      "status": "passed"
+    },
+    {
+      "test": "test_engine.SQLTests.test_aggregate_total",
+      "status": "passed"
+    },
+    {
+      "test": "test_engine.SQLTests.test_category_totals",
+      "status": "passed"
+    },
+    {
+      "test": "test_engine.SQLTests.test_cleaning_counts",
+      "status": "passed"
+    },
+    {
+      "test": "test_engine.SQLTests.test_empty_statistical_signal_is_valid",
+      "status": "passed"
+    },
+    {
+      "test": "test_engine.SQLTests.test_extension_blocked",
+      "status": "passed"
+    },
+    {
+      "test": "test_engine.SQLTests.test_first_month_has_no_comparison",
+      "status": "passed"
+    },
+    {
+      "test": "test_engine.SQLTests.test_fixed_question",
+      "status": "passed"
+    },
+    {
+      "test": "test_engine.SQLTests.test_issue_line_numbers",
+      "status": "passed"
+    },
+    {
+      "test": "test_engine.SQLTests.test_missing_table_reports_error",
+      "status": "passed"
+    },
+    {
+      "test": "test_engine.SQLTests.test_monthly_window",
+      "status": "passed"
+    },
+    {
+      "test": "test_engine.SQLTests.test_multi_statement_blocked",
+      "status": "passed"
+    },
+    {
+      "test": "test_engine.SQLTests.test_pragma_blocked",
+      "status": "passed"
+    },
+    {
+      "test": "test_engine.SQLTests.test_raw_data_not_deleted",
+      "status": "passed"
+    },
+    {
+      "test": "test_engine.SQLTests.test_readonly_delete",
+      "status": "passed"
+    },
+    {
+      "test": "test_engine.SQLTests.test_recursive_budget",
+      "status": "passed"
+    },
+    {
+      "test": "test_engine.SQLTests.test_refund_preaggregation_avoids_fanout",
+      "status": "passed"
+    },
+    {
+      "test": "test_engine.SQLTests.test_result_cap",
+      "status": "passed"
+    },
+    {
+      "test": "test_engine.SQLTests.test_unknown_natural_question_not_fabricated",
+      "status": "passed"
+    },
+    {
+      "test": "test_engine.SQLTests.test_write_cte_blocked",
+      "status": "passed"
+    }
+  ],
+  "limitations": [
+    "人工构造的小样本回归检查，不代表真实业务效果。",
+    "本报告不调用真实模型；真实调用另见 reports/live-evaluation.json，均不代表生产准确率。"
+  ]
+}

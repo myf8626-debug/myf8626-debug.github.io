@@ -14,7 +14,7 @@ self.onmessage = async ({ data }) => {
     )
       throw Error("仅支持单条 SELECT / WITH 查询");
     if (
-      /\b(INSERT|UPDATE|DELETE|DROP|ALTER|CREATE|ATTACH|DETACH|PRAGMA|REPLACE|VACUUM|REINDEX|LOAD_EXTENSION)\b/i.test(
+      /\b(INSERT|UPDATE|DELETE|DROP|ALTER|CREATE|ATTACH|DETACH|PRAGMA|REPLACE|VACUUM|REINDEX|LOAD_EXTENSION|RANDOMBLOB|ZEROBLOB)\b/i.test(
         query,
       )
     )

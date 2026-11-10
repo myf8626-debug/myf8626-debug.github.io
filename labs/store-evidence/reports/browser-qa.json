@@ -1,0 +1,35 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "browser_python_parity": [
+        {
+          "id": "refunds",
+          "equal": true
+        },
+        {
+          "id": "monthly",
+          "equal": true
+        },
+        {
+          "id": "category",
+          "equal": true
+        },
+        {
+          "id": "issues",
+          "equal": true
+        },
+        {
+          "id": "outliers",
+          "equal": true
+        }
+      ]
+    },
+    "real model UI → SQL → SQLite result 340 CNY",
+    "390px mobile no horizontal overflow",
+    "mock outage clears stale result"
+  ],
+  "limitations": [
+    "One real model UI question; failure branch uses mocked HTTP 502."
+  ]
+}

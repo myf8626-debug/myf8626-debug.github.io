@@ -1,0 +1,38 @@
+{
+  "generated_at": "2026-11-10T14:18:43.260Z",
+  "passed": true,
+  "checks": [
+    {
+      "case": "baseline",
+      "passed": true
+    },
+    {
+      "case": "amount",
+      "passed": true
+    },
+    {
+      "case": "status",
+      "passed": true
+    },
+    {
+      "case": "null",
+      "passed": true
+    },
+    {
+      "case": "refund",
+      "passed": true
+    },
+    {
+      "case": "date",
+      "passed": true
+    },
+    {
+      "case": "negative-offset",
+      "passed": true
+    }
+  ],
+  "seed_sha256": "3b144c5bd4ec2469231c42d3a9bd66afd65d87a085999fc25185822b30c86ccd",
+  "limitations": [
+    "Seven synthetic mutations; engine consistency is not business truth or real-model quality."
+  ]
+}
