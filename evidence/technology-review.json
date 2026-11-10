@@ -1,0 +1,51 @@
+{
+  "date": "2026-11-11",
+  "resume_protocol": {
+    "stack": [
+      "Node.js",
+      "Express",
+      "SQLite",
+      "React",
+      "Vite"
+    ],
+    "personal_scope": [
+      "候选人事实库",
+      "检索隔离",
+      "工具授权",
+      "四个 Career Skill"
+    ],
+    "retrieval": "450-character fixed chunks; keyword matching and type hints; no embeddings/vector index/reranker in inspected candidate retrieval path",
+    "tests_this_review": {
+      "selected_tests": 23,
+      "passed": 23,
+      "full_suite": false
+    }
+  },
+  "cloud": {
+    "stack": [
+      "Vue 3",
+      "TypeScript",
+      "Element Plus",
+      "Pinia",
+      "Axios",
+      "Vue Router",
+      "ECharts",
+      "Vite"
+    ],
+    "personal_scope": "前端与接口联调",
+    "chunking": "File/Blob byte slicing for upload, not RAG semantic chunking",
+    "type_check": "blocked by vue-tsc /supportedTSExtensions/ toolchain error; not passed",
+    "backend_rag": "not verified in inspected source"
+  },
+  "thesis": {
+    "stack": [
+      "Python",
+      "ZIP/XML",
+      "SHA-256",
+      "JSON"
+    ],
+    "tests": "14 synthetic package tests in existing report",
+    "real_thesis_validated": false
+  },
+  "method": "Implementation checked locally; presence of a library does not establish personal ownership or production validation."
+}

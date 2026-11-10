@@ -1427,3 +1427,13 @@ a:hover .store-preview {
 @media (max-width: 600px) {
  .education-card { grid-row: 5; }
 }
+
+/* Match the main-project ordering: Resume Protocol, cloud drive, thesis tool. */
+@media (min-width: 901px) { .cloud-card { grid-column: 1; } .thesis-card { grid-column: 2; } }
+@media (min-width: 601px) and (max-width: 900px) { .cloud-card { grid-column: 1; } .thesis-card { grid-column: 2; } }
+@media (max-width: 600px) { .cloud-card { grid-column: 1; } .thesis-card { grid-column: 2; } }
+
+.practice-notes { margin: 22px 0; display: grid; gap: 20px; }
+.practice-notes p { margin: 0; border-left: 2px solid #9ec9e966; padding-left: 14px; }
+.practice-notes strong { display: block; font-size: 14px; font-weight: 600; color: var(--text-main); }
+.practice-notes span { display: block; margin-top: 6px; font-size: 11px; line-height: 1.9; color: var(--text-muted); }

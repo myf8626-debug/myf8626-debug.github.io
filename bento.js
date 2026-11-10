@@ -31,11 +31,10 @@
     "case-resume": "Resume Protocol",
     "case-thesis": "论文模板保护工具",
     "case-cloud": "云栈 · 智能云盘",
-    "case-internship": "潮向信息科技 · 数据中台",
     resume: "教育、能力与获奖",
-    contact: "简历与联系",
+    contact: "关于与联系",
   };
-  const aliases = { experience: "case-internship" };
+  const aliases = {};
   let previousFocus = null;
   let currentKey = null;
   function renderRoute() {

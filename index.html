@@ -18,9 +18,9 @@
       } catch (e) {}
     </script>
     <link rel="stylesheet" href="vendor/vighnesh-portfolio/theme-tokens.css" />
-    <link rel="stylesheet" href="bento.css?v=20261111-personal" />
+    <link rel="stylesheet" href="bento.css?v=20261111-reviewed" />
     <link rel="stylesheet" href="palette.css?v=20261110-colors" />
-    <script defer src="bento.js?v=20261110-colors"></script>
+    <script defer src="bento.js?v=20261111-reviewed"></script>
   <link rel="stylesheet" href="verification.css?v=20261111">
 </head>
   <body>
@@ -38,7 +38,7 @@
           <div class="identity">
             <img
               src="assets/miao-yifei.png"
-              alt="苗怡飞的简历证件照"
+              alt="苗怡飞的头像"
               width="88"
               height="117"
             />
@@ -74,8 +74,8 @@
           </div>
           <div class="card-copy">
             <h2>Resume Protocol</h2>
-            <p>让求职事实有来源，让模型调用有边界。</p>
-            <span class="card-note">事实溯源 / 工具授权 / 合成材料导出验证</span>
+            <p>候选人材料检索、事实溯源与工具授权。</p>
+            <span class="card-note">Node.js / SQLite · 团队中的知识库与授权层</span>
           </div></a
         ><a
           class="bento-card thesis-card"
@@ -98,7 +98,7 @@
           </div>
           <div class="card-copy">
             <h2>论文模板<br />保护工具</h2>
-            <p>14 项保护回归，误改有记录。</p>
+            <p>用部件哈希检查模板误改。</p>
           </div></a
         ><a
           class="bento-card cloud-card"
@@ -131,13 +131,13 @@
           </svg>
           <div class="card-copy">
             <h2>云栈<br />智能云盘</h2>
-            <p>文件、权限与异常状态。</p>
+            <p>Vue 3 · 文件操作与上传状态。</p>
           </div></a
         ><a
           class="bento-card education-card"
           href="work.html#resume"
           data-modal="resume"
-          ><span class="card-label">教育与获奖</span
+          ><span class="card-label">实践与教育</span
           ><span class="card-arrow"
             ><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
               <path
@@ -149,6 +149,7 @@
                 stroke-linejoin="round"
               /></svg
           ></span>
+          <div class="practice-notes"><p><strong>候选人知识库</strong><span>Node.js · SQLite<br>原文溯源、检索隔离与工具授权</span></p><p><strong>文件管理界面</strong><span>Vue 3 · TypeScript<br>上传状态、异常反馈与接口联调</span></p><p><strong>文档检查工具</strong><span>Python · ZIP/XML<br>部件哈希、审计记录与回归检查</span></p></div>
           <div class="card-copy">
             <span class="work-marker">2024.09—2028.06</span>
             <h2>郑州轻工业大学</h2>
@@ -306,7 +307,7 @@
           <div class="project-copy">
             <h3>Resume Protocol</h3>
             <p class="project-description">
-              让求职事实有来源，让模型调用有边界。
+              候选人材料检索、事实溯源与工具授权。
             </p>
             <dl class="project-facts">
               <div>
@@ -363,7 +364,7 @@
               aria-hidden="true"
             ></span>
           </summary><figure class="verification-shot"><a href="assets/resume-export-verified.png"><img loading="lazy" src="assets/resume-export-verified.png" alt="真实模型生成的 PDF 导出预览 · 虚构候选人材料"></a><figcaption>真实模型生成的 PDF 导出预览 · 虚构候选人材料</figcaption></figure><p class="verification-link"><a href="verification.html#resume">查看验证范围与记录</a></p>
-          <div class="detail-body">
+          <div class="detail-body"><section class="case-part"><h4>实际检索实现</h4><p>Node.js / Express / SQLite。上传文本按 450 字符切分，保留原文位置；用关键词匹配与事实类型提示召回，再组成有长度上限的 Evidence Pack。这是基于材料的检索增强流程，当前未接入 Embedding、向量数据库或 Rerank。</p></section>
             <section class="case-part">
               <h4>问题</h4>
               <p>
@@ -544,13 +545,13 @@
                   ><small>权限边界 / 数据一致性</small>
                 </div>
               </div>
-              <p class="preview-caption">React · Ant Design · Axios</p>
+              <p class="preview-caption">Vue 3 · TypeScript · Element Plus · Axios</p>
             </div>
           </div>
           <div class="project-copy">
             <h3>云栈 · 智能云盘</h3>
             <p class="project-description">
-              把文件操作与权限状态，落到具体界面。
+              负责文件管理前端与接口联调，把上传进度、失败重试和列表状态呈现在界面。
             </p>
             <dl class="project-facts">
               <div>
@@ -561,7 +562,7 @@
               </div>
               <div>
                 <dt>验证边界</dt>
-                <dd>省级获奖项目；当前展示个人职责，暂未提供在线演示入口。</dd>
+                <dd>团队项目；仅展示本人前端与联调职责。本次类型检查因工具链报错未完成，暂不提供在线演示。</dd>
               </div>
             </dl>
             <div class="project-actions">
@@ -605,7 +606,7 @@
             <section class="case-part">
               <h4>边界</h4>
               <p>
-                这是团队项目，我的职责限于前端及相关接口联调。当前页面未提供在线运行入口，不把示意图当作产品运行截图。
+                这是团队项目，我的职责限于前端及接口联调。当前本地代码为 Vue 3 / TypeScript；分片上传针对文件字节，不等于 RAG 文本切分。本次类型检查遇到 vue-tsc 工具链错误，未验证服务端完整流程。
               </p>
             </section>
           </div>
@@ -618,7 +619,7 @@
         <div class="section-heading">
           <div>
             <p class="eyebrow section-eyebrow">
-              <span>03</span>About me<span class="eyebrow-cn">简历概览</span>
+              <span>03</span>About me<span class="eyebrow-cn">个人信息</span>
             </p>
             <h2>经历之外，关于我。</h2>
           </div>
@@ -672,16 +673,12 @@
             <div>
               <h4>工具与基础</h4>
               <p>
-                使用 Codex、Claude Code、Cursor 辅助开发；工程基础涉及
-                Java、React、TypeScript、Node.js 和 SQL。
+                使用 Codex、Claude Code、Cursor 辅助开发；项目实现涉及 React、Vue 3、TypeScript、Node.js、Python 与 SQLite；各项目的个人职责分别说明。
               </p>
             </div>
           </div>
         </div>
-        <div class="resume-download">
-          <p>完整经历、项目职责与联系方式，可在单页 PDF 简历中查看。</p>
 
-        </div>
       </section>
     </template>
     <template id="detail-contact"

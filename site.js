@@ -13,10 +13,10 @@
         String(button.dataset.filter === kind),
       ),
     );
-    count.textContent =
+    if (count) count.textContent =
       projects.filter((project) => !project.hidden).length + " 项作品";
   }
-  group.hidden = false;
+  if (group) group.hidden = false;
   filters.forEach((button) =>
     button.addEventListener("click", () => filter(button.dataset.filter)),
   );
