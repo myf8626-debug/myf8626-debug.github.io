@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="基于 AnythingLLM 的候选人证据检索评测扩展：React、Express、SQLite、pgvector、BM25 与 RRF。展示真实模型实验与验证边界。">
+<title>AnythingLLM · 证据检索评测 — 苗怡飞</title><link rel="canonical" href="https://myf8626-debug.github.io/anythingllm.html"><link rel="icon" href="assets/favicon.svg"><link rel="stylesheet" href="verification.css?v=20261111">
+<style>.verification-page figure img{height:auto}.result-scroll{overflow-x:auto}table{width:100%;border-collapse:collapse;font-size:14px}th,td{text-align:left;padding:14px 10px;border-bottom:1px solid #6984ad55}th{color:#a9f3d7}td:first-child{min-width:160px}.verification-page h1 small{display:block;font-size:.42em;color:#a9f3d7;margin-bottom:16px}.verification-panel a{overflow-wrap:anywhere}</style></head>
+<body class="verification-page"><main class="verification-wrap">
+<nav class="verification-nav" aria-label="主导航"><a href="./">苗怡飞 / 返回主页</a><a href="work.html">全部作品</a></nav>
+<p class="verification-meta">2026.11 · AnythingLLM 开源二次开发 · 本地验证版</p>
+<h1><small>候选人证据检索实验室</small>证据没找到，<br>还是被排序丢掉？</h1>
+<p class="verification-lead">Resume Protocol 关注候选人事实是否有来源。这个扩展接着检查：已有来源的事实能否被检索出来，又会不会在重排或截断时丢失。基于 AnythingLLM，在 AI 辅助下实现评测界面、任务 API、记录存储与混合召回。</p>
+<div class="verification-actions"><a href="#implementation">看新增实现</a><a href="#results">看真实模型结果</a><a href="#evidence">查看验证文件</a></div>
+<figure><a href="assets/anythingllm-workspace.png"><img src="assets/anythingllm-workspace.png" alt="完整 AnythingLLM 工作空间中的检索评测页：批量运行结果、候选池与最终召回指标、证据导出" width="1440" height="1000"></a><figcaption>本地生产构建的实际界面，使用合成词项基线完成 20 题运行与导出。下方真实 E5 模型对照由集成脚本执行，二者不混用指标。</figcaption></figure>
+<section class="verification-panel" id="implementation"><h2>先定位召回问题，再考虑重排</h2>
+<p>重排只能处理已有候选。我先把候选池、原始 Top K、最终 Top K 分开评测，逐题对照标注依据，区分“没有召回”和“召回后被丢弃”。不能因为最终答案不好，就直接认定需要更换模型。</p>
+<ul><li><strong>前后端评测流程：</strong>React 配置与结果界面 → Express API → SQLite 数据集、运行及逐题记录。支持幂等提交、取消、失败回退和 JSON 导出；取消后的迟到结果不能覆盖任务状态。</li>
+<li><strong>补充候选来源：</strong>在评测入口加入 pgvector 向量召回与 BM25 关键词召回，用 RRF 按排名融合，保留来源渠道。中文双字词项与英文标识符用于匹配；未改写上游文档切分器。</li>
+<li><strong>范围与可比性：</strong>服务端按工作空间与用户绑定记录，复用上游鉴权；数据集版本和参数随运行保存，不兼容的基线不直接比较增益。</li></ul>
+<p><strong>技术栈：</strong>React / JavaScript、Node.js / Express、SQLite、PostgreSQL / pgvector、BM25、RRF；复用上游 Prisma、Embedding 适配与本地交叉编码器推理。</p>
+</section>
+<section class="verification-panel thesis" id="results"><h2>真实模型跑通，也保留退化结果</h2>
+<p>multilingual-e5-small 实际生成 384 维向量并写入 pgvector；MiniLM 实际推理。12 段合成资料、20 道开发验收题，candidateK=8、最终 K=3；Recall / MRR 只统计其中 17 道有答案题，3 道无答案题单独记录。</p>
+<div class="result-scroll" role="region" aria-label="真实本地模型对照结果，可横向滚动" tabindex="0"><table><thead><tr><th scope="col">配置</th><th scope="col">Recall@3</th><th scope="col">MRR@3</th><th scope="col">无答案错误召回</th></tr></thead><tbody>
+<tr><th scope="row">E5 + pgvector</th><td>1.000</td><td>0.902</td><td>3 / 3</td></tr>
+<tr><th scope="row">加英文 MiniLM 重排</th><td>0.765</td><td>0.627</td><td>3 / 3</td></tr>
+<tr><th scope="row">加 BM25 / RRF</th><td>1.000</td><td>0.902</td><td>3 / 3</td></tr>
+</tbody></table></div>
+<p>这组中文题上，英文重排模型造成退化；混合召回没有展示 Recall / MRR 增益。固定向量机制测试另验证了关键词分支能补回向量池外的证据，但不能据此宣称一般准确率提高。</p>
+<p class="verification-boundary">三道无答案题仍全部返回候选，高召回不等于会正确拒答。数据不是独立留出集，没有验证生成回答的幻觉率或真实业务收益。</p>
+</section>
+<section class="verification-panel" id="evidence"><h2>可核对的验证记录</h2>
+<div class="verification-stats"><div class="verification-stat"><strong>30</strong><span>核心测试通过</span></div><div class="verification-stat"><strong>15</strong><span>真实 HTTP 鉴权检查</span></div><div class="verification-stat"><strong>10</strong><span>pgvector 集成检查</span></div></div>
+<p>前端生产构建通过；完整工作空间完成载入 → 批量运行 20 题 → 导出，导出接口返回 HTTP 200。手机 390 px 视口验收无页面横向溢出。pgvector 机制检查使用固定三维向量，真实模型效果单独记录。</p>
+<div class="verification-actions"><a href="evidence/anythingllm/semantic-pgvector.json">逐题模型原始报告</a><a href="evidence/anythingllm/auth-integration.json">鉴权检查报告</a><a href="evidence/anythingllm/pgvector-integration.json">pgvector 集成报告</a><a href="evidence/anythingllm/model-manifest.json">模型文件指纹</a></div>
+</section>
+<section class="verification-panel store"><h2>二次开发范围与当前限制</h2>
+<p><strong>本次新增：</strong>检索评测 UI / API、任务记录、指标与失败定位、BM25 / RRF 混合召回及相关测试。项目方向连接候选人事实溯源场景，代码实现与验证主要使用 Codex 辅助。</p>
+<p><strong>来自上游：</strong>AnythingLLM 的聊天、工作空间、认证中间件、文档导入、已有向量与 Embedding 适配及模型推理框架。未训练模型，也不将整个开源产品计为个人实现。</p>
+<p class="verification-boundary">混合检索只接入评测与预览入口，尚未替换主聊天默认检索。BM25 在内存构建，单工作空间上限 2000 片段；未验证生产规模、上传 / OCR 到最终生成的完整链路。当前页面展示本地成果，线上没有模型后端，二次开发源码暂未公开。</p>
+<p>上游：<a href="https://github.com/Mintplex-Labs/anything-llm">Mintplex-Labs / anything-llm</a>（MIT）。本地实现提交 <code>d689b8a</code>；上游基线 <code>728586d</code>。</p>
+</section><footer><a href="./">返回个人主页</a> · <a href="verification.html">其他项目验证记录</a></footer>
+</main></body></html>

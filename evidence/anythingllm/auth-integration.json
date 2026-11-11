@@ -1,0 +1,22 @@
+{
+  "testedAt": "2026-11-11T14:41:22.703Z",
+  "passed": 15,
+  "checks": [
+    "anonymous rejected",
+    "regular user role rejected",
+    "admin authorized",
+    "missing workspace rejected",
+    "dataset hidden from another manager",
+    "forged scope rejected",
+    "HTTP retry is idempotent",
+    "idempotency conflict rejected",
+    "cross-user run read rejected",
+    "cross-user run /export rejected",
+    "cross-user run /cancel rejected",
+    "cross-workspace run rejected",
+    "authenticated batch completes",
+    "authorized export carries evidence",
+    "large body rejected before processing"
+  ],
+  "scope": "Actual upstream middleware and isolated SQLite/Prisma; no credential or token included"
+}

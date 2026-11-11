@@ -1,6 +1,6 @@
 # 苗怡飞的个人作品集
 
-基于 [Vighnesh-Gaddam/Portfolio](https://github.com/Vighnesh-Gaddam/Portfolio) 的 MIT 模板制作的静态适配版，展示个人介绍、教育信息和三项主要作品，部署于 GitHub Pages。个人介绍居中，项目分列两侧；支持详情弹窗、深浅主题与手机布局。
+基于 [Vighnesh-Gaddam/Portfolio](https://github.com/Vighnesh-Gaddam/Portfolio) 的 MIT 模板制作的静态适配版，展示个人介绍、教育信息和四项主要作品，部署于 GitHub Pages。个人介绍居中，项目分列两侧；支持详情弹窗、深浅主题与手机布局。
 
 - `index.html` / `bento.css` / `bento.js`：卡片主页、主题切换和原生 dialog 详情。首页默认深色。
 - `palette.css`：蓝灰背景、多色项目卡片及对应的浅色主题；头像与截图保留原始颜色。
@@ -30,3 +30,7 @@
 ## 技术核对与项目排序
 
 主项目顺序为 Resume Protocol、云栈、draft-thesis-docx。候选人检索已补充本地 Embedding、SQLite 向量缓存与 RRF 融合；云栈依据本地代码纠正为 Vue 3 / TypeScript / Element Plus，分片上传不写作 RAG 文档切分。本次云栈类型检查因工具链错误未完成。核对摘要位于 evidence/technology-review.json。单页投递简历在本地另行交付，不恢复网站求职入口。
+
+## AnythingLLM 二次开发展示
+
+新增 `anythingllm.html`，沿用现有主页卡片与验证页视觉。实际截图位于 `assets/anythingllm-workspace.png`，合成材料报告位于 `evidence/anythingllm/`。项目为 AI 辅助开源二次开发，未公开本地源码或部署模型后端；明确区分上游能力、评测入口扩展、真实模型与固定向量机制检查，不宣称混合召回提高准确率。

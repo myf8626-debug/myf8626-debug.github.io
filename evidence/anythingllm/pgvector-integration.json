@@ -1,0 +1,127 @@
+{
+  "testedAt": "2026-11-11T14:35:10.046Z",
+  "checks": [
+    "actual pgvector SQL",
+    "actual upstream PGVector adapter",
+    "actual GenericOpenAiEmbedder HTTP serialization",
+    "namespace isolation",
+    "parameterized namespace",
+    "threshold filtering",
+    "source provenance",
+    "EvaluationService persistence and metrics",
+    "BM25 recovers evidence absent from vector candidates",
+    "keyword branch also enforces namespace isolation"
+  ],
+  "embedding": "fixed 3-dimensional vectors; not a real embedding model",
+  "requests": 5,
+  "result": {
+    "id": "dcc667a1-8c75-4908-9b9b-64f2197ad49a",
+    "datasetId": "9b4bcc94-11f0-426e-a34c-505cdc3a68d1",
+    "created": "2026-11-11T14:35:09.924Z",
+    "status": "succeeded",
+    "config": {
+      "mode": "workspace",
+      "retrieval": "vector",
+      "reranker": "none",
+      "topK": 2,
+      "candidateK": 3,
+      "threshold": 0.5,
+      "timeoutMs": 30000
+    },
+    "snapshot": {
+      "implementation": "retrieval-evaluation-v1",
+      "upstreamCommit": "728586d76c843ed25cb7a27c7403f4b79bd960c8",
+      "rerankModel": "none",
+      "retriever": "pgvector",
+      "embeddingModel": "fixed-vector-test",
+      "corpusHash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "corpusKind": "workspace",
+      "corpusVersionKind": "document ID/update-time manifest; not a vector-content snapshot",
+      "documentCount": 0,
+      "datasetHash": "f8f31356680b50371e3ccb0be38b1e02e0b27b05699763a3bf17e1e01109831e",
+      "recordedAt": "2026-11-11T14:35:09.924Z"
+    },
+    "error": null,
+    "results": [
+      {
+        "questionId": "q1",
+        "status": "succeeded",
+        "before": [
+          {
+            "sourceId": "origin",
+            "text": "候选人事实只能来自用户上传的原始材料。",
+            "title": "事实来源",
+            "score": 1
+          },
+          {
+            "sourceId": "years",
+            "text": "毕业年份不能直接推导工作年限。",
+            "title": "年限边界",
+            "score": 0.7999999642372166
+          }
+        ],
+        "after": [
+          {
+            "sourceId": "origin",
+            "text": "候选人事实只能来自用户上传的原始材料。",
+            "title": "事实来源",
+            "score": 1
+          },
+          {
+            "sourceId": "years",
+            "text": "毕业年份不能直接推导工作年限。",
+            "title": "年限边界",
+            "score": 0.7999999642372166
+          }
+        ],
+        "fallback": false,
+        "warning": null,
+        "retrievalMs": 100,
+        "durationMs": 100,
+        "metrics": {
+          "recall": 1,
+          "reciprocalRank": 1,
+          "falseRetrieval": null
+        },
+        "diagnosis": {
+          "stage": "covered",
+          "missing": [],
+          "dropped": []
+        }
+      }
+    ],
+    "datasetName": "PGVector 集成验收",
+    "questions": [
+      {
+        "id": "q1",
+        "query": "候选人事实来源",
+        "answerable": true,
+        "relevant": [
+          {
+            "sourceId": "origin",
+            "quote": "候选人事实只能来自用户上传的原始材料。"
+          }
+        ]
+      }
+    ],
+    "summary": {
+      "total": 1,
+      "completed": 1,
+      "succeeded": 1,
+      "failed": 0,
+      "pending": 0,
+      "answerable": 1,
+      "unanswerable": 0,
+      "recall": 1,
+      "mrr": 1,
+      "beforeRecall": 1,
+      "beforeMrr": 1,
+      "candidateRecall": 1,
+      "falseRetrievalRate": null,
+      "unanswerableMeasured": 0,
+      "fallback": 0,
+      "p95Ms": 100,
+      "denominator": "Recall/MRR 使用全部可回答题，失败或未完成题计 0；无答案题单列。耗时仅统计成功题。"
+    }
+  }
+}

@@ -5,6 +5,7 @@
 <p class="verification-meta">更新于 2026.11.11 · 本地验证成果</p>
 <h1>把结果放出来，<br>也把边界说清楚。</h1>
 <p class="verification-lead">这里汇总实际运行记录与截图。测试通过只说明所列样例符合预期，不代表生产准确率。新增修复和验证使用 AI 辅助开发，个人职责与团队成果分别说明。</p>
+<section class="verification-panel thesis" id="anythingllm"><p class="verification-meta">2026.11.11 · 开源二次开发 · AI 辅助实现</p><h2>AnythingLLM · 候选人证据检索评测</h2><p>新增评测界面、任务 API 与 BM25 / RRF 混合召回；真实 multilingual-e5-small、pgvector 与 MiniLM 对照已跑通。30 项核心测试、15 项 HTTP 鉴权检查、10 项 pgvector 集成检查通过。</p><p class="verification-boundary">仅 20 道合成开发题，混合召回没有显示指标增益，英文重排发生退化；未验证生产规模与最终生成。</p><div class="verification-actions"><a href="anythingllm.html">查看完整实现与验证边界</a><a href="evidence/anythingllm/semantic-pgvector.json">逐题原始报告</a></div></section>
 <section class="verification-panel" id="resume" aria-labelledby="resume-title">
 <p class="verification-meta">团队协作 · 候选人知识库与工具授权层</p><h2 id="resume-title">Resume Protocol</h2>
 <p>近期补做真实模型调用：使用虚构候选人材料，走通上传 → 用户提供 JD → 生成与现有服务端校验 → PDF / DOCX 导出。原始报告保留“机械检查通过、语义复核待完成”的状态；后续人工检查范围有限。</p>
