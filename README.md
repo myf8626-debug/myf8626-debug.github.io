@@ -29,4 +29,4 @@
 
 ## 技术核对与项目排序
 
-主项目顺序为 Resume Protocol、云栈、draft-thesis-docx。候选人检索为关键词匹配和类型提示，未接入向量检索；云栈依据本地代码纠正为 Vue 3 / TypeScript / Element Plus，分片上传不写作 RAG 文档切分。本次云栈类型检查因工具链错误未完成。核对摘要位于 evidence/technology-review.json。单页投递简历在本地另行交付，不恢复网站求职入口。
+主项目顺序为 Resume Protocol、云栈、draft-thesis-docx。候选人检索已补充本地 Embedding、SQLite 向量缓存与 RRF 融合；云栈依据本地代码纠正为 Vue 3 / TypeScript / Element Plus，分片上传不写作 RAG 文档切分。本次云栈类型检查因工具链错误未完成。核对摘要位于 evidence/technology-review.json。单页投递简历在本地另行交付，不恢复网站求职入口。

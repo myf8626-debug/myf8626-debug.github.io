@@ -1,0 +1,87 @@
+{
+  "kind": "real_local_embedding_synthetic_retrieval",
+  "model": "Xenova/multilingual-e5-small:q8:mean:normalized:v1",
+  "dimensions": 384,
+  "examples": [
+    {
+      "id": "sql",
+      "query": "怎样让 SQL 执行更快？",
+      "expectedDocument": "sql",
+      "hybridTop1": "sql",
+      "hybridHitAt3": true,
+      "lexicalTop1": "sql",
+      "elapsedMs": 1569
+    },
+    {
+      "id": "ui",
+      "query": "有哪些浏览器界面的开发经验？",
+      "expectedDocument": "ui",
+      "hybridTop1": "ui",
+      "hybridHitAt3": true,
+      "lexicalTop1": null,
+      "elapsedMs": 40
+    },
+    {
+      "id": "auth",
+      "query": "如何保证不同租户的数据互不泄露？",
+      "expectedDocument": "auth",
+      "hybridTop1": "retry",
+      "hybridHitAt3": true,
+      "lexicalTop1": "retry",
+      "elapsedMs": 48
+    },
+    {
+      "id": "doc",
+      "query": "能否识别论文封面被意外修改？",
+      "expectedDocument": "doc",
+      "hybridTop1": "retry",
+      "hybridHitAt3": true,
+      "lexicalTop1": null,
+      "elapsedMs": 9
+    },
+    {
+      "id": "retry",
+      "query": "弱网情况下传输大文件如何恢复？",
+      "expectedDocument": "retry",
+      "hybridTop1": "ui",
+      "hybridHitAt3": true,
+      "lexicalTop1": "ui",
+      "elapsedMs": 21
+    },
+    {
+      "id": "eval",
+      "query": "做过哪些模型质量检验工作？",
+      "expectedDocument": "eval",
+      "hybridTop1": "eval",
+      "hybridHitAt3": true,
+      "lexicalTop1": null,
+      "elapsedMs": 8
+    }
+  ],
+  "hybridTop1": 3,
+  "lexicalTop1": 1,
+  "hybridHitAt3": 6,
+  "total": 6,
+  "checks": {
+    "crossUserDenied": true,
+    "persistedIndexRead": true,
+    "updatedTextReindexed": true,
+    "deletedDocumentExcluded": true,
+    "fullRegressionPassed": true,
+    "productionBuildPassed": true,
+    "browserAcceptanceSteps": 6,
+    "browserGenerationModel": "deterministic fixture"
+  },
+  "limitations": [
+    "Six authored synthetic development questions, not held-out evaluation.",
+    "Exact cosine scan, not ANN; no production-scale latency claim.",
+    "This run validates embeddings and retrieval, not end-to-end generative answer correctness.",
+    "Semantic cutoff 0.8 not independently calibrated; English single-token skills use lexical-only matching.",
+    "Index refresh and cleanup occur on retrieval."
+  ],
+  "sourceHashes": {
+    "server/vectorRetrieval.js": "7aa9a7a676ff1a1b9f30c60438a93f86a691f12230f8bc51fca00340903ec985",
+    "server/vectorRetrieval.test.js": "fe118fddaf51e5b1efe4b4be6d12837ab24646e44abc28fdc68188b2b252bd96",
+    "scripts/validate-vector-live.mjs": "c1aa2b46d958cc206e622f5293849372e2b0fc0dd51523b2a7a2ebda0c796853"
+  }
+}

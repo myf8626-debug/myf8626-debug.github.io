@@ -74,7 +74,7 @@
           </div>
           <div class="card-copy">
             <h2>Resume Protocol</h2>
-            <p>候选人材料检索、事实溯源与工具授权。</p>
+            <p>候选人材料混合检索、事实溯源与工具授权。</p>
             <span class="card-note">Node.js / SQLite · 团队中的知识库与授权层</span>
           </div></a
         ><a
@@ -149,7 +149,7 @@
                 stroke-linejoin="round"
               /></svg
           ></span>
-          <div class="practice-notes"><p><strong>候选人知识库</strong><span>Node.js · SQLite<br>原文溯源、检索隔离与工具授权</span></p><p><strong>文件管理界面</strong><span>Vue 3 · TypeScript<br>上传状态、异常反馈与接口联调</span></p><p><strong>文档检查工具</strong><span>Python · ZIP/XML<br>部件哈希、审计记录与回归检查</span></p></div>
+          <div class="practice-notes"><p><strong>候选人知识库</strong><span>Node.js · SQLite<br>混合检索、原文溯源与工具授权</span></p><p><strong>文件管理界面</strong><span>Vue 3 · TypeScript<br>上传状态、异常反馈与接口联调</span></p><p><strong>文档检查工具</strong><span>Python · ZIP/XML<br>部件哈希、审计记录与回归检查</span></p></div>
           <div class="card-copy">
             <span class="work-marker">2024.09—2028.06</span>
             <h2>郑州轻工业大学</h2>
@@ -307,7 +307,7 @@
           <div class="project-copy">
             <h3>Resume Protocol</h3>
             <p class="project-description">
-              候选人材料检索、事实溯源与工具授权。
+              候选人材料混合检索、事实溯源与工具授权。
             </p>
             <dl class="project-facts">
               <div>
@@ -364,7 +364,7 @@
               aria-hidden="true"
             ></span>
           </summary><figure class="verification-shot"><a href="assets/resume-export-verified.png"><img loading="lazy" src="assets/resume-export-verified.png" alt="真实模型生成的 PDF 导出预览 · 虚构候选人材料"></a><figcaption>真实模型生成的 PDF 导出预览 · 虚构候选人材料</figcaption></figure><p class="verification-link"><a href="verification.html#resume">查看验证范围与记录</a></p>
-          <div class="detail-body"><section class="case-part"><h4>实际检索实现</h4><p>Node.js / Express / SQLite。上传文本按 450 字符切分，保留原文位置；用关键词匹配与事实类型提示召回，再组成有长度上限的 Evidence Pack。这是基于材料的检索增强流程，当前未接入 Embedding、向量数据库或 Rerank。</p></section>
+          <div class="detail-body"><section class="case-part"><h4>实际检索实现</h4><p>上传文本按 450 字符切分。本地 multilingual-e5-small 生成 384 维向量，SQLite 按用户与候选人隔离保存，精确余弦检索与关键词召回通过 RRF 融合，保留来源与证据预算。索引在检索时按内容哈希更新。六题合成开发样例：Top-1 从关键词 1/6 到混合 3/6，Hit@3 为 6/6；不是独立准确率，未接入 Rerank 或 ANN。</p></section>
             <section class="case-part">
               <h4>问题</h4>
               <p>

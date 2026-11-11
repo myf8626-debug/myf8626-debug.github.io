@@ -14,7 +14,7 @@
       "工具授权",
       "四个 Career Skill"
     ],
-    "retrieval": "450-character fixed chunks; keyword matching and type hints; no embeddings/vector index/reranker in inspected candidate retrieval path",
+    "retrieval": "Local multilingual-e5-small 384D; scoped SQLite vectors; exact cosine + lexical RRF; no reranker or ANN. See vector-retrieval.json.",
     "tests_this_review": {
       "selected_tests": 23,
       "passed": 23,
