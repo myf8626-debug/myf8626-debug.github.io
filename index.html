@@ -5,11 +5,11 @@
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <meta
       name="description"
-      content="苗怡飞的个人作品集。AI 产品与工程，关注事实溯源、检索隔离与工具授权。郑州轻工业大学软件工程，2028 届。"
+      content="苗怡飞的个人作品集。AI 应用开发与全栈实践，关注事实溯源、检索隔离与工具授权。郑州轻工业大学软件工程，2028 届。"
     />
     <meta name="theme-color" content="#171e31" />
     <link rel="canonical" href="https://myf8626-debug.github.io/" />
-    <title>苗怡飞 · AI 产品与工程作品集</title>
+    <title>苗怡飞 · AI 应用开发与全栈实践作品集</title>
     <link rel="icon" href="assets/favicon.svg" />
     <script>
       try {
@@ -45,7 +45,7 @@
             <div>
               <h1 id="profile-name">苗怡飞</h1>
               <p>MIAO YIFEI</p>
-              <span>AI 产品 / AI 工程</span>
+              <span>AI 应用开发 · 全栈实践</span>
             </div>
           </div>
           <div class="profile-bottom">
@@ -74,8 +74,8 @@
           </div>
           <div class="card-copy">
             <h2>Resume Protocol</h2>
-            <p>截图识别岗位，基于证据修改简历与保留 DOCX 样式。</p>
-            <span class="card-note">Node.js / SQLite · 团队中的知识库与授权层</span>
+            <p>以候选人知识库与工具授权为核心，补齐可核对的简历交互。</p>
+            <span class="card-note">React / Node.js / SQLite · 团队协作与 AI 辅助扩展</span>
           </div></a
         ><a
           class="bento-card thesis-card"
@@ -149,7 +149,7 @@
                 stroke-linejoin="round"
               /></svg
           ></span>
-          <div class="practice-notes"><p><strong>候选人知识库</strong><span>Node.js · SQLite<br>混合检索、原文溯源与工具授权</span></p><p><strong>文件管理界面</strong><span>Vue 3 · TypeScript<br>上传状态、异常反馈与接口联调</span></p><p><strong>文档检查工具</strong><span>Python · ZIP/XML<br>部件哈希、审计记录与回归检查</span></p></div>
+          <div class="practice-notes"><p><strong>AI 应用 / 后端</strong><span>Agent SDK · Node.js · SQLite<br>RAG、事实溯源与工具授权</span></p><p><strong>前端交互</strong><span>React · Vue 3 · TypeScript<br>差异确认、状态处理与接口联调</span></p><p><strong>文档 / 验证</strong><span>Python · Playwright · Git<br>格式保护与浏览器验收</span></p></div>
           <div class="card-copy">
             <span class="work-marker">2024.09—2028.06</span>
             <h2>郑州轻工业大学</h2>
@@ -307,7 +307,7 @@
           <div class="project-copy">
             <h3>Resume Protocol</h3>
             <p class="project-description">
-              截图识别岗位，基于证据修改简历与保留 DOCX 样式。
+              以候选人知识库与工具授权为核心，补齐可核对的简历交互。
             </p>
             <dl class="project-facts">
               <div>
@@ -364,7 +364,7 @@
               aria-hidden="true"
             ></span>
           </summary><figure class="verification-shot"><a href="assets/resume-review-difference.png"><img loading="lazy" src="assets/resume-review-difference.png" alt="局部修改前后对照与人工确认 · 合成材料"></a><figcaption>实际局部修改界面 · 合成材料，确认后才写入当前稿</figcaption></figure><p class="verification-link"><a href="verification.html#resume">查看验证范围与记录</a></p>
-          <div class="detail-body"><section class="case-part"><h4>截图 JD 与原样式编辑</h4><p>PNG/JPEG 岗位截图经本地 OCR 识别，用户校对后设为目标岗位，不写入候选人事实库。原始 DOCX 可选普通同样式段落修改，预览确认后保存独立版本；保留页眉、表格、样式等其他部件，不套统一模板。</p><p>一个合成 DOCX 经 Word 渲染，修改前后均一页，18 个其他部件原字节不变，像素差异限于修改的那一行。只覆盖该测试模板；混合字体、复杂对象和更长文本不自动替换，PDF 原样式编辑暂不支持。</p><a href="verification.html#source-workspace">查看截图识别与原样式前后对比</a></section><section class="case-part"><h4>从建议到可确认的修改</h4><p>新增单条编辑与 AI 改写建议：先展示前后文本和来源，再由用户确认。按岗位要求逐条检索原文；相似片段只作线索，不直接判定符合。版本存入 SQLite，可恢复、下载固定版本的 PDF / DOCX，接受前检查当前稿和材料是否已变化。</p><p>本地合成材料的真实 DeepSeek 建议、确认与恢复，以及浏览器操作和指定版本导出已通过。初稿为预置数据，非本轮重新生成；新增代码尚未推送团队仓库。</p><p><a href="verification.html#resume-review">查看修改界面、验证步骤与边界</a></p></section><section class="case-part"><h4>实际检索实现</h4><p>上传文本按 450 字符切分。本地 multilingual-e5-small 生成 384 维向量，SQLite 按用户与候选人隔离保存，精确余弦检索与关键词召回通过 RRF 融合，保留来源与证据预算。索引在检索时按内容哈希更新。六题合成开发样例：Top-1 从关键词 1/6 到混合 3/6，Hit@3 为 6/6；不是独立准确率，未接入 Rerank 或 ANN。</p></section>
+          <div class="detail-body"><section class="case-part"><h4>技术栈与个人贡献</h4><p><b>前端：</b>React / JavaScript，负责近期 AI 辅助补充的差异确认、截图校对与版本交互。<b>后端：</b>Node.js / Express / SQLite，原有个人贡献聚焦候选人知识库、检索隔离与工具授权。</p><p><b>AI 应用：</b>Claude Agent SDK、Transformers.js、本地 Embedding、关键词与向量 RRF 混合召回。<b>文档与验证：</b>Python / ZIP/XML、OCR、Playwright、Node.js 测试。</p><p>团队协作项目；近期前后端功能与验证由 AI 辅助完成。这里列出已落地的项目技术，不代表独立完成整个团队项目，也不把依赖清单等同于个人熟练度。</p></section><section class="case-part"><h4>截图 JD 与原样式编辑</h4><p>PNG/JPEG 岗位截图经本地 OCR 识别，用户校对后设为目标岗位，不写入候选人事实库。原始 DOCX 可选普通同样式段落修改，预览确认后保存独立版本；保留页眉、表格、样式等其他部件，不套统一模板。</p><p>一个合成 DOCX 经 Word 渲染，修改前后均一页，18 个其他部件原字节不变，像素差异限于修改的那一行。只覆盖该测试模板；混合字体、复杂对象和更长文本不自动替换，PDF 原样式编辑暂不支持。</p><a href="verification.html#source-workspace">查看截图识别与原样式前后对比</a></section><section class="case-part"><h4>从建议到可确认的修改</h4><p>新增单条编辑与 AI 改写建议：先展示前后文本和来源，再由用户确认。按岗位要求逐条检索原文；相似片段只作线索，不直接判定符合。版本存入 SQLite，可恢复、下载固定版本的 PDF / DOCX，接受前检查当前稿和材料是否已变化。</p><p>本地合成材料的真实 DeepSeek 建议、确认与恢复，以及浏览器操作和指定版本导出已通过。初稿为预置数据，非本轮重新生成；新增代码尚未推送团队仓库。</p><p><a href="verification.html#resume-review">查看修改界面、验证步骤与边界</a></p></section><section class="case-part"><h4>实际检索实现</h4><p>上传文本按 450 字符切分。本地 multilingual-e5-small 生成 384 维向量，SQLite 按用户与候选人隔离保存，精确余弦检索与关键词召回通过 RRF 融合，保留来源与证据预算。索引在检索时按内容哈希更新。六题合成开发样例：Top-1 从关键词 1/6 到混合 3/6，Hit@3 为 6/6；不是独立准确率，未接入 Rerank 或 ANN。</p></section>
             <section class="case-part">
               <h4>问题</h4>
               <p>
@@ -673,7 +673,7 @@
             <div>
               <h4>工具与基础</h4>
               <p>
-                使用 Codex、Claude Code、Cursor 辅助开发；项目实现涉及 React、Vue 3、TypeScript、Node.js、Python 与 SQLite；各项目的个人职责分别说明。
+                方向：AI 应用开发，偏 Agent / RAG 与后端，具备前后端项目实践。前端使用 React、Vue 3、JavaScript / TypeScript；后端使用 Node.js、Express、SQLite；AI 应用涉及 Claude Agent SDK、Transformers.js 与混合检索，Python 用于文档处理。Git、Playwright 与 Codex 用于协作、验证和辅助开发；个人职责与 AI 辅助扩展分别说明。
               </p>
             </div>
           </div>
