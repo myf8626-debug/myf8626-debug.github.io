@@ -1,0 +1,56 @@
+{
+  "synthetic": true,
+  "ocr": "real local Windows OCR",
+  "generationModelUsed": false,
+  "checks": [
+    "real image OCR returns Chinese and technology names without selecting a job",
+    "explicit confirmation sets target JD, clears stale draft and never writes Candidate Facts or Documents",
+    "blank and forged images fail without overwriting confirmed JD",
+    "real JPEG OCR works; older screenshot confirmation is rejected",
+    "selected DOCX paragraph preview and explicit save; immutable original bytes retained",
+    "source hash, stale text and length expansion rejected",
+    "saved original-style version survives reload and exports identical bytes",
+    "cross-user state and export denied",
+    "desktop and mobile browser flow without script errors or document overflow"
+  ],
+  "passed": true,
+  "ocrText": "测试岗位 ． 前端开发\n岗位职责\n使用 React 开发页面和文件列表\n处理错误提示 ， 核对页面展示\n岗位要求\n掌握 JavaScript 和 Git\n了解接口请求与异常处理",
+  "sourcePartsPreserved": 18,
+  "limitations": [
+    "Synthetic clear screenshot only, not OCR accuracy benchmark.",
+    "DOCX supports same-style plain paragraphs only; no longer text, fields or mixed runs.",
+    "PDF original-style editing is unsupported.",
+    "Pixel layout depends on Word/fonts; inspect the preview before using."
+  ],
+  "date": "2026-11-11",
+  "styleVerification": {
+    "changedPackageParts": [
+      "word/document.xml"
+    ],
+    "unchangedPackageParts": 18,
+    "paragraphAndRunPropertiesUnchanged": true,
+    "renderEngine": "Microsoft Word",
+    "pagesBefore": 1,
+    "pagesAfter": 1,
+    "pixelDifferenceBBox": [
+      386,
+      397,
+      560,
+      416
+    ],
+    "scope": "one synthetic styled DOCX; not all templates",
+    "visualInspection": "Word-rendered before/after inspected; pixel difference confined to changed text line"
+  },
+  "unitTestsPassed": 5,
+  "fullNpmTest": "passed",
+  "build": "passed",
+  "teamRepositoryPushed": false,
+  "development": "AI-assisted implementation and verification",
+  "sourceSha256": {
+    "server/sourceWorkspace.js": "0d094003774b010f3ffaee923871a05c3634b39f3ad15f21f868e11934198630",
+    "server/style_docx.py": "c47b244d8ecb4da7ed2f62631bcc6c255bc25059db844524bdc0b559827d871d",
+    "server/style_docx.test.py": "9d3bff6c7f5599e1496abe1ac5ae5941206503f783dc7764778a620f04a7dbf5",
+    "src/components/SourceWorkspace.jsx": "a020bbbae630ef91b8d709a6b4a177429d7eb2103e735988d216424de789a91c",
+    "scripts/validate-source-workspace.mjs": "a6a87e6130bada6194743ea69dbe8cf69ce19c3ff279fad1383c5f79e9102a4f"
+  }
+}
