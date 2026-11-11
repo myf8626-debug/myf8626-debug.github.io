@@ -1,6 +1,6 @@
 # 设计与素材来源
 
-2026-11-12 首页按用户要求改为黑色细线分区、浅色底与真实彩色项目截图。参考 [Kamiyd](https://kamiyd.com/) 简短自述、项目优先的信息组织；没有复制其代码、个人经历或项目素材。使用 frontend-design / ui-ux-pro-max 技能校验排版与响应式，原生 HTML/CSS/JavaScript，无新增运行时依赖。
+2026-11-12 首页按用户要求改为黑白描边卡片：中间个人卡，左右重点项目，后续作品、现场实践也使用独立卡片。采用白底、黑色边框、圆角和轻微错位阴影，保留真实彩色截图。参考 [Kamiyd](https://kamiyd.com/) 简短自述、项目优先的信息组织；没有复制其代码、个人经历或项目素材。使用 frontend-design / ui-ux-pro-max 技能校验排版与响应式，原生 HTML/CSS/JavaScript，无新增运行时依赖。
 
 首页重点展示 Resume Protocol 与 AnythingLLM，再展示诗词语音模块、GreenMate 的前端风格和黑客松现场。每项注明个人贡献、上游与验证环境。
 
@@ -14,6 +14,6 @@
 
 ## 保留的旧页面与许可
 
-旧 bento.css / bento.js / vendor 适配自 MIT 许可的 [Vighnesh-Gaddam/Portfolio](https://github.com/Vighnesh-Gaddam/Portfolio)，上游版本 afb00e6cf119897740cc700a9758165ed2704878。许可保留在 licenses/vighnesh-portfolio-MIT.txt。新首页使用 portfolio.css / portfolio.js，不加载旧模板。
+旧 bento.css / bento.js / vendor 适配自 MIT 许可的 [Vighnesh-Gaddam/Portfolio](https://github.com/Vighnesh-Gaddam/Portfolio)，上游版本 afb00e6cf119897740cc700a9758165ed2704878。许可保留在 licenses/vighnesh-portfolio-MIT.txt。新首页使用 portfolio.css / cards.css / portfolio.js，不加载旧模板。
 
 work.html 的完整复盘页保留；排版曾参考 [RyanFitzgerald/devportfolio](https://github.com/RyanFitzgerald/devportfolio)。项目的最新验证状态应以对应详情和验证报告为准。

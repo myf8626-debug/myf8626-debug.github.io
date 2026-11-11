@@ -1,0 +1,567 @@
+/* Homepage card layout. Detail pages retain their reading layout. */
+.cards-home {
+  background: #eeeef0;
+  color: #161616;
+}
+.cards-home .header {
+  border: 0;
+  padding: 24px 0 16px;
+}
+.cards-home .header nav {
+  gap: 8px;
+}
+.cards-home .header nav a {
+  padding: 5px 16px;
+  min-height: 44px;
+  border: 1px solid transparent;
+  border-radius: 24px;
+  display: flex;
+  align-items: center;
+}
+.cards-home .header nav a:hover {
+  border-color: #161616;
+  color: #161616;
+  background: #fff;
+}
+.cards-home .header a:hover,
+.cards-home .text-link:hover {
+  color: #161616;
+}
+.cards-home .section-heading {
+  border: 0;
+  padding: 18px 0 20px;
+}
+.cards-home .section-heading h2 {
+  font-size: 18px;
+}
+.cards-home .section-heading p {
+  font-size: 12px;
+}
+.featured-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 0.86fr) minmax(0, 1fr);
+  gap: 22px;
+  align-items: stretch;
+}
+.cards-home .feature,
+.cards-home .intro,
+.cards-home .visual-project,
+.cards-home .small-projects article,
+.cards-home .practice,
+.cards-home .about {
+  background: #fff;
+  border: 1.5px solid #161616;
+  border-radius: 20px;
+  box-shadow: 3px 3px 0 #161616;
+  overflow: hidden;
+}
+.cards-home .intro {
+  grid-column: 2;
+  grid-row: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  padding: 30px 22px 24px;
+  align-items: center;
+  text-align: center;
+}
+.cards-home .intro .portrait {
+  border: 0;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.cards-home .intro .portrait img {
+  width: 112px;
+  height: 150px;
+  margin: 0 0 18px;
+  border: 1px solid #161616;
+  border-radius: 12px;
+  object-fit: cover;
+}
+.cards-home .intro .portrait figcaption {
+  font-size: 12px;
+  border: 0;
+  padding: 0;
+  line-height: 1.9;
+}
+.cards-home .profile-copy {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+  width: 100%;
+  padding-top: 24px;
+}
+.cards-home .intro .eyebrow {
+  font-size: 11px;
+  letter-spacing: 0.035em;
+  border: 1px solid #161616;
+  border-radius: 20px;
+  padding: 3px 12px;
+  color: #161616;
+  margin-bottom: 14px;
+}
+.cards-home .intro h1 {
+  font-size: 38px;
+  letter-spacing: 0.03em;
+  line-height: 1.4;
+}
+.profile-en {
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  margin-top: 5px;
+  color: #56565d;
+}
+.cards-home .intro .lead {
+  font-size: 13px;
+  line-height: 1.95;
+  margin: 22px 0;
+}
+.cards-home .intro-links {
+  margin-top: auto;
+  gap: 10px;
+  width: 100%;
+  justify-content: center;
+  padding-top: 8px;
+}
+.cards-home .text-link {
+  border: 1px solid #161616;
+  border-radius: 24px;
+  padding: 6px 14px;
+  min-height: 44px;
+  font-size: 12px;
+  gap: 9px;
+  background: #fff;
+  transition:
+    background 0.15s,
+    color 0.15s;
+}
+.cards-home .text-link:hover {
+  background: #161616;
+  color: #fff;
+}
+.cards-home .text-link svg {
+  width: 14px;
+  height: 14px;
+}
+.cards-home .feature {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  min-width: 0;
+  grid-row: 1;
+}
+.cards-home .resume-project {
+  grid-column: 1;
+}
+.cards-home .anything-project {
+  grid-column: 3;
+}
+.cards-home .feature-image {
+  order: -1;
+  padding: 18px 18px 12px;
+  background: #fafafa;
+  border: 0;
+  border-bottom: 1px solid #161616;
+  justify-content: flex-start;
+}
+.cards-home .feature-image .image-link {
+  border: 1px solid #161616;
+  border-radius: 9px;
+  overflow: hidden;
+  background: #fff;
+  height: 188px;
+}
+.cards-home .feature-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.cards-home .feature-image figcaption {
+  font-size: 10px;
+  line-height: 1.6;
+  margin: 9px 0 0;
+  min-height: 32px;
+}
+.cards-home .feature-copy {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  border: 0;
+  padding: 22px;
+}
+.cards-home .feature .eyebrow {
+  font-size: 10px;
+  margin-bottom: 10px;
+}
+.cards-home .feature h3 {
+  font-size: 26px;
+  letter-spacing: -0.04em;
+}
+.cards-home .project-line {
+  font-size: 18px;
+  line-height: 1.55;
+  margin: 14px 0 0;
+}
+.cards-home .feature dl {
+  font-size: 12px;
+  margin: 14px 0 12px;
+  line-height: 1.8;
+}
+.cards-home .feature dt {
+  margin: 0;
+}
+.cards-home .feature-copy .stack-line {
+  font-size: 10px;
+  color: #54545a;
+  margin: 0 0 16px;
+}
+.cards-home .feature .project-links {
+  margin-top: auto;
+  gap: 8px;
+}
+.cards-home .feature .text-link {
+  padding: 6px 11px;
+  font-size: 11px;
+  gap: 6px;
+}
+.cards-home .visual-project {
+  margin: 28px 0 0;
+  padding: 28px;
+}
+.cards-home .visual-intro {
+  gap: 34px;
+  grid-template-columns: 1fr 1.3fr;
+  margin-bottom: 24px;
+}
+.cards-home .visual-intro h3 {
+  font-size: 30px;
+}
+.cards-home .visual-intro .eyebrow {
+  font-size: 11px;
+  margin-bottom: 12px;
+}
+.cards-home .visual-intro p:not(.eyebrow) {
+  font-size: 14px;
+}
+.cards-home .wide-shot {
+  border-radius: 12px;
+  overflow: hidden;
+}
+.cards-home .wide-shot img {
+  max-height: 580px;
+  object-fit: cover;
+  object-position: center;
+}
+.cards-home .wide-shot figcaption {
+  font-size: 11px;
+}
+.cards-home .phone-gallery {
+  background: #f3f3f3;
+  border-radius: 12px;
+  padding: 24px;
+  gap: 22px;
+}
+.cards-home .phone-gallery figcaption {
+  color: #303030;
+}
+.cards-home .image-note {
+  font-size: 11px;
+}
+.cards-home .small-projects {
+  border: 0;
+  gap: 24px;
+  margin: 28px 0;
+}
+.cards-home .small-projects article,
+.cards-home .small-projects article + article {
+  padding: 26px;
+  border: 1.5px solid #161616;
+}
+.cards-home .practice {
+  padding: 28px;
+  margin: 0 0 28px;
+}
+.cards-home .practice .section-heading {
+  padding: 0 0 26px;
+}
+.cards-home .practice .section-heading h2 {
+  font-size: 23px;
+}
+.cards-home .event-layout img,
+.cards-home .event-gallery img {
+  border-radius: 12px;
+}
+.cards-home .about {
+  margin: 0;
+  padding: 28px;
+  gap: 40px;
+  grid-template-columns: 1fr 1.4fr;
+}
+.cards-home .about h2 {
+  font-size: 28px;
+}
+.cards-home .about p:not(.eyebrow) {
+  font-size: 14px;
+}
+.cards-home footer {
+  border: 0;
+  margin-top: 20px;
+}
+@media (min-width: 1500px) {
+  .cards-home .site-shell {
+    max-width: 1320px;
+  }
+}
+@media (max-width: 1050px) and (min-width: 701px) {
+  .featured-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+  .cards-home .intro {
+    grid-column: 1/-1;
+    grid-row: 1;
+    flex-direction: row;
+    text-align: left;
+    gap: 32px;
+    padding: 24px 32px;
+  }
+  .cards-home .intro .portrait {
+    min-width: 170px;
+  }
+  .cards-home .profile-copy {
+    align-items: flex-start;
+    padding: 0;
+  }
+  .cards-home .intro .lead {
+    margin: 12px 0;
+  }
+  .cards-home .intro-links {
+    justify-content: flex-start;
+  }
+  .cards-home .resume-project {
+    grid-column: 1;
+    grid-row: 2;
+  }
+  .cards-home .anything-project {
+    grid-column: 2;
+    grid-row: 2;
+  }
+}
+@media (max-width: 700px) {
+  .cards-home .site-shell {
+    padding: 0 16px;
+  }
+  .cards-home .header {
+    padding: 16px 0 8px;
+  }
+  .cards-home .header nav {
+    gap: 0;
+  }
+  .cards-home .header nav a {
+    padding: 5px 10px;
+    font-size: 12px;
+  }
+  .cards-home .section-heading {
+    padding: 12px 0 16px;
+    display: flex;
+    gap: 12px;
+  }
+  .cards-home .section-heading p {
+    display: none;
+  }
+  .featured-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .cards-home .intro {
+    grid-column: 1;
+    grid-row: 1;
+    flex-direction: row;
+    gap: 18px;
+    padding: 24px 20px;
+    text-align: left;
+    align-items: flex-start;
+  }
+  .cards-home .intro .portrait {
+    flex: 0 0 92px;
+  }
+  .cards-home .intro .portrait img {
+    width: 80px;
+    height: 107px;
+    margin-bottom: 12px;
+    border-radius: 9px;
+  }
+  .cards-home .intro .portrait figcaption {
+    font-size: 9px;
+    line-height: 1.8;
+  }
+  .cards-home .profile-copy {
+    align-items: flex-start;
+    padding: 0;
+    min-width: 0;
+  }
+  .cards-home .intro .eyebrow {
+    font-size: 9px;
+    padding: 2px 7px;
+    margin-bottom: 10px;
+  }
+  .cards-home .intro h1 {
+    font-size: 30px;
+  }
+  .cards-home .profile-en {
+    font-size: 9px;
+  }
+  .cards-home .intro .lead {
+    font-size: 11px;
+    margin: 12px 0;
+  }
+  .cards-home .intro .lead br {
+    display: none;
+  }
+  .cards-home .intro-links {
+    justify-content: flex-start;
+    gap: 6px;
+    padding-top: 0;
+  }
+  .cards-home .intro-links .text-link {
+    font-size: 10px;
+    padding: 5px 10px;
+    gap: 5px;
+  }
+  .cards-home .resume-project {
+    grid-column: 1;
+    grid-row: 2;
+  }
+  .cards-home .anything-project {
+    grid-column: 1;
+    grid-row: 3;
+  }
+  .cards-home .feature-image .image-link {
+    height: auto;
+    aspect-ratio: 1.65;
+  }
+  .cards-home .feature-image figcaption {
+    min-height: 0;
+    font-size: 11px;
+  }
+  .cards-home .feature-copy {
+    padding: 22px;
+  }
+  .cards-home .feature .eyebrow {
+    font-size: 11px;
+  }
+  .cards-home .feature dl {
+    font-size: 13px;
+  }
+  .cards-home .feature-copy .stack-line {
+    font-size: 11px;
+  }
+  .cards-home .visual-project {
+    padding: 20px;
+    margin-top: 22px;
+  }
+  .cards-home .visual-intro {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  .cards-home .visual-intro h3 {
+    font-size: 26px;
+  }
+  .cards-home .visual-intro p:not(.eyebrow) {
+    font-size: 13px;
+  }
+  .cards-home .wide-shot img {
+    max-height: none;
+  }
+  .cards-home .phone-gallery {
+    padding: 14px;
+    gap: 20px 14px;
+  }
+  .cards-home .phone-gallery figcaption {
+    font-size: 10px;
+  }
+  .cards-home .small-projects {
+    gap: 20px;
+    margin: 22px 0;
+  }
+  .cards-home .small-projects article,
+  .cards-home .small-projects article + article {
+    padding: 22px;
+  }
+  .cards-home .practice {
+    padding: 20px;
+    margin-bottom: 22px;
+  }
+  .cards-home .practice .section-heading {
+    display: block;
+    padding-bottom: 22px;
+  }
+  .cards-home .practice .section-heading h2 {
+    font-size: 22px;
+  }
+  .cards-home .practice .section-heading p {
+    display: block;
+    margin-top: 10px;
+  }
+  .cards-home .about {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 22px;
+  }
+  .cards-home .about h2 {
+    font-size: 26px;
+  }
+  .cards-home footer {
+    margin-top: 12px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .cards-home * {
+    transition: none !important;
+  }
+}
+
+.profile-school {
+  display: none;
+}
+@media (max-width: 700px) {
+  .cards-home .intro .portrait figcaption {
+    display: none;
+  }
+  .cards-home .profile-school {
+    display: block;
+    font-size: 11px;
+    line-height: 1.8;
+    margin-top: 10px;
+  }
+  .cards-home .intro .eyebrow {
+    font-size: 10px;
+  }
+  .cards-home .intro .lead {
+    font-size: 12px;
+  }
+  .cards-home .intro-links .text-link {
+    font-size: 11px;
+  }
+}
+@media (max-width: 360px) {
+  .cards-home .intro {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 12px;
+  }
+  .cards-home .intro .portrait {
+    flex-basis: auto;
+  }
+  .cards-home .profile-copy {
+    align-items: center;
+  }
+  .cards-home .intro-links {
+    justify-content: center;
+  }
+}
