@@ -1,0 +1,110 @@
+[
+  {
+    "date": "2026-11-12",
+    "project": "诗词 · 小书童",
+    "title": "把个人贡献提取成独立仓库",
+    "text": "从团队平台提取语音对话与角色交互模块，补齐独立启动、来源说明和脱敏配置。前端构建、18 项后台测试与 4 项音频测试通过。",
+    "boundary": "这次完成的是模块提取与基础验证，完整语音链路没有重新复验。",
+    "links": [
+      {
+        "label": "看独立仓库",
+        "href": "https://github.com/myf8626-debug/poetry-companion"
+      },
+      {
+        "label": "看验证记录",
+        "href": "https://github.com/myf8626-debug/poetry-companion/blob/main/docs/verification.md"
+      }
+    ]
+  },
+  {
+    "date": "2026-11-12",
+    "project": "个人作品集",
+    "title": "重新整理作品，也把过程留下来",
+    "text": "用黑白描边卡片重新编排作品集，突出 Resume Protocol 和 AnythingLLM。加入诗词国风界面、鸿蒙原生预览与黑客松现场照片，并开始记录项目更新。",
+    "boundary": "项目详情分别标明个人贡献、团队来源和验证环境。",
+    "links": [
+      { "label": "看作品", "href": "#projects" },
+      {
+        "label": "看页面提交",
+        "href": "https://github.com/myf8626-debug/myf8626-debug.github.io/commit/9549648eb510302fe945f3cf1b5bea165a2f8c4c"
+      }
+    ]
+  },
+  {
+    "date": "2026-11-11",
+    "project": "AnythingLLM",
+    "title": "用真实模型对照召回与重排",
+    "text": "在 AI 辅助下补齐检索评测界面、任务记录与混合召回。使用真实 E5、pgvector 和 MiniLM 跑过 20 道合成验收题，逐题保留证据与结果。",
+    "boundary": "这组中文题中重排出现退化，混合召回没有展示增益；这些结果也保留在报告中。",
+    "links": [
+      { "label": "看实验结果", "href": "anythingllm.html#results" },
+      {
+        "label": "看逐题报告",
+        "href": "evidence/anythingllm/semantic-pgvector.json"
+      }
+    ]
+  },
+  {
+    "date": "2026-11-11",
+    "project": "Resume Protocol",
+    "title": "把修改、确认、版本与导出接起来",
+    "text": "在 AI 辅助下补齐局部修改与差异确认、岗位要求和证据对照、版本保存与导出；随后加入 JD 截图识别与原 DOCX 样式修改。",
+    "boundary": "使用合成资料验收；原样式验证限于一份简单 DOCX，不代表所有复杂模板都适用。",
+    "links": [
+      { "label": "看编辑流程", "href": "resume-protocol.html" },
+      { "label": "看修改验收", "href": "evidence/resume-review.json" },
+      {
+        "label": "看 OCR 与样式验证",
+        "href": "evidence/resume-source-workspace.json"
+      }
+    ]
+  },
+  {
+    "date": "2026-11-11",
+    "project": "Resume Protocol",
+    "title": "补上真实向量检索，核对隔离与更新",
+    "text": "接入本地 E5 的 384 维向量，与关键词检索融合。用 6 道合成题检查召回，并核对跨用户拒绝访问、索引持久化、文档更新与删除。",
+    "boundary": "采用精确余弦扫描，未验证生产规模性能；6 道开发题不是独立效果评测集。",
+    "links": [
+      { "label": "看检索报告", "href": "evidence/vector-retrieval.json" },
+      {
+        "label": "看当日同步",
+        "href": "https://github.com/myf8626-debug/myf8626-debug.github.io/commit/f59b042"
+      }
+    ]
+  },
+  {
+    "date": "2026-11-11",
+    "project": "GreenMate · 鸿蒙",
+    "title": "完成碳岛三消玩法与原生预览检查",
+    "text": "加入遮挡判定、三消、撤回、洗牌与关卡切换，在 DevEco 原生 Previewer 中检查点击、消除、暂停和第二关。新增三消检查 8 组通过。",
+    "boundary": "游戏得分与碳积分账本隔离；本局不存档，本轮不是设备性能验收。",
+    "links": [{ "label": "看原生界面与实现", "href": "greenmate.html" }]
+  },
+  {
+    "date": "2026-11-10",
+    "project": "draft-thesis-docx",
+    "title": "给模板保护补上回归验证",
+    "text": "围绕论文前置部分的检查与哈希比对补充回归验证，14 项测试通过，保存脚本指纹与结果。",
+    "boundary": "测试使用最小合成 ZIP/XML 文档包，尚未在真实论文上验证，也未完成排版渲染验收。",
+    "links": [
+      { "label": "看回归报告", "href": "evidence/thesis-regression.json" },
+      { "label": "看论文工具", "href": "work.html#case-thesis" }
+    ]
+  },
+  {
+    "date": "2026-11-08",
+    "display_date": "2026.11.07—08",
+    "project": "中源黑客松",
+    "title": "参与郑州轻工业大学站活动组织",
+    "text": "以组织者之一的身份参与中源黑客松郑轻站活动，和同学、开发者一起到现场交流与实践。",
+    "boundary": "现场照片与活动指南已整理到作品集。",
+    "links": [
+      { "label": "看现场记录", "href": "#practice" },
+      {
+        "label": "看活动指南",
+        "href": "https://my.feishu.cn/docx/Zrhwd4QbBoN0djxAEqkceVgqncg"
+      }
+    ]
+  }
+]

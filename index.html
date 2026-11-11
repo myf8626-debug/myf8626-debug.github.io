@@ -12,7 +12,7 @@
     <link rel="canonical" href="https://myf8626-debug.github.io/" />
     <link rel="icon" href="assets/favicon.svg" />
     <link rel="stylesheet" href="portfolio.css?v=20261112" />
-    <link rel="stylesheet" href="cards.css?v=20261112-cards" />
+    <link rel="stylesheet" href="cards.css?v=20261112-updates" />
     <script defer src="portfolio.js?v=20261112"></script>
   </head>
   <body class="cards-home">
@@ -21,8 +21,8 @@
       <header class="header">
         <a class="brand" href="./">苗怡飞 <span>F1ymiao</span></a>
         <nav aria-label="主导航">
-          <a href="#projects">作品</a><a href="#practice">实践</a
-          ><a href="#about">关于</a>
+          <a href="#projects">作品</a><a href="#updates">更新</a
+          ><a href="#practice">实践</a><a href="#about">关于</a>
         </nav>
       </header>
       <main id="main">
@@ -425,6 +425,197 @@
             </article>
           </div>
         </section>
+        <!-- updates:start -->
+        <section
+          class="updates-card"
+          id="updates"
+          aria-labelledby="updates-title"
+        >
+          <div class="section-heading">
+            <h2 id="updates-title">最近更新</h2>
+            <p>做了什么，验证到哪一步。</p>
+          </div>
+          <p class="updates-intro">
+            记录项目的开发、验证与发布进展。涉及团队与开源项目的部分，具体分工见对应详情。
+          </p>
+          <ol class="updates-latest">
+            <li class="update-entry">
+              <div class="update-meta">
+                <time datetime="2026-11-12">2026.11.12</time
+                ><span>诗词 · 小书童</span>
+              </div>
+              <h3>把个人贡献提取成独立仓库</h3>
+              <p>
+                从团队平台提取语音对话与角色交互模块，补齐独立启动、来源说明和脱敏配置。前端构建、18
+                项后台测试与 4 项音频测试通过。
+              </p>
+              <p class="update-boundary">
+                这次完成的是模块提取与基础验证，完整语音链路没有重新复验。
+              </p>
+              <div class="update-links">
+                <a href="https://github.com/myf8626-debug/poetry-companion"
+                  >看独立仓库</a
+                ><a
+                  href="https://github.com/myf8626-debug/poetry-companion/blob/main/docs/verification.md"
+                  >看验证记录</a
+                >
+              </div>
+            </li>
+            <li class="update-entry">
+              <div class="update-meta">
+                <time datetime="2026-11-12">2026.11.12</time
+                ><span>个人作品集</span>
+              </div>
+              <h3>重新整理作品，也把过程留下来</h3>
+              <p>
+                用黑白描边卡片重新编排作品集，突出 Resume Protocol 和
+                AnythingLLM。加入诗词国风界面、鸿蒙原生预览与黑客松现场照片，并开始记录项目更新。
+              </p>
+              <p class="update-boundary">
+                项目详情分别标明个人贡献、团队来源和验证环境。
+              </p>
+              <div class="update-links">
+                <a href="#projects">看作品</a
+                ><a
+                  href="https://github.com/myf8626-debug/myf8626-debug.github.io/commit/9549648eb510302fe945f3cf1b5bea165a2f8c4c"
+                  >看页面提交</a
+                >
+              </div>
+            </li>
+            <li class="update-entry">
+              <div class="update-meta">
+                <time datetime="2026-11-11">2026.11.11</time
+                ><span>AnythingLLM</span>
+              </div>
+              <h3>用真实模型对照召回与重排</h3>
+              <p>
+                在 AI 辅助下补齐检索评测界面、任务记录与混合召回。使用真实
+                E5、pgvector 和 MiniLM 跑过 20
+                道合成验收题，逐题保留证据与结果。
+              </p>
+              <p class="update-boundary">
+                这组中文题中重排出现退化，混合召回没有展示增益；这些结果也保留在报告中。
+              </p>
+              <div class="update-links">
+                <a href="anythingllm.html#results">看实验结果</a
+                ><a href="evidence/anythingllm/semantic-pgvector.json"
+                  >看逐题报告</a
+                >
+              </div>
+            </li>
+          </ol>
+          <details class="updates-history">
+            <summary>
+              <span>展开更早的 5 条记录</span
+              ><span class="update-chevron" aria-hidden="true"></span>
+            </summary>
+            <ol class="updates-earlier">
+              <li class="update-entry">
+                <div class="update-meta">
+                  <time datetime="2026-11-11">2026.11.11</time
+                  ><span>Resume Protocol</span>
+                </div>
+                <h3>把修改、确认、版本与导出接起来</h3>
+                <p>
+                  在 AI
+                  辅助下补齐局部修改与差异确认、岗位要求和证据对照、版本保存与导出；随后加入
+                  JD 截图识别与原 DOCX 样式修改。
+                </p>
+                <p class="update-boundary">
+                  使用合成资料验收；原样式验证限于一份简单
+                  DOCX，不代表所有复杂模板都适用。
+                </p>
+                <div class="update-links">
+                  <a href="resume-protocol.html">看编辑流程</a
+                  ><a href="evidence/resume-review.json">看修改验收</a
+                  ><a href="evidence/resume-source-workspace.json"
+                    >看 OCR 与样式验证</a
+                  >
+                </div>
+              </li>
+              <li class="update-entry">
+                <div class="update-meta">
+                  <time datetime="2026-11-11">2026.11.11</time
+                  ><span>Resume Protocol</span>
+                </div>
+                <h3>补上真实向量检索，核对隔离与更新</h3>
+                <p>
+                  接入本地 E5 的 384 维向量，与关键词检索融合。用 6
+                  道合成题检查召回，并核对跨用户拒绝访问、索引持久化、文档更新与删除。
+                </p>
+                <p class="update-boundary">
+                  采用精确余弦扫描，未验证生产规模性能；6
+                  道开发题不是独立效果评测集。
+                </p>
+                <div class="update-links">
+                  <a href="evidence/vector-retrieval.json">看检索报告</a
+                  ><a
+                    href="https://github.com/myf8626-debug/myf8626-debug.github.io/commit/f59b042"
+                    >看当日同步</a
+                  >
+                </div>
+              </li>
+              <li class="update-entry">
+                <div class="update-meta">
+                  <time datetime="2026-11-11">2026.11.11</time
+                  ><span>GreenMate · 鸿蒙</span>
+                </div>
+                <h3>完成碳岛三消玩法与原生预览检查</h3>
+                <p>
+                  加入遮挡判定、三消、撤回、洗牌与关卡切换，在 DevEco 原生
+                  Previewer 中检查点击、消除、暂停和第二关。新增三消检查 8
+                  组通过。
+                </p>
+                <p class="update-boundary">
+                  游戏得分与碳积分账本隔离；本局不存档，本轮不是设备性能验收。
+                </p>
+                <div class="update-links">
+                  <a href="greenmate.html">看原生界面与实现</a>
+                </div>
+              </li>
+              <li class="update-entry">
+                <div class="update-meta">
+                  <time datetime="2026-11-10">2026.11.10</time
+                  ><span>draft-thesis-docx</span>
+                </div>
+                <h3>给模板保护补上回归验证</h3>
+                <p>
+                  围绕论文前置部分的检查与哈希比对补充回归验证，14
+                  项测试通过，保存脚本指纹与结果。
+                </p>
+                <p class="update-boundary">
+                  测试使用最小合成 ZIP/XML
+                  文档包，尚未在真实论文上验证，也未完成排版渲染验收。
+                </p>
+                <div class="update-links">
+                  <a href="evidence/thesis-regression.json">看回归报告</a
+                  ><a href="work.html#case-thesis">看论文工具</a>
+                </div>
+              </li>
+              <li class="update-entry">
+                <div class="update-meta">
+                  <time datetime="2026-11-08">2026.11.07—08</time
+                  ><span>中源黑客松</span>
+                </div>
+                <h3>参与郑州轻工业大学站活动组织</h3>
+                <p>
+                  以组织者之一的身份参与中源黑客松郑轻站活动，和同学、开发者一起到现场交流与实践。
+                </p>
+                <p class="update-boundary">
+                  现场照片与活动指南已整理到作品集。
+                </p>
+                <div class="update-links">
+                  <a href="#practice">看现场记录</a
+                  ><a
+                    href="https://my.feishu.cn/docx/Zrhwd4QbBoN0djxAEqkceVgqncg"
+                    >看活动指南</a
+                  >
+                </div>
+              </li>
+            </ol>
+          </details>
+        </section>
+        <!-- updates:end -->
         <section
           class="practice"
           id="practice"

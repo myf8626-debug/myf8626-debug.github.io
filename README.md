@@ -14,3 +14,7 @@
 - evidence/：可公开的验证数据。
 
 来源、图片性质和旧模板许可见 DESIGN_SOURCES.md。GitHub Pages 只展示静态作品，不提供模型调用或应用后台。
+
+## 更新日志
+
+修改 `updates.json`（按日期倒序），然后运行 `python scripts/render-updates.py`。首页默认显示最新 3 条，其余使用原生折叠区；无 JavaScript 也可阅读。日期来自项目记录、验收报告或公开发布记录，避免把发布时间当作全部功能的开发时间。每条记录写清验证范围并附可公开的依据。
