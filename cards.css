@@ -735,3 +735,13 @@
     justify-content: center;
   }
 }
+
+/* Space between primary projects and the activity log after moving secondary cards. */
+.cards-home #projects + .updates-card {
+  margin-top: 28px;
+}
+@media (max-width: 700px) {
+  .cards-home #projects + .updates-card {
+    margin-top: 22px;
+  }
+}
