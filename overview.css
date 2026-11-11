@@ -1,0 +1,479 @@
+/* Compact portfolio overview; detail pages keep their own reading styles. */
+:root {
+  color-scheme: light;
+  --ink: #171717;
+  --muted: #595959;
+  --paper: #ffffff;
+  --line: 1.5px solid var(--ink);
+}
+* {
+  box-sizing: border-box;
+}
+html {
+  scroll-padding-top: 20px;
+}
+body {
+  margin: 0;
+  background: #f1f1f1;
+  color: var(--ink);
+  font-family: Arial, "PingFang SC", "Microsoft YaHei", sans-serif;
+  font-size: 14px;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+img {
+  display: block;
+  max-width: 100%;
+}
+h1,
+h2,
+p {
+  margin: 0;
+}
+h1,
+h2 {
+  text-wrap: balance;
+  line-height: 1.3;
+}
+a:focus-visible {
+  outline: 3px solid var(--ink);
+  outline-offset: 5px;
+}
+.skip {
+  position: absolute;
+  left: 20px;
+  top: -100px;
+  z-index: 10;
+  padding: 12px;
+  background: #fff;
+  border: var(--line);
+}
+.skip:focus {
+  top: 12px;
+}
+.overview-shell {
+  max-width: 1320px;
+  padding: 0 32px;
+  margin: auto;
+}
+.overview-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 18px 0;
+}
+.brand {
+  font-size: 18px;
+  font-weight: 700;
+}
+.brand span {
+  margin-left: 10px;
+  font-size: 12px;
+  font-weight: 400;
+  color: var(--muted);
+}
+nav {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+nav a {
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+}
+nav a:hover,
+.overview-footer a:hover {
+  text-decoration: underline;
+  text-underline-offset: 5px;
+}
+.primary-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.88fr) minmax(0, 1.1fr);
+  gap: 18px;
+}
+.card {
+  background: var(--paper);
+  border: var(--line);
+  border-radius: 20px;
+  box-shadow: 3px 3px 0 var(--ink);
+  min-width: 0;
+}
+a.card {
+  transition:
+    transform 0.16s ease,
+    box-shadow 0.16s ease;
+}
+@media (hover: hover) {
+  a.card:hover {
+    transform: translateY(-3px);
+    box-shadow: 3px 6px 0 var(--ink);
+  }
+}
+.main-project {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  grid-row: 1;
+}
+.resume-card {
+  grid-column: 1;
+}
+.anything-card {
+  grid-column: 3;
+}
+.card-heading {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 10px;
+  font-size: 12px;
+  color: var(--muted);
+  margin-bottom: 12px;
+}
+.card-heading svg {
+  flex-shrink: 0;
+  color: var(--ink);
+}
+.main-project h2 {
+  font-size: clamp(24px, 2.2vw, 29px);
+  letter-spacing: -0.035em;
+}
+.contribution {
+  margin: 12px 0 18px;
+  line-height: 1.8;
+  max-width: 32em;
+}
+.project-preview {
+  margin-top: auto;
+  flex: 1;
+  min-height: 150px;
+  max-height: 188px;
+  height: 168px;
+  border: 1px solid #d5d5d5;
+  border-radius: 10px;
+  background: #f8f8f8;
+  overflow: hidden;
+}
+.project-preview img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.card-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  padding-top: 16px;
+  font-size: 12px;
+}
+.card-bottom > span:first-child {
+  color: var(--muted);
+}
+.card-bottom > span:last-child {
+  white-space: nowrap;
+  text-decoration: underline;
+  text-underline-offset: 5px;
+}
+.profile-card {
+  grid-column: 2;
+  grid-row: 1;
+  padding: 18px 20px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+.profile-top {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 4px 12px;
+  width: 100%;
+  color: var(--muted);
+  font-size: 12px;
+}
+.avatar {
+  width: 78px;
+  height: 104px;
+  object-fit: cover;
+  border: 1px solid var(--ink);
+  border-radius: 10px;
+  margin: 17px 0 12px;
+}
+.profile-card h1 {
+  font-size: 30px;
+  letter-spacing: 0.06em;
+}
+.profile-direction {
+  margin-top: 6px;
+  font-size: 15px;
+  font-weight: 600;
+}
+.profile-school {
+  font-size: 12px;
+  color: var(--muted);
+  margin-top: 2px;
+}
+.profile-summary {
+  margin: 14px 0 16px;
+  font-size: 14px;
+}
+.profile-links {
+  display: flex;
+  gap: 10px;
+  margin-top: auto;
+}
+.profile-links a {
+  border: 1px solid var(--ink);
+  border-radius: 24px;
+  padding: 8px 16px;
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.profile-links a:hover {
+  background: var(--ink);
+  color: white;
+}
+.secondary-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+  margin-top: 20px;
+}
+.mini-card {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 20px;
+  min-height: 156px;
+}
+.mini-copy {
+  flex: 1;
+  min-width: 0;
+}
+.card-label {
+  color: var(--muted);
+  font-size: 12px;
+  display: block;
+  margin-bottom: 9px;
+}
+.mini-card h2 {
+  font-size: 20px;
+  overflow-wrap: anywhere;
+  padding-right: 8px;
+}
+.mini-card p {
+  font-size: 13px;
+  margin-top: 9px;
+  color: #454545;
+}
+.mini-image {
+  width: 102px;
+  height: 104px;
+  border: 1px solid #d5d5d5;
+  border-radius: 10px;
+  overflow: hidden;
+  flex-shrink: 0;
+  background: #f4f4f4;
+  margin-top: 12px;
+}
+.mini-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.phone-mini .mini-image img {
+  object-fit: contain;
+}
+.corner-arrow {
+  position: absolute;
+  top: 13px;
+  right: 13px;
+  display: flex;
+}
+.mini-card:not(:has(.mini-image)) {
+  padding-right: 42px;
+}
+.overview-footer {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  color: var(--muted);
+  padding: 24px 0 18px;
+  font-size: 12px;
+}
+@media (max-width: 1100px) {
+  .overview-shell {
+    padding: 0 24px;
+  }
+  .primary-grid {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 0.85fr) minmax(0, 1fr);
+    gap: 14px;
+  }
+  .main-project,
+  .profile-card {
+    padding: 18px;
+  }
+  .profile-top {
+    justify-content: center;
+  }
+  .main-project h2 {
+    font-size: 24px;
+  }
+  .card-bottom {
+    flex-wrap: wrap;
+    gap: 4px;
+  }
+  .secondary-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+  }
+}
+@media (max-width: 900px) {
+  .overview-shell {
+    padding: 0 18px;
+  }
+  .overview-header {
+    flex-wrap: wrap;
+    gap: 4px 16px;
+    padding: 14px 0;
+  }
+  .brand span {
+    display: none;
+  }
+  nav {
+    gap: 2px;
+  }
+  nav a {
+    font-size: 13px;
+    padding: 0 8px;
+  }
+  .primary-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+  .profile-card {
+    grid-column: 1 / -1;
+    grid-row: 1;
+    display: grid;
+    grid-template-columns: 96px 1fr;
+    column-gap: 20px;
+    text-align: left;
+    align-items: center;
+    padding: 22px;
+  }
+  .profile-top {
+    grid-column: 2;
+    justify-content: flex-start;
+    margin-bottom: 8px;
+  }
+  .avatar {
+    grid-column: 1;
+    grid-row: 1 / 5;
+    margin: 0;
+    width: 96px;
+    height: 128px;
+  }
+  .profile-card h1,
+  .profile-direction,
+  .profile-school {
+    grid-column: 2;
+  }
+  .profile-summary {
+    grid-column: 1 / -1;
+    margin: 16px 0 14px;
+  }
+  .profile-summary br {
+    display: none;
+  }
+  .profile-links {
+    grid-column: 1 / -1;
+    justify-content: flex-start;
+  }
+  .resume-card {
+    grid-row: 2;
+    grid-column: 1;
+  }
+  .anything-card {
+    grid-row: 2;
+    grid-column: 2;
+  }
+  .main-project h2 {
+    font-size: 23px;
+  }
+  .project-preview {
+    flex: none;
+    margin-top: auto;
+  }
+  .mini-card {
+    padding: 18px;
+  }
+  .mini-image {
+    width: 80px;
+    height: 92px;
+  }
+  .mini-card h2 {
+    font-size: 18px;
+  }
+  .overview-footer {
+    flex-wrap: wrap;
+  }
+}
+@media (max-width: 560px) {
+  .primary-grid,
+  .secondary-grid {
+    grid-template-columns: 1fr;
+  }
+  .profile-card,
+  .resume-card,
+  .anything-card {
+    grid-column: 1;
+    grid-row: auto;
+  }
+  .main-project {
+    padding: 22px;
+  }
+  .main-project h2 {
+    font-size: 27px;
+  }
+  .project-preview {
+    height: 170px;
+  }
+  .card-bottom {
+    flex-wrap: nowrap;
+  }
+  .secondary-grid {
+    margin-top: 18px;
+  }
+  .mini-image {
+    width: 108px;
+    height: 108px;
+  }
+  .mini-card {
+    min-height: 148px;
+    padding: 20px;
+  }
+  .mini-card h2 {
+    font-size: 20px;
+  }
+  .overview-footer > span:nth-child(2) {
+    flex-basis: 100%;
+    order: 3;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  a.card {
+    transition: none;
+  }
+}

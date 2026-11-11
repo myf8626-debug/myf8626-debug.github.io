@@ -6,9 +6,11 @@
 
 本地预览：`python -m http.server 3221 --bind 127.0.0.1`，打开 http://127.0.0.1:3221/ 。
 
-- index.html / portfolio.css / cards.css / portfolio.js：黑白描边卡片首页、响应式项目展示、图片放大。
+- index.html / overview.css：紧凑的黑白卡片首页，个人介绍居中，重点项目两侧排列，点击卡片进入详情。
+- portfolio.css / cards.css / portfolio.js：详情页、更新日志样式与图片放大。
 - resume-protocol.html / anythingllm.html：重点项目、个人贡献与验证边界。
 - poetry.html / greenmate.html：诗词语音模块与鸿蒙原生界面。
+- hackathon.html：活动组织、社群身份、现场照片与活动指南。
 - work.html / verification.html：既有完整复盘和验证记录。
 - assets/：真实运行截图与用户提供照片。
 - evidence/：可公开的验证数据。

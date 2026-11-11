@@ -5,584 +5,294 @@
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <meta
       name="description"
-      content="苗怡飞的作品集：Resume Protocol 候选人知识库与工具授权、AnythingLLM 检索评测、小书童语音陪伴、GreenMate 鸿蒙应用与中源黑客松。"
+      content="苗怡飞的 AI 应用与全栈开发作品集：Resume Protocol、AnythingLLM 检索评测、诗词语音助手与鸿蒙应用。"
     />
-    <meta name="theme-color" content="#f7f7f8" />
+    <meta name="theme-color" content="#f1f1f1" />
     <title>苗怡飞 · AI 应用与全栈开发</title>
     <link rel="canonical" href="https://myf8626-debug.github.io/" />
     <link rel="icon" href="assets/favicon.svg" />
-    <link rel="stylesheet" href="portfolio.css?v=20261112" />
-    <link rel="stylesheet" href="cards.css?v=20261112-log-page" />
-    <script defer src="portfolio.js?v=20261112"></script>
+    <link rel="stylesheet" href="overview.css?v=20261112-cards" />
   </head>
-  <body class="cards-home">
+  <body>
     <a class="skip" href="#main">跳到主要内容</a>
-    <div class="site-shell">
-      <header class="header">
+    <div class="overview-shell">
+      <header class="overview-header">
         <a class="brand" href="./">苗怡飞 <span>F1ymiao</span></a>
         <nav aria-label="主导航">
           <a href="#projects">作品</a
           ><a href="updates.html" target="_blank" rel="noopener noreferrer"
             >更新日志</a
-          ><a href="#practice">实践</a><a href="#about">关于</a>
+          ><a href="mailto:378122428@qq.com">联系我</a>
         </nav>
       </header>
       <main id="main">
-        <section id="projects" aria-labelledby="projects-title">
-          <div class="section-heading">
-            <h2 id="projects-title">作品与实践</h2>
-            <p>先看产品，再看我做了什么。</p>
-          </div>
-          <div class="featured-grid">
-            <section class="intro" aria-labelledby="intro-title">
-              <figure class="portrait">
-                <img
-                  src="assets/miao-yifei.png"
-                  width="88"
-                  height="117"
-                  alt="苗怡飞的彩色头像"
-                />
-                <figcaption>
-                  郑州 · 软件工程本科<br />郑州轻工业大学 / 2028 届
-                </figcaption>
-              </figure>
-              <div class="profile-copy">
-                <p class="eyebrow">AI 应用与全栈开发</p>
-                <h1 id="intro-title">苗怡飞</h1>
-                <p class="profile-en">MIAO YIFEI</p>
-                <p class="profile-school">郑州轻工业大学 · 2028 届</p>
-                <p class="lead">
-                  在做简历 Agent、检索评测，<br />也做诗词语音助手与鸿蒙应用。
-                </p>
-                <div class="intro-links">
-                  <a class="text-link" href="https://github.com/myf8626-debug"
-                    >GitHub
-                    <svg
-                      viewBox="0 0 24 24"
-                      width="14"
-                      height="14"
-                      aria-hidden="true"
-                    >
-                      <path
-                        d="M5 19 19 5M5 5h14v14"
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-width="1.5"
-                      /></svg></a
-                  ><a class="text-link" href="mailto:378122428@qq.com"
-                    >邮件联系
-                    <svg
-                      viewBox="0 0 24 24"
-                      width="14"
-                      height="14"
-                      aria-hidden="true"
-                    >
-                      <path
-                        d="M5 19 19 5M5 5h14v14"
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-width="1.5"
-                      /></svg
-                  ></a>
-                </div>
+        <section id="projects" aria-label="作品总览">
+          <div class="primary-grid">
+            <section
+              class="card profile-card"
+              id="about"
+              aria-labelledby="profile-title"
+            >
+              <div class="profile-top">
+                <span>郑州 · 2028 届</span><span>软件工程本科</span>
+              </div>
+              <img
+                class="avatar"
+                src="assets/miao-yifei.png"
+                alt="苗怡飞的彩色头像"
+                width="96"
+                height="128"
+              />
+              <h1 id="profile-title">苗怡飞</h1>
+              <p class="profile-direction">AI 应用与全栈开发</p>
+              <p class="profile-school">郑州轻工业大学</p>
+              <p class="profile-summary">
+                把界面、数据和模型调用<br />接成能用的产品。
+              </p>
+              <div class="profile-links">
+                <a href="https://github.com/myf8626-debug">GitHub</a
+                ><a href="mailto:378122428@qq.com">邮件联系</a>
               </div>
             </section>
-            <article class="feature resume-project">
-              <div class="feature-copy">
-                <p class="eyebrow">团队协作 · 候选人知识库与工具授权</p>
-                <h3>Resume Protocol</h3>
-                <p class="project-line">
-                  改简历时，每一条经历<br />都有原文可以核对。
-                </p>
-                <dl>
-                  <dt>我的部分</dt>
-                  <dd>
-                    事实溯源、检索隔离、工具授权；AI 辅助补齐修改与导出流程。
-                  </dd>
-                </dl>
-                <p class="stack-line">React · Node.js · SQLite</p>
-                <div class="project-links">
-                  <a class="text-link" href="resume-protocol.html"
-                    >看项目与贡献<svg
-                      viewBox="0 0 24 24"
-                      width="18"
-                      height="18"
-                      aria-hidden="true"
-                    >
-                      <path
-                        d="M5 19 19 5M5 5h14v14"
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-width="1.5"
-                      /></svg></a
-                  ><a class="text-link" href="verification.html#resume-review"
-                    >看验证记录<svg
-                      viewBox="0 0 24 24"
-                      width="18"
-                      height="18"
-                      aria-hidden="true"
-                    >
-                      <path
-                        d="M5 19 19 5M5 5h14v14"
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-width="1.5"
-                      /></svg
-                  ></a>
-                </div>
+            <a
+              class="card main-project resume-card"
+              href="resume-protocol.html"
+              aria-label="Resume Protocol：查看项目与我的贡献"
+            >
+              <div class="card-heading">
+                <span>团队协作 · 候选人知识库与工具授权</span
+                ><svg
+                  viewBox="0 0 24 24"
+                  width="20"
+                  height="20"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M6 18 18 6M6 6h12v12"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                  />
+                </svg>
               </div>
-              <figure class="feature-image">
-                <a
-                  class="image-link"
-                  href="assets/resume-review-difference.png"
-                  data-image
-                  aria-label="放大：Resume Protocol 局部修改与差异确认界面"
-                  ><img
-                    src="assets/resume-review-difference.png"
-                    alt="Resume Protocol 局部修改与差异确认界面"
-                    width="513"
-                    height="384"
-                    loading="lazy"
-                /></a>
-                <figcaption>本地运行截图 · 合成候选人资料</figcaption>
-              </figure>
-            </article>
-            <article class="feature anything-project">
-              <div class="feature-copy">
-                <p class="eyebrow">开源二次开发 · 检索评测扩展</p>
-                <h3>AnythingLLM</h3>
-                <p class="project-line">
-                  答案不对，先看证据<br />在哪一步丢了。
-                </p>
-                <dl>
-                  <dt>我的部分</dt>
-                  <dd>
-                    AI 辅助实现评测 UI、任务 API
-                    与混合召回，复用上游聊天与鉴权。
-                  </dd>
-                </dl>
-                <p class="stack-line">React · Express · pgvector</p>
-                <div class="project-links">
-                  <a class="text-link" href="anythingllm.html"
-                    >看实现与实验<svg
-                      viewBox="0 0 24 24"
-                      width="18"
-                      height="18"
-                      aria-hidden="true"
-                    >
-                      <path
-                        d="M5 19 19 5M5 5h14v14"
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-width="1.5"
-                      /></svg></a
-                  ><a
-                    class="text-link"
-                    href="evidence/anythingllm/semantic-pgvector.json"
-                    >看逐题结果<svg
-                      viewBox="0 0 24 24"
-                      width="18"
-                      height="18"
-                      aria-hidden="true"
-                    >
-                      <path
-                        d="M5 19 19 5M5 5h14v14"
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-width="1.5"
-                      /></svg
-                  ></a>
-                </div>
+              <h2>Resume Protocol</h2>
+              <p class="contribution">
+                我负责事实溯源、检索隔离与工具授权，让简历修改有据可查。
+              </p>
+              <div class="project-preview">
+                <img
+                  src="assets/resume-review-difference.png"
+                  alt="Resume Protocol 局部修改与差异确认，本地合成资料截图"
+                  width="1440"
+                  height="1000"
+                />
               </div>
-              <figure class="feature-image">
-                <a
-                  class="image-link"
-                  href="assets/anythingllm-workspace.png"
-                  data-image
-                  aria-label="放大：AnythingLLM 工作空间中的检索评测页"
-                  ><img
-                    src="assets/anythingllm-workspace.png"
-                    alt="AnythingLLM 工作空间中的检索评测页"
-                    width="1440"
-                    height="1000"
-                    loading="lazy"
-                /></a>
-                <figcaption>
-                  本地运行截图 · 截图为合成词项基线，真实模型结果单列于详情
-                </figcaption>
-              </figure>
-            </article>
+              <div class="card-bottom">
+                <span>React · Node.js · SQLite</span><span>查看详情</span>
+              </div></a
+            ><a
+              class="card main-project anything-card"
+              href="anythingllm.html"
+              aria-label="AnythingLLM：查看项目与我的贡献"
+            >
+              <div class="card-heading">
+                <span>开源二次开发 · 检索评测</span
+                ><svg
+                  viewBox="0 0 24 24"
+                  width="20"
+                  height="20"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M6 18 18 6M6 6h12v12"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                  />
+                </svg>
+              </div>
+              <h2>AnythingLLM</h2>
+              <p class="contribution">
+                AI 辅助扩展评测界面、任务 API 与混合召回，对照每一步检索结果。
+              </p>
+              <div class="project-preview">
+                <img
+                  src="assets/anythingllm-workspace.png"
+                  alt="AnythingLLM 检索评测界面，本地合成词项基线截图"
+                  width="1440"
+                  height="1000"
+                />
+              </div>
+              <div class="card-bottom">
+                <span>React · Express · pgvector</span><span>查看详情</span>
+              </div></a
+            >
           </div>
-
-          <article class="visual-project" id="poetry">
-            <div class="visual-intro">
-              <div>
-                <p class="eyebrow">诗词平台 · 个人贡献模块</p>
-                <h3>小书童，陪你聊一首诗。</h3>
+          <div class="secondary-grid" aria-label="更多作品与实践">
+            <a class="card mini-card" id="poetry" href="poetry.html">
+              <div class="mini-copy">
+                <span class="card-label">团队平台中的个人模块</span>
+                <h2>诗词 · 小书童</h2>
+                <p>语音对话、角色交互与状态清理。</p>
               </div>
-              <div>
-                <p>
-                  在国风游园里加入中文语音对话：本机识别、模型回答、女声朗读，以及会跟随、能拖动的
-                  SVG 小书童。
-                </p>
-                <p class="role">
-                  <strong>我的部分：</strong
-                  >语音链路、录音与播放清理、停止回答、角色交互及测试。原诗词平台的游戏和国风场景来自团队项目。
-                </p>
-                <div class="project-links">
-                  <a class="text-link" href="poetry.html"
-                    >看语音交互与分工<svg
-                      viewBox="0 0 24 24"
-                      width="18"
-                      height="18"
-                      aria-hidden="true"
-                    >
-                      <path
-                        d="M5 19 19 5M5 5h14v14"
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-width="1.5"
-                      /></svg></a
-                  ><a
-                    class="text-link"
-                    href="https://github.com/myf8626-debug/poetry-companion"
-                    >独立模块源码<svg
-                      viewBox="0 0 24 24"
-                      width="18"
-                      height="18"
-                      aria-hidden="true"
-                    >
-                      <path
-                        d="M5 19 19 5M5 5h14v14"
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-width="1.5"
-                      /></svg
-                  ></a>
-                </div>
-              </div>
-            </div>
-            <figure class="wide-shot">
-              <a
-                class="image-link"
-                href="assets/poetry-companion.png"
-                data-image
-                aria-label="放大：诗韵游园国风场景与小书童语音对话，来自原团队集成环境"
-                ><img
+              <div class="mini-image">
+                <img
                   src="assets/poetry-companion.png"
-                  alt="诗韵游园国风场景与小书童语音对话，来自原团队集成环境"
+                  alt="团队诗词平台中的小书童语音对话"
                   width="1440"
                   height="1000"
                   loading="lazy"
-              /></a>
-            </figure>
-          </article>
-        </section>
-
-        <section
-          class="practice"
-          id="practice"
-          aria-labelledby="practice-title"
-        >
-          <div class="section-heading">
-            <h2 id="practice-title">也在现场，一起把事做成。</h2>
-            <p>中源黑客松 · 郑州轻工业大学站</p>
-          </div>
-          <div class="event-layout">
-            <div class="event-copy">
-              <p class="eyebrow">2026.11.07—08</p>
-              <h3>中源黑客松</h3>
-              <p>
-                以组织者之一的身份参与郑轻站活动。和同学、开发者一起，把想法带到现场。
-              </p>
-              <p><strong>社群身份：</strong>中源 AINative Club 会员。</p>
-              <p class="muted">
-                活动地点：中国（郑州）智能传感谷。照片为本人提供的现场素材。
-              </p>
-              <a
-                class="text-link"
-                href="https://my.feishu.cn/docx/Zrhwd4QbBoN0djxAEqkceVgqncg"
-                >阅读活动终极指南<svg
-                  viewBox="0 0 24 24"
-                  width="18"
-                  height="18"
-                  aria-hidden="true"
-                >
-                  <path
-                    d="M5 19 19 5M5 5h14v14"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="1.5"
-                  /></svg
-              ></a>
-            </div>
-            <figure>
-              <a
-                class="image-link"
-                href="assets/hackathon-group.jpg"
-                data-image
-                aria-label="放大：中源黑客松郑州轻工业大学站现场合影"
-                ><img
-                  src="assets/hackathon-group.jpg"
-                  alt="中源黑客松郑州轻工业大学站现场合影"
-                  width="1706"
-                  height="1279"
-                  loading="lazy"
-              /></a>
-              <figcaption>活动现场合影</figcaption>
-            </figure>
-          </div>
-          <div class="event-gallery">
-            <figure>
-              <a
-                class="image-link"
-                href="assets/hackathon-signing.jpg"
-                data-image
-                aria-label="放大：中源黑客松郑轻站现场签名与活动海报"
-                ><img
-                  src="assets/hackathon-signing.jpg"
-                  alt="中源黑客松郑轻站现场签名与活动海报"
-                  width="1706"
-                  height="1279"
-                  loading="lazy"
-              /></a>
-              <figcaption>为之则易，不为则难</figcaption>
-            </figure>
-            <figure>
-              <a
-                class="image-link"
-                href="assets/hackathon-venue.jpg"
-                data-image
-                aria-label="放大：中国郑州智能传感谷运营中心外景"
-                ><img
-                  src="assets/hackathon-venue.jpg"
-                  alt="中国郑州智能传感谷运营中心外景"
-                  width="1279"
-                  height="1706"
-                  loading="lazy"
-              /></a>
-              <figcaption>中国（郑州）智能传感谷</figcaption>
-            </figure>
-          </div>
-        </section>
-        <article class="visual-project" id="greenmate">
-          <div class="visual-intro">
-            <div>
-              <p class="eyebrow">HarmonyOS · 全栈实践</p>
-              <h3>GreenMate<br />让低碳记录看得见。</h3>
-            </div>
-            <div>
-              <p>
-                记录出行、节能与回收行为，查看预计减排、积分和碳树成长。用图表、任务与轻量小游戏连接日常反馈。
-              </p>
-              <p class="role">
-                <strong>我的部分：</strong>ArkTS / ArkUI
-                页面、本地数据与业务逻辑、Node.js 接口沙盒；开发与验证使用 AI
-                辅助。
-              </p>
-              <div class="project-links">
-                <a class="text-link" href="greenmate.html"
-                  >看原生界面与实现<svg
-                    viewBox="0 0 24 24"
-                    width="18"
-                    height="18"
-                    aria-hidden="true"
-                  >
-                    <path
-                      d="M5 19 19 5M5 5h14v14"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="1.5"
-                    /></svg
-                ></a>
+                />
               </div>
-            </div>
-          </div>
-          <div class="phone-gallery">
-            <figure>
-              <a
-                class="image-link"
-                href="assets/greenmate-home.jpg"
-                data-image
-                aria-label="放大：GreenMate 原生 Previewer 首页与低碳统计"
-                ><img
+              <span class="corner-arrow"
+                ><svg
+                  viewBox="0 0 24 24"
+                  width="20"
+                  height="20"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M6 18 18 6M6 6h12v12"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                  /></svg></span
+            ></a>
+            <a
+              class="card mini-card phone-mini"
+              id="greenmate"
+              href="greenmate.html"
+            >
+              <div class="mini-copy">
+                <span class="card-label">HarmonyOS · 全栈实践</span>
+                <h2>GreenMate</h2>
+                <p>低碳记录、统计反馈与原生界面。</p>
+              </div>
+              <div class="mini-image">
+                <img
                   src="assets/greenmate-home.jpg"
-                  alt="GreenMate 原生 Previewer 首页与低碳统计"
-                  width="1080"
-                  height="2340"
+                  alt="GreenMate 首页原生 Previewer 截图"
+                  width="1440"
+                  height="1000"
                   loading="lazy"
-              /></a>
-              <figcaption>低碳生活首页</figcaption>
-            </figure>
-            <figure>
-              <a
-                class="image-link"
-                href="assets/greenmate-stats.jpg"
-                data-image
-                aria-label="放大：GreenMate 原生 Previewer 数据统计图表"
-                ><img
-                  src="assets/greenmate-stats.jpg"
-                  alt="GreenMate 原生 Previewer 数据统计图表"
-                  width="1080"
-                  height="2340"
-                  loading="lazy"
-              /></a>
-              <figcaption>行为与数据统计</figcaption>
-            </figure>
-            <figure>
-              <a
-                class="image-link"
-                href="assets/greenmate-tree.jpg"
-                data-image
-                aria-label="放大：GreenMate 原生 Previewer 碳树成长界面"
-                ><img
-                  src="assets/greenmate-tree.jpg"
-                  alt="GreenMate 原生 Previewer 碳树成长界面"
-                  width="1080"
-                  height="2340"
-                  loading="lazy"
-              /></a>
-              <figcaption>碳树与成长反馈</figcaption>
-            </figure>
-            <figure>
-              <a
-                class="image-link"
-                href="assets/greenmate-game.jpg"
-                data-image
-                aria-label="放大：GreenMate 原生 Previewer 碳岛三消小游戏"
-                ><img
-                  src="assets/greenmate-game.jpg"
-                  alt="GreenMate 原生 Previewer 碳岛三消小游戏"
-                  width="1080"
-                  height="2340"
-                  loading="lazy"
-              /></a>
-              <figcaption>碳岛消消乐</figcaption>
-            </figure>
-          </div>
-          <p class="image-note">
-            以上为 DevEco 原生 Previewer
-            截图，包含演示数据。
-          </p>
-        </article>
-        <div class="small-projects">
-          <article>
-            <p class="eyebrow">独立开发 · Python</p>
-            <h3>draft-thesis-docx</h3>
-            <p>
-              依据学校论文规范制作的 Codex
-              skill，用部件哈希检查模板误改，要求引用与结论有依据。
-            </p>
-            <a class="text-link" href="work.html#case-thesis"
-              >看论文工具<svg
-                viewBox="0 0 24 24"
-                width="18"
-                height="18"
-                aria-hidden="true"
-              >
-                <path
-                  d="M5 19 19 5M5 5h14v14"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="1.5"
-                /></svg
-            ></a>
-          </article>
-          <article>
-            <p class="eyebrow">团队协作 · Vue 3</p>
-            <h3>云栈 · 智能云盘</h3>
-            <p>
-              参与前端文件操作、上传状态与接口联调。把团队产品中的个人职责单独说明。
-            </p>
-            <a class="text-link" href="work.html#case-cloud"
-              >看前端实践<svg
-                viewBox="0 0 24 24"
-                width="18"
-                height="18"
-                aria-hidden="true"
-              >
-                <path
-                  d="M5 19 19 5M5 5h14v14"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="1.5"
-                /></svg
-            ></a>
-          </article>
-        </div>
-        <section
-          class="updates-card updates-link-card"
-          id="updates"
-          aria-labelledby="updates-title"
-        >
-          <div>
-            <h2 id="updates-title">更新日志</h2>
-            <p>记录项目的开发、验证与发布进展。</p>
-          </div>
-          <a
-            class="text-link"
-            href="updates.html"
-            target="_blank"
-            rel="noopener noreferrer"
-            >查看更新日志（新标签页）</a
-          >
-        </section>
-        <section id="about" class="about">
-          <div>
-            <p class="eyebrow">关于我</p>
-            <h2>从界面，到数据，<br />再到模型调用。</h2>
-          </div>
-          <div>
-            <p>
-              郑州轻工业大学软件工程本科在读，2028 届，专业排名 12/121。方向是
-              AI 应用与全栈开发。
-            </p>
-            <p>
-              项目中使用 React / Vue、Node.js / Java、Python，也用 ArkTS
-              做鸿蒙界面。做过候选人知识库、检索评测与语音交互；每个项目的具体分工和验证范围写在详情页。
-            </p>
-            <div class="project-links">
-              <a class="text-link" href="mailto:378122428@qq.com"
-                >邮件联系<svg
+                />
+              </div>
+              <span class="corner-arrow"
+                ><svg
                   viewBox="0 0 24 24"
-                  width="18"
-                  height="18"
+                  width="20"
+                  height="20"
                   aria-hidden="true"
                 >
                   <path
-                    d="M5 19 19 5M5 5h14v14"
+                    d="M6 18 18 6M6 6h12v12"
                     fill="none"
                     stroke="currentColor"
                     stroke-width="1.5"
-                  /></svg></a
-              ><a class="text-link" href="https://github.com/myf8626-debug"
-                >GitHub<svg
+                  /></svg></span
+            ></a>
+            <a class="card mini-card" id="practice" href="hackathon.html">
+              <div class="mini-copy">
+                <span class="card-label">郑州轻工业大学站</span>
+                <h2>中源黑客松</h2>
+                <p>组织者之一 · 中源 AINative Club 会员。</p>
+              </div>
+              <div class="mini-image">
+                <img
+                  src="assets/hackathon-group.jpg"
+                  alt="中源黑客松郑轻站活动现场合影"
+                  width="1440"
+                  height="1000"
+                  loading="lazy"
+                />
+              </div>
+              <span class="corner-arrow"
+                ><svg
                   viewBox="0 0 24 24"
-                  width="18"
-                  height="18"
+                  width="20"
+                  height="20"
                   aria-hidden="true"
                 >
                   <path
-                    d="M5 19 19 5M5 5h14v14"
+                    d="M6 18 18 6M6 6h12v12"
                     fill="none"
                     stroke="currentColor"
                     stroke-width="1.5"
-                  /></svg
-              ></a>
-            </div>
+                  /></svg></span
+            ></a>
+            <a class="card mini-card" id="thesis" href="work.html#case-thesis">
+              <div class="mini-copy">
+                <span class="card-label">独立开发 · Python</span>
+                <h2>draft-thesis-docx</h2>
+                <p>依据学校规范，用脚本检查模板与引用。</p>
+              </div>
+              <span class="corner-arrow"
+                ><svg
+                  viewBox="0 0 24 24"
+                  width="20"
+                  height="20"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M6 18 18 6M6 6h12v12"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                  /></svg></span
+            ></a>
+            <a class="card mini-card" id="cloud" href="work.html#case-cloud">
+              <div class="mini-copy">
+                <span class="card-label">团队协作 · Vue 3</span>
+                <h2>云栈 · 智能云盘</h2>
+                <p>参与文件操作、上传状态与接口联调。</p>
+              </div>
+              <span class="corner-arrow"
+                ><svg
+                  viewBox="0 0 24 24"
+                  width="20"
+                  height="20"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M6 18 18 6M6 6h12v12"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                  /></svg></span
+            ></a>
+            <a
+              class="card mini-card"
+              id="updates"
+              href="updates.html"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <div class="mini-copy">
+                <span class="card-label">开发 · 验证 · 发布</span>
+                <h2>更新日志</h2>
+                <p>查看项目进展与验证记录。新标签页打开。</p>
+              </div>
+              <span class="corner-arrow"
+                ><svg
+                  viewBox="0 0 24 24"
+                  width="20"
+                  height="20"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M6 18 18 6M6 6h12v12"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                  /></svg></span
+            ></a>
           </div>
         </section>
       </main>
-      <footer>
-        <span>苗怡飞 / 2026</span><a href="#main">回到顶部</a
+      <footer class="overview-footer">
+        <span>苗怡飞 / 2026</span><span>项目分工与验证记录见详情页</span
         ><a href="DESIGN_SOURCES.md">设计与素材来源</a>
       </footer>
     </div>
-    <dialog id="image-viewer" aria-label="查看项目原图">
-      <button type="button" class="image-close" aria-label="关闭原图">
-        关闭</button
-      ><img alt="" />
-      <p></p>
-    </dialog>
   </body>
 </html>
