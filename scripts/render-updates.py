@@ -21,7 +21,7 @@ def render(entry):
         if ':' in href and not href.startswith('https://'):
             raise ValueError('Only local or HTTPS evidence links are supported')
         links.append(f'<a href="{escape(href, quote=True)}">{escape(link["label"])}</a>')
-    visible_date = entry.get('display_date', entry['date'].replace('-', '.'))
+    visible_date = entry['date'][:7].replace('-', '.')
     return f'''<li class="update-entry">
 <div class="update-meta"><time datetime="{entry['date']}">{visible_date}</time><span>{escape(entry['project'])}</span></div>
 <h3>{escape(entry['title'])}</h3>
