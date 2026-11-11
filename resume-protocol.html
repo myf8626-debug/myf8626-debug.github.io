@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta
+      name="description"
+      content="苗怡飞的作品集：Resume Protocol 候选人知识库与工具授权、AnythingLLM 检索评测、小书童语音陪伴、GreenMate 鸿蒙应用与中源黑客松。"
+    />
+    <meta name="theme-color" content="#f7f7f8" />
+    <title>Resume Protocol — 苗怡飞</title>
+    <link
+      rel="canonical"
+      href="https://myf8626-debug.github.io/resume-protocol.html"
+    />
+    <link rel="icon" href="assets/favicon.svg" />
+    <link rel="stylesheet" href="portfolio.css?v=20261112" />
+    <script defer src="portfolio.js?v=20261112"></script>
+  </head>
+  <body>
+    <div class="site-shell detail">
+      <header class="header">
+        <a class="brand" href="./">苗怡飞</a>
+        <nav><a href="./#projects">返回作品</a></nav>
+      </header>
+      <main>
+        <section class="intro">
+          <p class="eyebrow">团队协作 · 我的贡献与 AI 辅助扩展</p>
+          <h1>Resume Protocol</h1>
+          <p class="lead">让简历修改有原文依据，确认后再保存。</p>
+        </section>
+        <section class="detail-section">
+          <h2>要解决什么</h2>
+          <p>
+            候选人上传的经历、JD
+            的要求和助手生成的建议，很容易在对话中混在一起。这个项目把候选人事实单独保存，要求生成内容能回到原始资料核对。
+          </p>
+          <a
+            class="image-link"
+            href="assets/resume-review-difference.png"
+            data-image
+            aria-label="放大：局部修改：原文、建议与差异确认"
+            ><img
+              src="assets/resume-review-difference.png"
+              alt="局部修改：原文、建议与差异确认"
+              width="513"
+              height="384"
+              loading="lazy"
+          /></a>
+        </section>
+        <section class="detail-section">
+          <h2>我在团队里做的部分</h2>
+          <ul>
+            <li>
+              <strong>候选人知识库：</strong>事实携带 source_id / source_quote /
+              source_position；只从上传文档的唯一写入路径抽取，JD
+              与模型推断不能写入事实库。
+            </li>
+            <li>
+              <strong>检索隔离：</strong>使用服务端持久化的 user_id +
+              candidate_id 绑定范围，工具不接收模型指定的 scope。越权抛出错误。
+            </li>
+            <li>
+              <strong>工具授权：</strong>allowedTools
+              由会话绑定与检索服务状态决定，模型输出不参与权限计算。
+            </li>
+          </ul>
+          <p>
+            这是团队项目；我的核心职责是知识库与工具授权，后续界面和检索扩展主要使用
+            AI 辅助实现。
+          </p>
+        </section>
+        <section class="detail-section">
+          <h2>从依据到修改，补上可操作的流程</h2>
+          <p>
+            选择一条经历 → 查看修改差异 → 确认或放弃 → 对照岗位要求与证据 →
+            保存版本 → 导出。JD 截图先经本地 OCR 提取并由用户确认，再进入分析。
+          </p>
+          <a
+            class="image-link"
+            href="assets/resume-review-requirements.png"
+            data-image
+            aria-label="放大：岗位要求与候选人证据对照"
+            ><img
+              src="assets/resume-review-requirements.png"
+              alt="岗位要求与候选人证据对照"
+              width="513"
+              height="571"
+              loading="lazy"
+          /></a>
+          <p>
+            检索使用本地 E5 生成的 384 维向量，在 SQLite
+            中做精确余弦计算，并与关键词结果融合；没有使用 ANN
+            索引，也没有将模型建议直接当成事实。
+          </p>
+        </section>
+        <section class="detail-section">
+          <h2>验证到哪里</h2>
+          <p>
+            已有本地流程与真实模型调用记录，使用合成候选人资料。原样式导出验证针对一份简单
+            DOCX，不能推论所有复杂模板都能保留；PDF 原样式编辑尚未实现。
+          </p>
+          <div class="project-links">
+            <a class="text-link" href="verification.html"
+              >查看完整验证记录<svg
+                viewBox="0 0 24 24"
+                width="18"
+                height="18"
+                aria-hidden="true"
+              >
+                <path
+                  d="M5 19 19 5M5 5h14v14"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                /></svg></a
+            ><a class="text-link" href="evidence/resume-review.json"
+              >流程验收报告<svg
+                viewBox="0 0 24 24"
+                width="18"
+                height="18"
+                aria-hidden="true"
+              >
+                <path
+                  d="M5 19 19 5M5 5h14v14"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                /></svg></a
+            ><a class="text-link" href="evidence/resume-source-workspace.json"
+              >截图识别与原样式报告<svg
+                viewBox="0 0 24 24"
+                width="18"
+                height="18"
+                aria-hidden="true"
+              >
+                <path
+                  d="M5 19 19 5M5 5h14v14"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                /></svg></a
+            ><a class="text-link" href="work.html#case-resume"
+              >阅读完整复盘<svg
+                viewBox="0 0 24 24"
+                width="18"
+                height="18"
+                aria-hidden="true"
+              >
+                <path
+                  d="M5 19 19 5M5 5h14v14"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                /></svg
+            ></a>
+          </div>
+        </section>
+      </main>
+      <footer>
+        <a href="./#projects">返回作品集</a><span>苗怡飞 / 2026</span>
+      </footer>
+    </div>
+    <dialog id="image-viewer" aria-label="查看项目原图">
+      <button class="image-close" type="button">关闭</button><img alt="" />
+      <p></p>
+    </dialog>
+  </body>
+</html>

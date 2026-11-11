@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta
+      name="description"
+      content="苗怡飞的作品集：Resume Protocol 候选人知识库与工具授权、AnythingLLM 检索评测、小书童语音陪伴、GreenMate 鸿蒙应用与中源黑客松。"
+    />
+    <meta name="theme-color" content="#f7f7f8" />
+    <title>GreenMate · 低碳生活助手 — 苗怡飞</title>
+    <link
+      rel="canonical"
+      href="https://myf8626-debug.github.io/greenmate.html"
+    />
+    <link rel="icon" href="assets/favicon.svg" />
+    <link rel="stylesheet" href="portfolio.css?v=20261112" />
+    <script defer src="portfolio.js?v=20261112"></script>
+  </head>
+  <body>
+    <div class="site-shell detail">
+      <header class="header">
+        <a class="brand" href="./">苗怡飞</a>
+        <nav><a href="./#projects">返回作品</a></nav>
+      </header>
+      <main>
+        <section class="intro">
+          <p class="eyebrow">
+            HarmonyOS / ArkTS / ArkUI / RelationalStore / Node.js
+          </p>
+          <h1>GreenMate · 低碳生活助手</h1>
+          <p class="lead">
+            把记录、估算与反馈连起来：知道自己做了什么，也看得见这些行为如何影响统计。
+          </p>
+        </section>
+        <section class="detail-section">
+          <h2>原生界面，而不只是概念图</h2>
+          <div class="phone-gallery">
+            <figure>
+              <a
+                class="image-link"
+                href="assets/greenmate-home.jpg"
+                data-image
+                aria-label="放大：原生 Previewer 首页"
+                ><img
+                  src="assets/greenmate-home.jpg"
+                  alt="原生 Previewer 首页"
+                  width="1080"
+                  height="2340"
+                  loading="lazy"
+              /></a>
+            </figure>
+            <figure>
+              <a
+                class="image-link"
+                href="assets/greenmate-stats.jpg"
+                data-image
+                aria-label="放大：原生 Previewer 统计页"
+                ><img
+                  src="assets/greenmate-stats.jpg"
+                  alt="原生 Previewer 统计页"
+                  width="1080"
+                  height="2340"
+                  loading="lazy"
+              /></a>
+            </figure>
+            <figure>
+              <a
+                class="image-link"
+                href="assets/greenmate-tree.jpg"
+                data-image
+                aria-label="放大：原生 Previewer 碳树页"
+                ><img
+                  src="assets/greenmate-tree.jpg"
+                  alt="原生 Previewer 碳树页"
+                  width="1080"
+                  height="2340"
+                  loading="lazy"
+              /></a>
+            </figure>
+          </div>
+          <p>
+            这些截图来自 DevEco 原生
+            Previewer，使用演示数据。首页、图表、碳树以绿色为主，让记录与反馈保持一致。
+          </p>
+        </section>
+        <section class="detail-section">
+          <h2>我做的内容</h2>
+          <ul>
+            <li>
+              <strong>页面与业务：</strong
+              >低碳记录、统计、积分与任务、碳树成长和个人数据管理。
+            </li>
+            <li>
+              <strong>本地数据：</strong>使用 RelationalStore
+              保存记录；处理统计缓存失效、备份校验、事务与重复事件。
+            </li>
+            <li>
+              <strong>接口沙盒：</strong>Node.js
+              复现接口与同步业务约束，用于验证重试、幂等和冲突处理。
+            </li>
+          </ul>
+          <p>
+            开发与验证使用 AI 辅助，工程参考来源保留在
+            THIRD_PARTY.md。用户界面、业务与沙盒是本人的全栈实践；设备协作相关的同学验收记录与本机验证分开记录。
+          </p>
+        </section>
+        <section class="detail-section">
+          <h2>碳岛小游戏</h2>
+          <div class="phone-gallery">
+            <figure>
+              <a
+                class="image-link"
+                href="assets/greenmate-game.jpg"
+                data-image
+                aria-label="放大：碳岛三消：第三张牌进入后消除"
+                ><img
+                  src="assets/greenmate-game.jpg"
+                  alt="碳岛三消：第三张牌进入后消除"
+                  width="1080"
+                  height="2340"
+                  loading="lazy"
+              /></a>
+            </figure>
+          </div>
+          <p>
+            三消玩法包含遮挡判定、撤回、洗牌和关卡切换。2026-11-11 的原生
+            Previewer 记录覆盖点选、消除、撤回、暂停和第二关渲染。
+          </p>
+          <p>
+            当前为离线单人玩法，本局不存档。游戏得分与碳积分账本隔离，不把游戏分数当作减排成果。
+          </p>
+        </section>
+        <section class="detail-section">
+          <h2>如实说明边界</h2>
+          <p>
+            预计减排来自行为数量与本地因子的估算，用于个人习惯反馈，不是权威碳核算。最新版本的局域网直连默认暂停；系统分布式通道未在本轮设备验证。原生
+            Previewer 运行不等于真机性能验收。
+          </p>
+          <p>
+            此页展示已核对的本地工程与运行素材，暂不链接内容不对应的旧 harmonyOS
+            仓库。
+          </p>
+        </section>
+      </main>
+      <footer>
+        <a href="./#projects">返回作品集</a><span>苗怡飞 / 2026</span>
+      </footer>
+    </div>
+    <dialog id="image-viewer" aria-label="查看项目原图">
+      <button class="image-close" type="button">关闭</button><img alt="" />
+      <p></p>
+    </dialog>
+  </body>
+</html>

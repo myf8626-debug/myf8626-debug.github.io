@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta
+      name="description"
+      content="苗怡飞的作品集：Resume Protocol 候选人知识库与工具授权、AnythingLLM 检索评测、小书童语音陪伴、GreenMate 鸿蒙应用与中源黑客松。"
+    />
+    <meta name="theme-color" content="#f7f7f8" />
+    <title>小书童 · 诗词语音陪伴 — 苗怡飞</title>
+    <link rel="canonical" href="https://myf8626-debug.github.io/poetry.html" />
+    <link rel="icon" href="assets/favicon.svg" />
+    <link rel="stylesheet" href="portfolio.css?v=20261112" />
+    <script defer src="portfolio.js?v=20261112"></script>
+  </head>
+  <body>
+    <div class="site-shell detail">
+      <header class="header">
+        <a class="brand" href="./">苗怡飞</a>
+        <nav><a href="./#projects">返回作品</a></nav>
+      </header>
+      <main>
+        <section class="intro">
+          <p class="eyebrow">团队平台中的个人贡献 · Vue 3 / Java / Python</p>
+          <h1>小书童 · 诗词语音陪伴</h1>
+          <p class="lead">
+            把“点击助手”变成可以开口、连续对话，也能随时停下来的体验。
+          </p>
+        </section>
+        <section class="detail-section">
+          <a
+            class="image-link"
+            href="assets/poetry-companion.png"
+            data-image
+            aria-label="放大：原团队平台中的小书童语音对话"
+            ><img
+              src="assets/poetry-companion.png"
+              alt="原团队平台中的小书童语音对话"
+              width="1440"
+              height="1000"
+              loading="lazy"
+          /></a>
+          <p>
+            国风场景、游戏入口和平台其他功能来自团队项目。我的贡献集中于小书童组件、语音调用、状态清理与角色交互，已提取为独立运行模块。
+          </p>
+        </section>
+        <section class="detail-section">
+          <h2>一轮对话怎么走</h2>
+          <p>
+            浏览器录音 → 本机 SenseVoice 识别 → Spring Boot 转发模型请求 → Edge
+            TTS 朗读 → 回到聆听。前端 Vue 负责录音、对话显示、播放和 SVG
+            角色状态。
+          </p>
+          <ul>
+            <li>
+              关闭面板、离开页面或切到后台时释放麦克风，取消等待；迟到的回答不能再次播放。
+            </li>
+            <li>
+              识别、模型或朗读失败分别提示，朗读失败保留文字回答；麦克风拒绝授权时仍可打字。
+            </li>
+            <li>
+              角色支持拖动、方向键移动、指针跟随和动作切换。嘴部依据实际音频能量开合，使用
+              SVG 分层动画，不是 Live2D 模型。
+            </li>
+          </ul>
+        </section>
+        <section class="detail-section">
+          <h2>如何区分个人贡献与原项目</h2>
+          <p>
+            个人提交记录包括
+            627b74c（语音对话）、a9099f1（官方模型配置）、27aac45（拖动与角色动作）。独立仓库保留来源说明，只提取相关模块和必要接口类型，不包含原平台数据库、用户数据与密钥。
+          </p>
+          <div class="project-links">
+            <a
+              class="text-link"
+              href="https://github.com/myf8626-debug/poetry-companion"
+              >查看独立模块<svg
+                viewBox="0 0 24 24"
+                width="18"
+                height="18"
+                aria-hidden="true"
+              >
+                <path
+                  d="M5 19 19 5M5 5h14v14"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                /></svg></a
+            ><a
+              class="text-link"
+              href="https://github.com/wt-06/poetry-platform/commit/27aac4556112ca38a4e29191e37f928ace2127a5"
+              >查看原贡献提交<svg
+                viewBox="0 0 24 24"
+                width="18"
+                height="18"
+                aria-hidden="true"
+              >
+                <path
+                  d="M5 19 19 5M5 5h14v14"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                /></svg
+            ></a>
+          </div>
+        </section>
+        <section class="detail-section">
+          <h2>已有验证与限制</h2>
+          <p>
+            原集成环境留下后台测试、音频处理、连续三轮对话、权限拒绝与生命周期检查记录；浏览器自动化使用合成录音，用户另确认过真实麦克风基本体验。独立版本的验证单独记在新仓库中。
+          </p>
+          <p>
+            采用半双工：朗读时暂停收音，不支持同时开口打断。整段音频返回后播放，尚未做流式播放、噪声环境评估和长时间稳定性验证。它不读取实时游戏分数，也不是带检索证据的诗词知识库问答。线上作品集展示界面和源码，没有部署语音后端。
+          </p>
+        </section>
+      </main>
+      <footer>
+        <a href="./#projects">返回作品集</a><span>苗怡飞 / 2026</span>
+      </footer>
+    </div>
+    <dialog id="image-viewer" aria-label="查看项目原图">
+      <button class="image-close" type="button">关闭</button><img alt="" />
+      <p></p>
+    </dialog>
+  </body>
+</html>
