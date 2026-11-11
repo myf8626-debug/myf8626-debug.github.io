@@ -1,0 +1,38 @@
+{
+  "synthetic": true,
+  "initialDraft": "seeded fixture, not generated in this run",
+  "generationModel": "DeepSeek via configured Claude Agent SDK",
+  "checks": [
+    "AI proposal returned without changing draft",
+    "AI suggestion accepted explicitly and restored to original",
+    "preview and discard leave original unchanged",
+    "confirmed edit changes selected entry only",
+    "requirements show source and missing evidence separately",
+    "version persists across page reload",
+    "restored older draft; fixed saved version still exports PDF/DOCX",
+    "other account cannot read review or export its version",
+    "desktop/mobile with no script errors or document overflow"
+  ],
+  "limitations": [
+    "Requirement matching retrieves possible evidence, not automatic qualification decisions.",
+    "DOCX checked structurally; independent Word rendering not performed.",
+    "字面数字与原文包含检查不能替代完整事实核验。",
+    "不是整个求职 Agent 的准确率评测；这轮没有调用 Career Skill。",
+    "列表仅显示最近 50 条版本，尚未提供自动保留期限。"
+  ],
+  "passed": true,
+  "proposalText": "使用 React 开发文件列表，并负责错误提示功能。",
+  "date": "2026-11-11",
+  "scope": "局部修改建议 → 人工确认 → 岗位依据对照 → 保存/恢复 → 指定版本导出；初稿为预置合成数据",
+  "unitTests": {
+    "passed": 4
+  },
+  "teamRepositoryPushed": false,
+  "development": "AI-assisted implementation and verification",
+  "sourceSha256": {
+    "server/resumeReview.js": "270e764b336ed54402207e75fd64a89371d131e39ceedc38104789571f2d4dcc",
+    "server/resumeReview.test.js": "ffc1609c9e8aadbeac84599841a5dae9633d4fd55537a46f7607571c197194db",
+    "src/components/ResumeReview.jsx": "613259283aa2a4a7ccbc79e32b08940a2f569600d97de93b593cd9cc27dd3466",
+    "scripts/validate-review-flow.mjs": "34c7fb64b485a8f82dca2676d6f01a90463aba8ef63c220193b8a2862b5668de"
+  }
+}

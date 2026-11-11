@@ -97,7 +97,7 @@
             <div class="project-copy">
               <h3>Resume Protocol</h3>
               <p class="project-description">
-                候选人材料混合检索、事实溯源与工具授权。
+                从来源检索，到逐条确认、版本保存与导出。
               </p>
               <dl class="project-facts">
                 <div>
@@ -153,8 +153,8 @@
                 class="expand-mark"
                 aria-hidden="true"
               ></span>
-            </summary><figure class="verification-shot"><a href="assets/resume-export-verified.png"><img loading="lazy" src="assets/resume-export-verified.png" alt="真实模型生成的 PDF 导出预览 · 虚构候选人材料"></a><figcaption>真实模型生成的 PDF 导出预览 · 虚构候选人材料</figcaption></figure><p class="verification-link"><a href="verification.html#resume">查看验证范围与记录</a></p>
-            <div class="detail-body"><section class="case-part"><h4>实际检索实现</h4><p>上传文本按 450 字符切分。本地 multilingual-e5-small 生成 384 维向量，SQLite 按用户与候选人隔离保存，精确余弦检索与关键词召回通过 RRF 融合，保留来源与证据预算。索引在检索时按内容哈希更新。六题合成开发样例：Top-1 从关键词 1/6 到混合 3/6，Hit@3 为 6/6；不是独立准确率，未接入 Rerank 或 ANN。</p></section>
+            </summary><figure class="verification-shot"><a href="assets/resume-review-difference.png"><img loading="lazy" src="assets/resume-review-difference.png" alt="局部修改前后对照与人工确认 · 合成材料"></a><figcaption>实际局部修改界面 · 合成材料，确认后才写入当前稿</figcaption></figure><p class="verification-link"><a href="verification.html#resume">查看验证范围与记录</a></p>
+            <div class="detail-body"><section class="case-part"><h4>从建议到可确认的修改</h4><p>新增单条编辑与 AI 改写建议：先展示前后文本和来源，再由用户确认。按岗位要求逐条检索原文；相似片段只作线索，不直接判定符合。版本存入 SQLite，可恢复、下载固定版本的 PDF / DOCX，接受前检查当前稿和材料是否已变化。</p><p>本地合成材料的真实 DeepSeek 建议、确认与恢复，以及浏览器操作和指定版本导出已通过。初稿为预置数据，非本轮重新生成；新增代码尚未推送团队仓库。</p><p><a href="verification.html#resume-review">查看修改界面、验证步骤与边界</a></p></section><section class="case-part"><h4>实际检索实现</h4><p>上传文本按 450 字符切分。本地 multilingual-e5-small 生成 384 维向量，SQLite 按用户与候选人隔离保存，精确余弦检索与关键词召回通过 RRF 融合，保留来源与证据预算。索引在检索时按内容哈希更新。六题合成开发样例：Top-1 从关键词 1/6 到混合 3/6，Hit@3 为 6/6；不是独立准确率，未接入 Rerank 或 ANN。</p></section>
               <section class="case-part">
                 <h4>问题</h4>
                 <p>
